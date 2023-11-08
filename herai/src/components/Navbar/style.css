@@ -1,0 +1,39 @@
+nav {
+    display: flex;
+    justify-content:space-between;
+    background-color: #f9eded;
+    padding: 10px;
+    margin: 0;
+    padding: 20px 100px;
+}
+
+img {
+    height: 50px;
+}
+
+.links{
+    display: flex;
+    margin: 0 100px;
+}
+
+.link{
+    margin: auto 30px;
+    text-decoration: none;
+    color: black;
+}
+
+.active{
+    font-weight: bold;
+}
+
+button{
+    background-color: black;
+    padding: 15px 75px;
+    margin: 0;
+    border: none;
+}
+
+.login{
+    text-decoration: none;
+    color: white;
+}

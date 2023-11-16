@@ -34,6 +34,13 @@ const Navbar = () => {
                 </NavLink>
                 <NavLink
                     className={"link"}
+                    to="/events"
+                    activeClassName="active"
+                >
+                    Events
+                </NavLink>
+                <NavLink
+                    className={"link"}
                     to="/links"
                     activeClassName="active"
                 >

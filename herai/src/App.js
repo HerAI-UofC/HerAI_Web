@@ -7,6 +7,7 @@ import About from "./pages/About";
 import Links from "./pages/Links";
 import Contact from "./pages/Contact";
 import Login from "./pages/Login";
+import Events from "./pages/Events.js";
 
 function App() {
     return (
@@ -17,6 +18,7 @@ function App() {
                 <Route path="/about" Component={About} />
                 <Route path="/links" Component={Links} />
                 <Route path="/contact" Component={Contact} />
+                <Route path="/events" Component={Events} />
                 <Route path="/login" Component={Login} />
             </Routes>
             <Footer />

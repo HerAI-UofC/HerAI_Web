@@ -4,6 +4,19 @@ import img2 from "../img/2.jpg";
 import img3 from "../img/3.jpg";
 
 const Home = () => {
+    window.addEventListener("scroll", () => {
+        const txt = document.getElementById("blurb");
+        const winHeight = window.innerHeight;
+        const txtTop = txt.getBoundingClientRect().top;
+
+        if (txtTop - winHeight <= 0) {
+            console.log("STARTED");
+            txt.classList.add("fade-in");
+        } else {
+            txt.classList.remove("fade-in");
+        }
+    });
+
     return (
         <>
             <div className="title-head">
@@ -12,7 +25,7 @@ const Home = () => {
             </div>
             <img src={img} alt="x" id="title-img"></img>
             <div className="about-blurb">
-                <h2>
+                <h2 id="blurb">
                     HerAI is a forward-thinking Woman in Artificial Intelligence
                     and Machine Learning (AI/ML) club dedicated to amplifying
                     the voices and contributions of women in the tech landscape.
@@ -24,8 +37,12 @@ const Home = () => {
             <div className="statement-img-img">
                 <h1>Empowering Women in the AI Revolution</h1>
                 <div className="img-container">
-                    <img src={img2} alt="x"></img>
-                    <img src={img3} alt="x"></img>
+                    <div className="img-wrapper">
+                        <img src={img2} alt="x"></img>
+                    </div>
+                    <div className="img-wrapper">
+                        <img src={img3} alt="x"></img>
+                    </div>
                 </div>
             </div>
             <div className="why-join-section">

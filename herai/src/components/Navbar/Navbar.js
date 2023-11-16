@@ -4,6 +4,15 @@ import React from "react";
 import logo from "../../img/logo.png";
 
 const Navbar = () => {
+    window.addEventListener("scroll", () => {
+        const navbar = document.querySelector("nav");
+        if (window.scrollY > 100) {
+            navbar.classList.add("scrolled");
+        } else {
+            navbar.classList.remove("scrolled");
+        }
+    });
+
     return (
         <nav>
             <img id="nav-logo" src={logo} alt="not found"></img>

@@ -66,12 +66,23 @@ body{
 .img-container{
     display: flex;
     justify-content: space-between;
+    /* overflow: hidden; */
 }
 
-.img-container img{
+.img-wrapper{
     width: 49.5%;
-    height: 1%;
+    overflow: hidden;
+}
+
+.img-wrapper img{
+    width: 100%;
+    height: 100%;
     margin: 0;
+    transition: transform 1s ease-in-out;
+}
+
+.img-container img:hover{
+    transform: scale(1.1);
 }
 
 .why-join-section{
@@ -96,4 +107,13 @@ body{
 .text-container p{
     font-family: "Lato";
     font-size: 12pt;
+}
+
+#blurb{
+    opacity: 0;
+    transition: opacity 3s;
+}
+
+#blurb.fade-in{
+    opacity: 1;
 }

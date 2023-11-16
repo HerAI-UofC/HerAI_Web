@@ -6,7 +6,7 @@ import logo from "../../img/logo.png";
 const Navbar = () => {
     return (
         <nav>
-            <img src={logo} alt="not found"></img>
+            <img id="nav-logo" src={logo} alt="not found"></img>
             <div className="links">
                 <NavLink
                     className={"link"}
@@ -25,17 +25,23 @@ const Navbar = () => {
                 </NavLink>
                 <NavLink
                     className={"link"}
+                    to="/links"
+                    activeClassName="active"
+                >
+                    Links
+                </NavLink>
+                <NavLink
+                    className={"link"}
                     to="/contact"
                     activeClassName="active"
                 >
                     Contact
                 </NavLink>
             </div>
-            <button>
-                <NavLink className={"login"} to="/login">
-                    Login
-                </NavLink>
-            </button>
+
+            <NavLink className={"login"} to="/login">
+                Login
+            </NavLink>
         </nav>
     );
 };

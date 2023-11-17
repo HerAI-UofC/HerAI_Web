@@ -45,6 +45,7 @@
     display: flex;
     padding: 50px 150px;
     align-items: center;
+    visibility: hidden;
 }
 
 .vision-section h2{
@@ -113,5 +114,6 @@
 }
 
 .slide-in{
+    visibility: visible;
     animation: slide-in 2s forwards;
 }

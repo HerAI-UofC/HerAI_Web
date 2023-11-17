@@ -17,40 +17,19 @@ const Navbar = () => {
         <nav>
             <img id="nav-logo" src={logo} alt="not found"></img>
             <div className="links">
-                <NavLink
-                    className={"link"}
-                    to="/"
-                    exact
-                    activeClassName="active"
-                >
+                <NavLink className={"link"} to="/">
                     Home
                 </NavLink>
-                <NavLink
-                    className={"link"}
-                    to="/about"
-                    activeClassName="active"
-                >
+                <NavLink className={"link"} to="/about">
                     About
                 </NavLink>
-                <NavLink
-                    className={"link"}
-                    to="/events"
-                    activeClassName="active"
-                >
+                <NavLink className={"link"} to="/events">
                     Events
                 </NavLink>
-                <NavLink
-                    className={"link"}
-                    to="/links"
-                    activeClassName="active"
-                >
+                <NavLink className={"link"} to="/links">
                     Links
                 </NavLink>
-                <NavLink
-                    className={"link"}
-                    to="/contact"
-                    activeClassName="active"
-                >
+                <NavLink className={"link"} to="/contact">
                     Contact
                 </NavLink>
             </div>

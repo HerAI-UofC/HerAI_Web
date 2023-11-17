@@ -6,14 +6,20 @@ import img3 from "../img/3.jpg";
 const Home = () => {
     window.addEventListener("scroll", () => {
         const txt = document.getElementById("blurb");
-        const winHeight = window.innerHeight;
-        const txtTop = txt.getBoundingClientRect().top;
+        //console.log(txt);
+        if (txt) {
+            //console.log("THERE");
+            const winHeight = window.innerHeight;
+            const txtTop = txt.getBoundingClientRect().top;
 
-        if (txtTop - winHeight <= 0) {
-            console.log("STARTED");
-            txt.classList.add("fade-in");
+            if (txtTop - winHeight <= 0) {
+                //console.log("STARTED");
+                txt.classList.add("fade-in");
+            } else {
+                txt.classList.remove("fade-in");
+            }
         } else {
-            txt.classList.remove("fade-in");
+            //console.log("NOT THERE");
         }
     });
 

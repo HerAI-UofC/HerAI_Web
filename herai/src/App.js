@@ -9,9 +9,12 @@ import Contact from "./pages/Contact";
 import Login from "./pages/Login";
 import Events from "./pages/Events.js";
 
+import ScrollToTop from "./components/ScrollToTop.js";
+
 function App() {
     return (
         <Router>
+            <ScrollToTop />
             <Navbar />
             <Routes>
                 <Route path="/" exact Component={Home} />

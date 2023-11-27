@@ -1,0 +1,5 @@
+{
+  "AppSyncApiName": "heraiamplifyauth",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false
+}

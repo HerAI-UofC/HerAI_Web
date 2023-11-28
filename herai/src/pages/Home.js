@@ -27,12 +27,12 @@ const Home = () => {
         <>
             <div className="title-head">
                 <h1>HerAI</h1>
-                <h4>Woman in AI/ML</h4>
+                <h4>Women in AI/ML</h4>
             </div>
             <img src={img} alt="x" id="title-img"></img>
             <div className="about-blurb">
                 <h2 id="blurb">
-                    HerAI is a forward-thinking Woman in Artificial Intelligence
+                    HerAI is a forward-thinking Women in Artificial Intelligence
                     and Machine Learning (AI/ML) club dedicated to amplifying
                     the voices and contributions of women in the tech landscape.
                 </h2>
@@ -74,7 +74,7 @@ const Home = () => {
                         <h6>Advocacy and Outreach</h6>
                         <p>
                             Join us in advocation for diversity and inclusion in
-                            AI/ML, and contribute to comunity outreach programs
+                            AI/ML, and contribute to community outreach programs
                             leveraging AI for societal good.
                         </p>
                     </div>

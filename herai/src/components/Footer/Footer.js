@@ -8,6 +8,8 @@ const Footer = () => {
             <div className="links-column">
                 <a href="/">Home</a>
                 <a href="/about">About</a>
+                <a href="/events">Events</a>
+                <a href="/community">Community</a>
                 <a href="/contact">Contact</a>
             </div>
             <p>connect.herai@gmail.com</p>

@@ -1,0 +1,125 @@
+.title{
+    background-color:#f8f6ee;
+    display: flex;
+    height: 600px;
+}
+
+.title-column {
+    flex: 1;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.title-column-text {
+    padding-top: 175px;
+}
+
+.title-column h1 {
+    text-align: center;
+    font-family: "Alice";
+    font-size: 44px;
+}
+
+#heart-img {
+    padding-top: 20px;
+    margin-left: 43%;
+}
+
+#triangle-img{
+    margin-top: 100px;
+    height:400px;
+    width:600px;
+    border-radius: 50px;
+}
+
+.sign-up{
+    background-color: white;
+    margin: 100px 0px;
+    text-align: center;
+}
+
+.sign-up h1{
+    font-family: "Alice";
+    font-size: 36px;
+}
+
+.divider{
+    border-bottom: 1px solid black;
+    height: 40px;
+    width: 125px;
+    margin-left: 45%;
+}
+
+.sign-up h4{
+    padding: 20px 400px;
+    margin-bottom: 25px;
+    font-family: "Lato";
+    font-size: 20px;
+}
+
+.signUp-btn{
+    background-color: #8c6d6c;
+    padding: 15px 75px;
+    color: white;
+    font-size: 20px;
+}
+
+.links-section-1{
+    background-color:#f8f6ee;
+    height:130px;
+    display: flex;
+}
+
+.stay-connected{
+    background-color: #fef2ec;
+    border-radius: 30px;
+    border: 1px solid black;
+    padding: 10px 450px;
+    margin-left: 135px;
+    margin-top: 50px;
+    font-family: "Alice";
+    font-size: 36px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+#connect{
+    opacity: 0;
+    transition: opacity 3s;
+}
+
+#connect.fade-in{
+    opacity: 1;
+}
+
+.links-section-2{
+    background-color:#f8f6ee;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 400px;
+    font-family: "Lato";
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+}
+
+.instagram img{
+    width: 75px;
+}
+
+.instagram a:hover{
+    color: #985252;
+}
+
+.discord img{
+    width: 125px;
+} 
+
+.discord a:hover{
+    color: #985252;
+}
+
+.linkedin a:hover{
+    color: #985252;
+}

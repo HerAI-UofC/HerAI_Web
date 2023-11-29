@@ -4,7 +4,7 @@ import logo from "../../img/logo.png";
 const Footer = () => {
     return (
         <div className="footer">
-            <img src={logo} alt="logo"></img>
+            <img src={logo} alt="logo" id="footer-logo"></img>
             <div className="links-column">
                 <a href="/">Home</a>
                 <a href="/about">About</a>

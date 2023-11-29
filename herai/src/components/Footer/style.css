@@ -20,10 +20,10 @@
     margin-bottom: 10px;
 }
 
-img{
+#footer-logo{
     margin: 0px;
     height: 75px;
-    width: 90px;
+    /* width: 90px; */
 }
 
 #contact-btn{

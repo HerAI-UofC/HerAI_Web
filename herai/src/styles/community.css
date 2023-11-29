@@ -21,8 +21,10 @@
 }
 
 #heart-img {
-    padding-top: 20px;
-    margin-left: 43%;
+    /* padding-top: 20px; */
+    margin: 20px auto;
+    width: 100px;
+    /* margin-left: 43%; */
 }
 
 #triangle-img{
@@ -97,6 +99,7 @@
     height: 200px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 25px 400px;
     font-family: "Lato";
     font-weight: bold;
@@ -118,6 +121,10 @@
 
 .discord a:hover{
     color: #985252;
+}
+
+.linkedin img{
+    width: 100px;
 }
 
 .linkedin a:hover{

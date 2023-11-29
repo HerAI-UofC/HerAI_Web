@@ -35,7 +35,11 @@ const About = () => {
                     landscape.
                 </p>
             </div>
-            <ScrollTrigger onEnter={onEnterView}>
+
+            <ScrollTrigger
+                onEnter={onEnterView}
+                style={{ backgroundColor: "#F4F4F4" }}
+            >
                 <div className="vision-section">
                     <h2 className={`${isVisible ? "slide-in" : ""}`}>
                         Our Vision

@@ -5,6 +5,7 @@
     background-repeat: no-repeat;
     background-size:cover;
     padding: 125px 0;
+    font-family: "Alice";
     text-align: center;
     
 }
@@ -33,6 +34,7 @@
 
 .about-section h3{
     font-size: 36pt;
+    font-family: "Alice";
 }
 
 .about-section p{
@@ -44,6 +46,7 @@
     background-color: #F4F4F4;
     display: flex;
     padding: 50px 150px;
+    font-family: "Alice";
     align-items: center;
     visibility: hidden;
 }
@@ -85,6 +88,7 @@
 }
 
 .txt-container h4{
+    font-family: "Alice";
     font-size: 28pt;
     margin: 0;
 }

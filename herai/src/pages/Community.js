@@ -31,8 +31,7 @@ const Community = () => {
             <div className="title">
                 <div className="title-column">
                     <div className="title-column-text">
-                        <h1>Become a part of</h1>
-                        <h1>the HerAI community</h1>
+                        <h1>Become a part of <br /> the HerAI community</h1>
                         <img src={img} alt="heart" id="heart-img"></img>
                     </div>
                 </div>
@@ -44,9 +43,9 @@ const Community = () => {
             <div className="sign-up">
                 <h1>HerAI Member Sign-Up</h1>
                 <div className="divider"></div>
-                <h4>Join the community and be part of a supportive network, gain access to exclusive
+                <p>Join the community and be part of a supportive network, gain access to exclusive
                     resources and workshop content, and learn about AI/ML
-                </h4>
+                </p>
                 <a className="signUp-btn" href="/login">
                     Sign Up
                 </a>

@@ -29,7 +29,7 @@ const About = () => {
                 <p>
                     Welcome to HerAI, a pioneering community dedicated to
                     empowering and advancing women in the exciting realms of
-                    Artificial Intelligence(AI) and Machine Learning(ML). Our
+                    Artificial Intelligence (AI) and Machine Learning (ML). Our
                     mission is to break barriers, foster inclusivity, and create
                     a platform where women thrive in the rapidly evolving tech
                     landscape.
@@ -42,7 +42,7 @@ const About = () => {
                     </h2>
                     <p className={`${isVisible ? "slide-in" : ""}`}>
                         To lead a paradigm shift by amplifying the presence of
-                        women in AI/ML, envisioning a future here their
+                        women in AI/ML, envisioning a future where their
                         contributions shape the forefront of technological
                         innovation.
                     </p>
@@ -58,7 +58,7 @@ const About = () => {
                         </h4>
                         <p>
                             Join us and be at the forefront of innovation, where
-                            diverse perspectives power the future of texhnology.
+                            diverse perspectives power the future of technology.
                         </p>
                         <a href="/contact">Contact Us</a>
                     </div>

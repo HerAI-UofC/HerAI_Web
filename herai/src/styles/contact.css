@@ -1,0 +1,61 @@
+.email-header{
+    background-color:#f8f6ee;
+    display: flex;
+    height:400px;
+    padding: 100px;
+}
+
+.email-column{
+    flex: 1;
+    padding: 20px;
+    font-family: "Alice";
+    font-size: 35px;
+    text-align: center;
+}
+
+.email-column:nth-child(2){
+    background-color: white;
+    padding: 55px 20px;
+    padding-bottom: 575px;
+}
+
+
+#contact-logo{
+    width: 60px;
+    margin: auto auto;
+}
+
+.pic-scroll{
+    display: flex;
+    justify-content: space-around;
+    background-image: url("../img/contact-img.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    align-items: center;
+    padding: 200px 0;
+}
+
+.contact-info {
+    background-color: white;
+    display: flex;
+    height: 500px;
+    padding: 100px 150px;
+}
+
+.info-section {
+    font-family: "Alice";
+}
+
+.info-section h1 {
+    font-size: 35px;
+}
+
+.info-section p {
+    padding-top: 25px;
+    font-size: 18px;
+}
+
+.highlight {
+    color: #985252;
+}

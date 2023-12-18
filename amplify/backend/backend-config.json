@@ -1,0 +1,108 @@
+{
+  "api": {
+    "heraiamplifyauth": {
+      "dependsOn": [],
+      "output": {
+        "authConfig": {
+          "additionalAuthenticationProviders": [],
+          "defaultAuthentication": {
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 7
+            },
+            "authenticationType": "API_KEY"
+          }
+        }
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "AppSync"
+    }
+  },
+  "auth": {
+    "heraiamplifyauth9cda9675": {
+      "customAuth": false,
+      "dependsOn": [
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "heraiamplifyauth9cda9675CustomMessage",
+          "triggerProvider": "Cognito"
+        }
+      ],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": [],
+          "passwordPolicyMinLength": 8
+        },
+        "signupAttributes": [
+          "EMAIL",
+          "NAME"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito"
+    }
+  },
+  "function": {
+    "heraiamplifyauth9cda9675CustomMessage": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_heraiamplifyauth9cda9675CustomMessage_EMAILMESSAGE": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "heraiamplifyauth9cda9675CustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_heraiamplifyauth9cda9675CustomMessage_EMAILSUBJECT": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "heraiamplifyauth9cda9675CustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_heraiamplifyauth9cda9675CustomMessage_REDIRECTURL": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "heraiamplifyauth9cda9675CustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_heraiamplifyauth9cda9675CustomMessage_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "heraiamplifyauth9cda9675CustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_heraiamplifyauth9cda9675CustomMessage_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "heraiamplifyauth9cda9675CustomMessage"
+        }
+      ]
+    }
+  }
+}

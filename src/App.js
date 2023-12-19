@@ -13,7 +13,7 @@ import ScrollToTop from "./components/ScrollToTop.js";
 
 function App() {
     return (
-        <Router>
+        <Router basename="/">
             <ScrollToTop />
             <Navbar />
             <Routes>

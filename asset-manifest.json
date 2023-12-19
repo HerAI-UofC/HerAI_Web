@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/herAI-Web/static/css/main.6d5730e3.css",
-    "main.js": "/herAI-Web/static/js/main.ee0e9805.js",
-    "static/media/community-img.png": "/herAI-Web/static/media/community-img.0715be13c31c511ededc.png",
-    "static/media/4.jpg": "/herAI-Web/static/media/4.fc1f50dfd059137ffffd.jpg",
-    "static/media/titleImg.jpg": "/herAI-Web/static/media/titleImg.e73b3eb7b38658e9df5d.jpg",
-    "static/media/2.jpg": "/herAI-Web/static/media/2.bee320efc78b23551475.jpg",
-    "static/media/logo.png": "/herAI-Web/static/media/logo.cc23f18f9a769dab6d85.png",
-    "static/media/3.jpg": "/herAI-Web/static/media/3.61c107d6f4b16b9bde52.jpg",
-    "index.html": "/herAI-Web/index.html",
-    "main.6d5730e3.css.map": "/herAI-Web/static/css/main.6d5730e3.css.map",
-    "main.ee0e9805.js.map": "/herAI-Web/static/js/main.ee0e9805.js.map"
+    "main.css": "/HerAI-Web/static/css/main.12f5f037.css",
+    "main.js": "/HerAI-Web/static/js/main.a9566d00.js",
+    "static/media/community-img.png": "/HerAI-Web/static/media/community-img.0715be13c31c511ededc.png",
+    "static/media/4.jpg": "/HerAI-Web/static/media/4.fc1f50dfd059137ffffd.jpg",
+    "static/media/titleImg.jpg": "/HerAI-Web/static/media/titleImg.e73b3eb7b38658e9df5d.jpg",
+    "static/media/2.jpg": "/HerAI-Web/static/media/2.bee320efc78b23551475.jpg",
+    "static/media/logo.png": "/HerAI-Web/static/media/logo.cc23f18f9a769dab6d85.png",
+    "static/media/3.jpg": "/HerAI-Web/static/media/3.61c107d6f4b16b9bde52.jpg",
+    "index.html": "/HerAI-Web/index.html",
+    "main.12f5f037.css.map": "/HerAI-Web/static/css/main.12f5f037.css.map",
+    "main.a9566d00.js.map": "/HerAI-Web/static/js/main.a9566d00.js.map"
   },
   "entrypoints": [
-    "static/css/main.6d5730e3.css",
-    "static/js/main.ee0e9805.js"
+    "static/css/main.12f5f037.css",
+    "static/js/main.a9566d00.js"
   ]
 }

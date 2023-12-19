@@ -17,7 +17,7 @@ const Navbar = () => {
         <nav>
             <img id="nav-logo" src={logo} alt="not found"></img>
             <div className="links">
-                <NavLink className={"link"} to="/herAI-Web">
+                <NavLink className={"link"} to="/HerAI_Web">
                     Home
                 </NavLink>
                 <NavLink className={"link"} to="/about">

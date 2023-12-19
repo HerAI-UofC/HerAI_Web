@@ -17,7 +17,7 @@ function App() {
             <ScrollToTop />
             <Navbar />
             <Routes>
-                <Route path="/herAI-Web" exact Component={Home} />
+                <Route path="/HerAI_Web" exact Component={Home} />
                 <Route path="/about" Component={About} />
                 <Route path="/community" Component={Community} />
                 <Route path="/contact" Component={Contact} />

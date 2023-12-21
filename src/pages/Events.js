@@ -84,7 +84,17 @@ const Events = () => {
                 <div className="event">
                     <h2>{events[currentEventIndex].title}</h2>
                     <p>{events[currentEventIndex].descr}</p>
-                    <NavLink className="check-btn">Check Out</NavLink>
+                    <NavLink
+                        to={{
+                            pathname: `/event/${events[
+                                currentEventIndex
+                            ].title.replace(" ", "")}`,
+                        }}
+                        state={events[currentEventIndex]}
+                        className="check-btn"
+                    >
+                        Check Out
+                    </NavLink>
                 </div>
             </div>
             <div className="dots">

@@ -1,0 +1,28 @@
+.gallery-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gallery-section h2{
+    font-size: 25pt;
+    margin: 20px 0;
+}
+
+.gallery-columns{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.gallery-columns div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 50px;
+}
+
+.gallery-columns img{
+    margin: 20px 0;
+}

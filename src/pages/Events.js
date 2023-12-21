@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Document, Page } from "react-pdf";
 import { NavLink } from "react-router-dom";
 import "../styles/events.css";
+import EventBlock from "../components/EventBlock/EventBlock";
 
 const Events = () => {
     // const videoSrc = "https://test-grab-bucket.s3.amazonaws.com/sample-5s.mp4";
@@ -25,7 +26,7 @@ const Events = () => {
     useEffect(() => {
         const timer = setInterval(() => {
             setCurrentEventIndex((currentEventIndex + 1) % events.length);
-        }, 100000);
+        }, 10000);
 
         return () => clearInterval(timer);
     }, [currentEventIndex, events.length]);
@@ -62,7 +63,15 @@ const Events = () => {
                     ></span>
                 ))}
             </div>
-            <h3>DVJAKN</h3>
+            <div>
+                {events.map((event, index) => (
+                    <EventBlock
+                        key={index}
+                        event={event}
+                        dir={index % 2 === 1}
+                    />
+                ))}
+            </div>
         </div>
     );
 };

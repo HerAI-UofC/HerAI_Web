@@ -33,10 +33,13 @@
 
 .check-btn{
     background-color: #8C6D6C;
+    color:white;
     border-radius: 10px;;
-    padding: 15px 40px;
+    padding: 20px 80px;
     margin-top: 20px;
     width: fit-content;
+    font-family: lato;
+    font-weight: 800;
 }
 
 .dots{

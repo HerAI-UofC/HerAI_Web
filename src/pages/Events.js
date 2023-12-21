@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Document, Page } from "react-pdf";
 import { NavLink } from "react-router-dom";
 import "../styles/events.css";
@@ -7,6 +7,8 @@ import EventBlock from "../components/EventBlock/EventBlock";
 const Events = () => {
     // const videoSrc = "https://test-grab-bucket.s3.amazonaws.com/sample-5s.mp4";
     // const pdfSrc = "https://test-grab-bucket.s3.amazonaws.com/sample.pdf";
+
+    const eventsBlockRef = useRef(null);
 
     const [events, useEvents] = useState([
         {
@@ -40,6 +42,18 @@ const Events = () => {
             descr: "Event 6 description: Dive into the world of AI with this engaging event. Explore the latest advancements, meet industry experts, and learn how AI is shaping the future. Don't miss out on this opportunity to broaden your knowledge and network with like-minded individuals.",
         },
     ]);
+
+    const [currentPage, setCurrentPage] = useState(1);
+    const [eventsPerPage] = useState(3);
+
+    const indexOfLastEvent = currentPage * eventsPerPage;
+    const indexOfFirstEvent = indexOfLastEvent - eventsPerPage;
+    const currentEvents = events.slice(indexOfFirstEvent, indexOfLastEvent);
+
+    const paginate = (pageNumber) => {
+        setCurrentPage(pageNumber);
+        eventsBlockRef.current.scrollIntoView({ behavior: "smooth" });
+    };
 
     const [currentEventIndex, setCurrentEventIndex] = useState(0);
 
@@ -83,14 +97,27 @@ const Events = () => {
                     ></span>
                 ))}
             </div>
-            <div>
-                {events.map((event, index) => (
+            <div ref={eventsBlockRef}>
+                {currentEvents.map((event, index) => (
                     <EventBlock
                         key={index}
                         event={event}
                         dir={index % 2 === 1}
                     />
                 ))}
+            </div>
+            <div className="pagination">
+                {Array(Math.ceil(events.length / eventsPerPage))
+                    .fill()
+                    .map((_, index) => (
+                        <button
+                            key={index}
+                            onClick={() => paginate(index + 1)}
+                            id={currentPage === index + 1 ? "active-page" : ""}
+                        >
+                            {index + 1}
+                        </button>
+                    ))}
             </div>
             <div className="sign-up-container">
                 <div className="sign-up-container-head">

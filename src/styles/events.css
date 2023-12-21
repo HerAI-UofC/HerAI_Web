@@ -85,4 +85,23 @@
     width: 50%;
 }
 
+.pagination{
+    text-align: center;
+}
 
+.pagination button{
+    margin: 0 10px;
+    height: 30px;
+    width: 30px;
+    background-color: #999;
+    border: none;
+    border-radius: 100%;
+    color: white;
+    cursor: pointer;
+    font-size:  16px;
+    transition: background-color 0.3s ease;
+}
+
+#active-page{
+    background-color: #8C6D6C;
+}

@@ -2,6 +2,9 @@ import { useLocation, useParams } from "react-router-dom";
 import "../styles/event.css";
 import { useState } from "react";
 import VideoPane from "../components/VideoPane/VideoPane";
+import SlidesPane from "../components/SlidesPane/SlidesPane";
+import GalleryPane from "../components/GalleryPane/GalleryPane";
+import DetailsPane from "../components/DetailsPane/DetailsPane";
 
 const Event = () => {
     const location = useLocation();
@@ -23,11 +26,11 @@ const Event = () => {
                 />
             );
         } else if (activeOption === "pdf") {
-            return <slidesPane />;
+            return <SlidesPane />;
         } else if (activeOption === "pic") {
-            return <galleryPane />;
+            return <GalleryPane />;
         } else if (activeOption === "info") {
-            return <detailsPane />;
+            return <DetailsPane />;
         }
     };
 

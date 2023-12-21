@@ -62,3 +62,27 @@
 #active-dot{
     background-color: #717171;
 }
+
+.sign-up-container{
+    background-color: black;
+    border-radius: 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    margin: 75px;
+    padding: 50px;
+}
+
+.sign-up-container h3{
+    font-size: 20pt;
+}
+
+.sign-up-container-body{
+    display: flex;
+    flex-direction: column;
+    font-family: lato;
+    font-size: 14pt;
+    width: 50%;
+}
+
+

@@ -19,6 +19,26 @@ const Events = () => {
             image: "https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630",
             descr: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.",
         },
+        {
+            title: "Event 3",
+            image: "https://www.democracy-international.org/sites/default/files/styles/image_small/public/images/gluhbirne.png?itok=93fYU6Ln",
+            descr: "Event 3 description: Step into the exciting world of game development at this event. Discover the latest trends, learn from industry veterans, and get hands-on experience with cutting-edge tools. Whether you're a seasoned developer or just starting out, this event is packed with insights and opportunities.",
+        },
+        {
+            title: "Event 4",
+            image: "https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/155457833/original/4f7bcb41ce4907038168383dd8905021470a4477/do-your-javascript-and-web-developement-assignments.jpg",
+            descr: "Event 4 description: Experience the power of cloud computing in this comprehensive event. Learn about the benefits of cloud technology, understand its applications in various industries, and get a glimpse into the future of computing. This event is perfect for IT professionals and enthusiasts alike.",
+        },
+        {
+            title: "Event 5",
+            image: "https://www.herzing.edu/sites/default/files/2020-09/how-to-become-software-engineer.jpg",
+            descr: "Event 5 description: Join us for a deep dive into the world of cybersecurity. Learn about the latest threats, the best prevention strategies, and how to secure your digital assets. This event is a must-attend for anyone interested in keeping their data safe in the digital age.",
+        },
+        {
+            title: "Event 6",
+            image: "https://usa.bootcampcdn.com/wp-content/uploads/sites/108/2021/03/CDG_blog_post_image_02-2-850x412.jpg",
+            descr: "Event 6 description: Dive into the world of AI with this engaging event. Explore the latest advancements, meet industry experts, and learn how AI is shaping the future. Don't miss out on this opportunity to broaden your knowledge and network with like-minded individuals.",
+        },
     ]);
 
     const [currentEventIndex, setCurrentEventIndex] = useState(0);
@@ -71,6 +91,24 @@ const Events = () => {
                         dir={index % 2 === 1}
                     />
                 ))}
+            </div>
+            <div className="sign-up-container">
+                <div className="sign-up-container-head">
+                    <h3>
+                        Interested in HerAI Events?
+                        <br />
+                        Sign Up to Stay Informed!
+                    </h3>
+                </div>
+                <div className="sign-up-container-body">
+                    <p>
+                        Get access to all of our workshop content and get
+                        notified of upcoming events
+                    </p>
+                    <NavLink to={"/login"} className={"check-btn"}>
+                        Sign Up
+                    </NavLink>
+                </div>
             </div>
         </div>
     );

@@ -1,5 +1,5 @@
 .event-backdrop{
-    border: 5px solid pink;
+    border: 5px solid #8C6D6C;
     border-top: none;
     height: 500px;
     background-position: center;
@@ -45,12 +45,12 @@
     
 }
 
-.event-options div:hover{
+.event-options div:not(.active):hover {
     background-color: #2A292A;
 }
 
 .event-options .active{
-    background-color: pink;
+    background-color: #8C6D6C;
 }
 
 .event-options img{

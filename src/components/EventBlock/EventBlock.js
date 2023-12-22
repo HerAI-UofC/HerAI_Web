@@ -18,7 +18,15 @@ const EventBlock = ({ event, dir }) => {
             <div className="event-preview">
                 <h2>{event.title}</h2>
                 <p>{event.descr}</p>
-                <NavLink className={"check-btn"}>Check Out</NavLink>
+                <NavLink
+                    to={{
+                        pathname: `/event/${event.title.replace(" ", "")}`,
+                    }}
+                    state={event}
+                    className={"check-btn"}
+                >
+                    Check Out
+                </NavLink>
             </div>
         </div>
     );

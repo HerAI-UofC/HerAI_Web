@@ -44,7 +44,7 @@ const Event = () => {
             return (
                 <VideoPane
                     src={
-                        "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                        "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
                     }
                 />
             );

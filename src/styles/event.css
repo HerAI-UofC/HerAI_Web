@@ -1,0 +1,59 @@
+.event-backdrop{
+    border: 5px solid #8C6D6C;
+    border-top: none;
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 75px;
+}
+
+.event-backdrop div{
+    width: 50%;
+}
+
+.event-backdrop h1{
+    font-size: 40pt;
+}
+
+.event-backdrop h4{
+    font-size: 12pt;
+}
+
+.event-backdrop p{
+    font-family: lato;
+    font-size: 14pt;
+}
+
+.event-options{
+    display: flex;
+    justify-content: space-around;
+    background-color: #4C5053;
+    color: white;
+}
+
+.event-options div{
+    padding: 10px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 2px solid black;
+    
+}
+
+.event-options div:not(.active):hover {
+    background-color: #2A292A;
+}
+
+.event-options .active{
+    background-color: #8C6D6C;
+}
+
+.event-options img{
+   width: 50px;
+   filter: invert(1);
+}

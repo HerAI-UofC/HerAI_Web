@@ -1,0 +1,36 @@
+.event-block{
+    display: flex;
+    justify-content: space-between;
+    
+    padding: 0 75px;
+    margin: 100px 0;
+}
+
+.event-img{
+    height: 600px;
+    width: 40%;
+}
+
+.event-img img{
+    
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.event-preview{
+    width:50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.event-preview h2{
+    font-size: 30pt;
+}
+
+.event-preview p{
+    font-size: 14pt;
+    font-family: lato;
+}

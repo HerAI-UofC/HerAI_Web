@@ -1,0 +1,21 @@
+.pdf-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pdf-section h2{
+    font-size: 25pt;
+    margin-top: 20px;
+}
+
+.pdf-section p{
+    font-family: lato;
+    font-size: 14pt;
+}
+
+.pdf-section iframe{
+    width: 90%;
+    height: 750px;
+    margin: 20px 0;
+}

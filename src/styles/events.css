@@ -1,0 +1,107 @@
+.upcoming-container {
+    
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 100px;
+   
+}
+
+.upcoming-container h1{
+    font-size: 40pt;
+}
+
+.event{
+    display: flex;
+    flex-direction: column;
+}
+
+.event h2{
+    font-size: 30pt;
+}
+
+.event p {
+    width: 50%;
+    font-size: 12pt;
+    font-family: lato;
+}
+
+.check-btn{
+    background-color: #8C6D6C;
+    color:white;
+    border-radius: 10px;;
+    padding: 20px 80px;
+    margin-top: 20px;
+    width: fit-content;
+    font-family: lato;
+    font-weight: 800;
+}
+
+.dots{
+    display: flex;
+    justify-content:center;
+    background-color: #FFF2EB;
+    padding: 20px;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+#active-dot{
+    background-color: #717171;
+}
+
+.sign-up-container{
+    background-color: black;
+    border-radius: 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    margin: 75px;
+    padding: 50px;
+}
+
+.sign-up-container h3{
+    font-size: 20pt;
+}
+
+.sign-up-container-body{
+    display: flex;
+    flex-direction: column;
+    font-family: lato;
+    font-size: 14pt;
+    width: 50%;
+}
+
+.pagination{
+    text-align: center;
+}
+
+.pagination button{
+    margin: 0 10px;
+    height: 30px;
+    width: 30px;
+    background-color: #999;
+    border: none;
+    border-radius: 100%;
+    color: white;
+    cursor: pointer;
+    font-size:  16px;
+    transition: background-color 0.3s ease;
+}
+
+#active-page{
+    background-color: #8C6D6C;
+}

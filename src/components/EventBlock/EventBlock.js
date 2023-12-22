@@ -20,7 +20,10 @@ const EventBlock = ({ event, dir }) => {
                 <p>{event.descr}</p>
                 <NavLink
                     to={{
-                        pathname: `/event/${event.title.replace(" ", "")}`,
+                        pathname: `/HerAI_Web/events/${event.title.replace(
+                            " ",
+                            ""
+                        )}`,
                     }}
                     state={event}
                     className={"check-btn"}

@@ -1,6 +1,7 @@
 import "../styles/about.css";
 import ScrollTrigger from "react-scroll-trigger";
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 const About = () => {
     const [isVisible, setVisible] = useState(false);
@@ -64,7 +65,7 @@ const About = () => {
                             Join us and be at the forefront of innovation, where
                             diverse perspectives power the future of technology.
                         </p>
-                        <a href="/contact">Contact Us</a>
+                        <NavLink to="/HerAI_Web/contact">Contact Us</NavLink>
                     </div>
                 </div>
             </div>

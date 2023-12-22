@@ -1,6 +1,8 @@
+import React, { useState } from "react";
 import "./style.css";
 
 const GalleryPane = ({ imgs }) => {
+    const [fullscreenImage, setFullscreenImage] = useState(null);
     const columns = [[], [], []];
 
     if (imgs === null) {
@@ -8,7 +10,14 @@ const GalleryPane = ({ imgs }) => {
     }
 
     imgs.forEach((src, index) => {
-        columns[index % 3].push(<img src={src} alt="" key={index} />);
+        columns[index % 3].push(
+            <img
+                src={src}
+                alt=""
+                key={index}
+                onClick={() => setFullscreenImage(src)}
+            />
+        );
     });
 
     return (
@@ -19,6 +28,19 @@ const GalleryPane = ({ imgs }) => {
                 <div>{columns[1]}</div>
                 <div>{columns[2]}</div>
             </div>
+            {fullscreenImage && (
+                <>
+                    <div
+                        className="fullscreen-backdrop"
+                        onClick={() => setFullscreenImage(null)}
+                    />
+                    <img
+                        src={fullscreenImage}
+                        className="fullscreen-image"
+                        onClick={() => setFullscreenImage(null)}
+                    />
+                </>
+            )}
         </div>
     );
 };

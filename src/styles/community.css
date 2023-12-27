@@ -70,19 +70,24 @@
     background-color:#f8f6ee;
     height:130px;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    
 }
 
 .stay-connected{
     background-color: #fef2ec;
     border-radius: 30px;
     border: 1px solid black;
-    padding: 10px 450px;
-    margin-left: 135px;
+    /* padding: 10px 450px; */
+    padding: 10px 0;
+    width: 75%;
     margin-top: 50px;
     font-family: "Alice";
     font-size: 36px;
     text-align: center;
-    box-sizing: border-box;
+    
 }
 
 #connect{

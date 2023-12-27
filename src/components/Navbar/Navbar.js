@@ -17,24 +17,24 @@ const Navbar = () => {
         <nav>
             <img id="nav-logo" src={logo} alt="not found"></img>
             <div className="links">
-                <NavLink className={"link"} to="/">
+                <NavLink className={"link"} to="/HerAI_Web" end>
                     Home
                 </NavLink>
-                <NavLink className={"link"} to="/about">
+                <NavLink className={"link"} to="/HerAI_Web/about">
                     About
                 </NavLink>
-                <NavLink className={"link"} to="/events">
+                <NavLink className={"link"} to="/HerAI_Web/events">
                     Events
                 </NavLink>
-                <NavLink className={"link"} to="/community">
+                <NavLink className={"link"} to="/HerAI_Web/community">
                     Community
                 </NavLink>
-                <NavLink className={"link"} to="/contact">
+                <NavLink className={"link"} to="/HerAI_Web/contact">
                     Contact
                 </NavLink>
             </div>
 
-            <NavLink className={"login"} to="/login">
+            <NavLink className={"login"} to="/HerAI_Web/login">
                 Login
             </NavLink>
         </nav>

@@ -2,6 +2,7 @@ import "../styles/home.css";
 import img from "../img/titleImg.jpg";
 import img2 from "../img/2.jpg";
 import img3 from "../img/3.jpg";
+import { NavLink } from "react-router-dom";
 
 const Home = () => {
     window.addEventListener("scroll", () => {
@@ -36,9 +37,9 @@ const Home = () => {
                     and Machine Learning (AI/ML) club dedicated to amplifying
                     the voices and contributions of women in the tech landscape.
                 </h2>
-                <a className="about-btn" href="/about">
+                <NavLink className="about-btn" to="/HerAI_Web/about">
                     About Us
-                </a>
+                </NavLink>
             </div>
             <div className="statement-img-img">
                 <h1>Empowering Women in the AI Revolution</h1>

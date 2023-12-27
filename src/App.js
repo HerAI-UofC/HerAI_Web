@@ -8,21 +8,23 @@ import Community from "./pages/Community";
 import Contact from "./pages/Contact";
 import Login from "./pages/Login";
 import Events from "./pages/Events.js";
+import Event from "./pages/Event.js";
 
 import ScrollToTop from "./components/ScrollToTop.js";
 
 function App() {
     return (
-        <Router>
+        <Router basename="/">
             <ScrollToTop />
             <Navbar />
             <Routes>
-                <Route path="/" exact Component={Home} />
-                <Route path="/about" Component={About} />
-                <Route path="/community" Component={Community} />
-                <Route path="/contact" Component={Contact} />
-                <Route path="/events" Component={Events} />
-                <Route path="/login" Component={Login} />
+                <Route path="/HerAI_Web" exact Component={Home} />
+                <Route path="/HerAI_Web/about" Component={About} />
+                <Route path="/HerAI_Web/community" Component={Community} />
+                <Route path="/HerAI_Web/contact" Component={Contact} />
+                <Route path="/HerAI_Web/events" Component={Events} />
+                <Route path="/HerAI_Web/login" Component={Login} />
+                <Route path="/HerAI_Web/events/:eventTitle" Component={Event} />
             </Routes>
             <Footer />
         </Router>

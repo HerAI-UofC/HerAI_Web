@@ -1,19 +1,20 @@
 {
   "files": {
-    "main.css": "/HerAI_Web/static/css/main.cdd54a07.css",
-    "main.js": "/HerAI_Web/static/js/main.96fe4528.js",
+    "main.css": "/HerAI_Web/static/css/main.b411a9eb.css",
+    "main.js": "/HerAI_Web/static/js/main.3e1d4b3a.js",
     "static/media/community-img.png": "/HerAI_Web/static/media/community-img.0715be13c31c511ededc.png",
+    "static/media/contact-img.jpg": "/HerAI_Web/static/media/contact-img.cd6e3b61d6f3b2f8b03b.jpg",
     "static/media/4.jpg": "/HerAI_Web/static/media/4.fc1f50dfd059137ffffd.jpg",
     "static/media/titleImg.jpg": "/HerAI_Web/static/media/titleImg.e73b3eb7b38658e9df5d.jpg",
     "static/media/2.jpg": "/HerAI_Web/static/media/2.bee320efc78b23551475.jpg",
     "static/media/logo.png": "/HerAI_Web/static/media/logo.cc23f18f9a769dab6d85.png",
     "static/media/3.jpg": "/HerAI_Web/static/media/3.61c107d6f4b16b9bde52.jpg",
     "index.html": "/HerAI_Web/index.html",
-    "main.cdd54a07.css.map": "/HerAI_Web/static/css/main.cdd54a07.css.map",
-    "main.96fe4528.js.map": "/HerAI_Web/static/js/main.96fe4528.js.map"
+    "main.b411a9eb.css.map": "/HerAI_Web/static/css/main.b411a9eb.css.map",
+    "main.3e1d4b3a.js.map": "/HerAI_Web/static/js/main.3e1d4b3a.js.map"
   },
   "entrypoints": [
-    "static/css/main.cdd54a07.css",
-    "static/js/main.96fe4528.js"
+    "static/css/main.b411a9eb.css",
+    "static/js/main.3e1d4b3a.js"
   ]
 }

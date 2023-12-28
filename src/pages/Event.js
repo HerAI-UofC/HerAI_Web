@@ -1,16 +1,58 @@
 import { useLocation, useParams } from "react-router-dom";
 import "../styles/event.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import VideoPane from "../components/VideoPane/VideoPane";
 import SlidesPane from "../components/SlidesPane/SlidesPane";
 import GalleryPane from "../components/GalleryPane/GalleryPane";
 import DetailsPane from "../components/DetailsPane/DetailsPane";
+import { getUrl } from "aws-amplify/storage";
+import awsconfig from "../aws-exports";
+import { fetchAuthSession } from "aws-amplify/auth";
 
 const Event = () => {
     const location = useLocation();
     const event = location.state;
 
     const [activeOption, setActiveOption] = useState("vid");
+    const [vidSrc, setVidSrc] = useState(null);
+    const [pdfSrc, setPdfSrc] = useState(null);
+
+    const [file, setFile] = useState(null);
+    const [signedIn, setSignedIn] = useState(false);
+
+    const isUser = async () => {
+        try {
+            await fetchAuthSession();
+            setSignedIn(true);
+        } catch {
+            setSignedIn(false);
+        }
+    };
+
+    useEffect(() => {
+        isUser();
+    }, []);
+
+    useEffect(() => {
+        if (signedIn) {
+            console.log("IN");
+            getUrls();
+        } else {
+            console.log("OUT");
+        }
+    }, [signedIn]);
+
+    const getUrls = async () => {
+        //if()
+        const getVidUrl = await getUrl({
+            key: event.title.replace(" ", "").toLowerCase() + ".mp4",
+        });
+        const getPdfUrl = await getUrl({
+            key: event.title.replace(" ", "").toLowerCase() + ".pdf",
+        });
+        setVidSrc(getVidUrl.url.href);
+        setPdfSrc(getPdfUrl.url.href);
+    };
 
     if (event === null) {
         return <h1>NOT FOUND</h1>;
@@ -41,21 +83,9 @@ const Event = () => {
 
     const setView = () => {
         if (activeOption === "vid") {
-            return (
-                <VideoPane
-                    src={
-                        "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
-                    }
-                />
-            );
+            return <VideoPane src={vidSrc} />;
         } else if (activeOption === "pdf") {
-            return (
-                <SlidesPane
-                    src={
-                        "https://www.clickdimensions.com/links/TestPDFfile.pdf"
-                    }
-                />
-            );
+            return <SlidesPane src={pdfSrc} />;
         } else if (activeOption === "pic") {
             return <GalleryPane imgs={testList} />;
         } else if (activeOption === "info") {
@@ -72,7 +102,7 @@ const Event = () => {
                 }}
             >
                 <div>
-                    <h1>{event.title}</h1>
+                    <h1 onClick={() => test()}>{event.title}</h1>
                     <h4>December 21, 2023</h4>
                     <p>{event.descr}</p>
                 </div>

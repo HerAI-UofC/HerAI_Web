@@ -8,6 +8,7 @@ import DetailsPane from "../components/DetailsPane/DetailsPane";
 import { getUrl } from "aws-amplify/storage";
 import awsconfig from "../aws-exports";
 import { fetchAuthSession } from "aws-amplify/auth";
+import AccessDeniedPane from "../components/AccessDeniedPane/AccessDeniedPane";
 
 const Event = () => {
     const location = useLocation();
@@ -82,6 +83,10 @@ const Event = () => {
     ];
 
     const setView = () => {
+        if (!signedIn && (activeOption === "vid" || activeOption === "pdf")) {
+            return <AccessDeniedPane />;
+        }
+
         if (activeOption === "vid") {
             return <VideoPane src={vidSrc} />;
         } else if (activeOption === "pdf") {

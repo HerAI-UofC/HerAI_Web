@@ -59,28 +59,13 @@ const Event = () => {
         return <h1>NOT FOUND</h1>;
     }
 
-    const testList = [
-        "https://picsum.photos/id/237/200/300",
-        "https://picsum.photos/id/238/200/300",
-        "https://picsum.photos/id/239/200/300",
-        "https://picsum.photos/id/240/200/300",
-        "https://picsum.photos/id/241/200/300",
-        "https://picsum.photos/id/242/200/300",
-        "https://picsum.photos/id/243/200/300",
-        "https://picsum.photos/id/244/200/300",
-        "https://picsum.photos/id/245/200/300",
-        "https://picsum.photos/id/246/200/300",
-        "https://picsum.photos/id/247/200/300",
-        "https://picsum.photos/id/248/200/300",
-        "https://picsum.photos/id/249/200/300",
-        "https://picsum.photos/id/250/200/300",
-        "https://picsum.photos/id/251/200/300",
-        "https://picsum.photos/id/252/200/300",
-        "https://picsum.photos/id/253/200/300",
-        "https://picsum.photos/id/254/200/300",
-        "https://picsum.photos/id/255/200/300",
-        "https://picsum.photos/id/256/200/300",
-    ];
+    const galleryUrls = Array.from(
+        { length: 5 },
+        (_, i) =>
+            `https://res.cloudinary.com/dngcyqfpe/image/upload/${event.title
+                .replace(" ", "")
+                .toLowerCase()}-${i + 1}.jpg`
+    );
 
     const setView = () => {
         if (!signedIn && (activeOption === "vid" || activeOption === "pdf")) {
@@ -92,7 +77,7 @@ const Event = () => {
         } else if (activeOption === "pdf") {
             return <SlidesPane src={pdfSrc} />;
         } else if (activeOption === "pic") {
-            return <GalleryPane imgs={testList} />;
+            return <GalleryPane imgs={galleryUrls} />;
         } else if (activeOption === "info") {
             return <DetailsPane />;
         }

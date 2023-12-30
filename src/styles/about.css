@@ -40,6 +40,7 @@
 .about-section p{
     font-size: 25pt;
     font-family: "Lato";
+    font-weight: 300;
 }
 
 .vision-section{
@@ -62,6 +63,7 @@
 .vision-section p{
     font-size: 20pt;
     font-family: Lato;
+    font-weight: 300;
 }
 
 .contact-section{
@@ -84,7 +86,7 @@
 .txt-container{
     background-color: white;
     width: 30%;
-    padding: 50px 100px;
+    padding: 50px;
 }
 
 .txt-container h4{
@@ -96,6 +98,7 @@
 .txt-container p{
     font-size: 12pt;
     font-family: Lato;
+    font-weight: 300;
     margin: 20px 0 40px;
 }
 

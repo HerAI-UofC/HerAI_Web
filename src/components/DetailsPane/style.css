@@ -1,0 +1,34 @@
+.details-pane{
+    font-family: lato;
+    padding: 20px;
+}
+
+.details-pane h2{
+    font-family: alice;
+    font-size: 25pt;
+    text-align: center;
+}
+
+.details-box{
+    border-radius: 20px;
+    border: 1px solid #8C6D6C;
+    margin: 20px 0;
+    padding: 20px
+}
+
+.details-box h6{
+    margin: 5px 0;
+    font-size: 14pt;
+    font-weight: 300;
+}
+
+h6 strong{
+    font-weight: 700;
+}
+
+.details-box p{
+    font-size: 12pt;
+    margin: 10px 0;
+    font-weight: 300;
+}
+

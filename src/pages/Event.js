@@ -79,7 +79,24 @@ const Event = () => {
         } else if (activeOption === "pic") {
             return <GalleryPane imgs={galleryUrls} />;
         } else if (activeOption === "info") {
-            return <DetailsPane />;
+            return <DetailsPane event={event} fDate={formattedDate()} />;
+        }
+    };
+
+    const formattedDate = () => {
+        try {
+            const date = new Date(event.date);
+            let hours = date.getHours();
+            const minutes = String(date.getMinutes()).padStart(2, "0");
+            const ampm = hours >= 12 ? "PM" : "AM";
+            hours = hours % 12;
+            hours = hours ? hours : 12; // the hour '0' should be '12'
+            const formatted = `${
+                date.getMonth() + 1
+            }/${date.getDate()}/${date.getFullYear()} ${hours}:${minutes} ${ampm}`;
+            return formatted;
+        } catch {
+            return;
         }
     };
 
@@ -93,8 +110,9 @@ const Event = () => {
             >
                 <div>
                     <h1 onClick={() => test()}>{event.title}</h1>
-                    <h4>December 21, 2023</h4>
-                    <p>{event.descr}</p>
+                    <h5>{event.location}</h5>
+                    <h6>{formattedDate()}</h6>
+                    <p>{event.summary}</p>
                 </div>
             </div>
             <div className="event-options">

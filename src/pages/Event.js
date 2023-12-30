@@ -9,6 +9,7 @@ import { getUrl } from "aws-amplify/storage";
 import awsconfig from "../aws-exports";
 import { fetchAuthSession } from "aws-amplify/auth";
 import AccessDeniedPane from "../components/AccessDeniedPane/AccessDeniedPane";
+import UpcomingPane from "../components/UpcomingPane/UpcomingPane";
 
 const Event = () => {
     const location = useLocation();
@@ -31,15 +32,14 @@ const Event = () => {
     };
 
     useEffect(() => {
-        isUser();
+        if (!event.isUpcoming) {
+            isUser();
+        }
     }, []);
 
     useEffect(() => {
         if (signedIn) {
-            console.log("IN");
             getUrls();
-        } else {
-            console.log("OUT");
         }
     }, [signedIn]);
 
@@ -68,14 +68,23 @@ const Event = () => {
     );
 
     const setView = () => {
+        if (
+            event.isUpcoming &&
+            (activeOption === "vid" ||
+                activeOption === "pdf" ||
+                activeOption === "pic")
+        ) {
+            return <UpcomingPane />;
+        }
+
         if (!signedIn && (activeOption === "vid" || activeOption === "pdf")) {
             return <AccessDeniedPane />;
         }
 
         if (activeOption === "vid") {
-            return <VideoPane src={vidSrc} />;
+            return <VideoPane src={vidSrc} descr={event.videoDescription} />;
         } else if (activeOption === "pdf") {
-            return <SlidesPane src={pdfSrc} />;
+            return <SlidesPane src={pdfSrc} descr={event.pdfDescription} />;
         } else if (activeOption === "pic") {
             return <GalleryPane imgs={galleryUrls} />;
         } else if (activeOption === "info") {

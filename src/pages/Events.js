@@ -10,7 +10,7 @@ const Events = () => {
 
     const eventsBlockRef = useRef(null);
 
-    const [events, useEvents] = useState([
+    const [events, setEvents] = useState([
         {
             title: "Event 1",
             image: "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
@@ -42,6 +42,19 @@ const Events = () => {
             descr: "Event 6 description: Dive into the world of AI with this engaging event. Explore the latest advancements, meet industry experts, and learn how AI is shaping the future. Don't miss out on this opportunity to broaden your knowledge and network with like-minded individuals.",
         },
     ]);
+
+    useEffect(() => {
+        const updatedEvents = events.map((e) => {
+            return {
+                ...e,
+                header: `https://res.cloudinary.com/dngcyqfpe/image/upload/v1703908805/${e.title
+                    .replace(" ", "")
+                    .toLowerCase()}-head.jpg`,
+            };
+        });
+
+        setEvents(updatedEvents);
+    }, [events]);
 
     const [currentPage, setCurrentPage] = useState(1);
     const [eventsPerPage] = useState(3);
@@ -77,7 +90,7 @@ const Events = () => {
             <div
                 className="upcoming-container"
                 style={{
-                    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${events[currentEventIndex].image})`,
+                    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${events[currentEventIndex].header})`,
                 }}
             >
                 <h1>Upcoming Events</h1>

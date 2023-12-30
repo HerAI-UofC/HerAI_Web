@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import "./style.css";
 
 const EventBlock = ({ event, dir }) => {
-    console.log(event);
+    //console.log(event);
     return (
         <div
             className="event-block"
@@ -13,7 +13,7 @@ const EventBlock = ({ event, dir }) => {
             }
         >
             <div className="event-img">
-                <img src={event.image}></img>
+                <img src={event.header}></img>
             </div>
             <div className="event-preview">
                 <h2>{event.title}</h2>

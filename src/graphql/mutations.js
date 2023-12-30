@@ -1,6 +1,69 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
+export const createEvents = /* GraphQL */ `
+  mutation CreateEvents(
+    $input: CreateEventsInput!
+    $condition: ModelEventsConditionInput
+  ) {
+    createEvents(input: $input, condition: $condition) {
+      id
+      title
+      location
+      date
+      isUpcoming
+      summary
+      description
+      videoDescription
+      pdfDescription
+      presenters
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const updateEvents = /* GraphQL */ `
+  mutation UpdateEvents(
+    $input: UpdateEventsInput!
+    $condition: ModelEventsConditionInput
+  ) {
+    updateEvents(input: $input, condition: $condition) {
+      id
+      title
+      location
+      date
+      isUpcoming
+      summary
+      description
+      videoDescription
+      pdfDescription
+      presenters
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const deleteEvents = /* GraphQL */ `
+  mutation DeleteEvents(
+    $input: DeleteEventsInput!
+    $condition: ModelEventsConditionInput
+  ) {
+    deleteEvents(input: $input, condition: $condition) {
+      id
+      title
+      location
+      date
+      isUpcoming
+      summary
+      description
+      videoDescription
+      pdfDescription
+      presenters
+      createdAt
+      updatedAt
+    }
+  }
+`;
 export const createTodo = /* GraphQL */ `
   mutation CreateTodo(
     $input: CreateTodoInput!
@@ -12,7 +75,6 @@ export const createTodo = /* GraphQL */ `
       description
       createdAt
       updatedAt
-      __typename
     }
   }
 `;
@@ -27,7 +89,6 @@ export const updateTodo = /* GraphQL */ `
       description
       createdAt
       updatedAt
-      __typename
     }
   }
 `;
@@ -42,7 +103,6 @@ export const deleteTodo = /* GraphQL */ `
       description
       createdAt
       updatedAt
-      __typename
     }
   }
 `;

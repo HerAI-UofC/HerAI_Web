@@ -1,0 +1,13 @@
+{
+  "resourceName": "workshopContent",
+  "policyUUID": "ecc02b7a",
+  "bucketName": "content",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "READ",
+    "CREATE_AND_UPDATE"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}

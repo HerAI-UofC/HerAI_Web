@@ -27,6 +27,9 @@
       },
       "api": {
         "heraiamplifyauth": {}
+      },
+      "storage": {
+        "workshopContent": {}
       }
     }
   }

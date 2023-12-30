@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState } from "react";
-import { Document, Page } from "react-pdf";
 import { NavLink } from "react-router-dom";
 import "../styles/events.css";
 import EventBlock from "../components/EventBlock/EventBlock";
+import { generateClient } from "aws-amplify/api";
+import { listEvents } from "../graphql/queries";
 
 const Events = () => {
     // const videoSrc = "https://test-grab-bucket.s3.amazonaws.com/sample-5s.mp4";
@@ -10,38 +11,46 @@ const Events = () => {
 
     const eventsBlockRef = useRef(null);
 
-    const [events, useEvents] = useState([
+    const client = generateClient();
+
+    const [events, setEvents] = useState([
         {
-            title: "Event 1",
-            image: "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
-            descr: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        },
-        {
-            title: "Event 2",
-            image: "https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630",
-            descr: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.",
-        },
-        {
-            title: "Event 3",
-            image: "https://www.democracy-international.org/sites/default/files/styles/image_small/public/images/gluhbirne.png?itok=93fYU6Ln",
-            descr: "Event 3 description: Step into the exciting world of game development at this event. Discover the latest trends, learn from industry veterans, and get hands-on experience with cutting-edge tools. Whether you're a seasoned developer or just starting out, this event is packed with insights and opportunities.",
-        },
-        {
-            title: "Event 4",
-            image: "https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/155457833/original/4f7bcb41ce4907038168383dd8905021470a4477/do-your-javascript-and-web-developement-assignments.jpg",
-            descr: "Event 4 description: Experience the power of cloud computing in this comprehensive event. Learn about the benefits of cloud technology, understand its applications in various industries, and get a glimpse into the future of computing. This event is perfect for IT professionals and enthusiasts alike.",
-        },
-        {
-            title: "Event 5",
-            image: "https://www.herzing.edu/sites/default/files/2020-09/how-to-become-software-engineer.jpg",
-            descr: "Event 5 description: Join us for a deep dive into the world of cybersecurity. Learn about the latest threats, the best prevention strategies, and how to secure your digital assets. This event is a must-attend for anyone interested in keeping their data safe in the digital age.",
-        },
-        {
-            title: "Event 6",
-            image: "https://usa.bootcampcdn.com/wp-content/uploads/sites/108/2021/03/CDG_blog_post_image_02-2-850x412.jpg",
-            descr: "Event 6 description: Dive into the world of AI with this engaging event. Explore the latest advancements, meet industry experts, and learn how AI is shaping the future. Don't miss out on this opportunity to broaden your knowledge and network with like-minded individuals.",
+            title: "LOADING",
+            location: "LOADING",
+            date: "LOADING",
+            isUpcoming: true,
+            summary: "LOADING",
+            description: "LOADING",
+            videoDescription: "LOADING",
+            pdfDescription: "LOADING",
+            presenters: "LOADING",
         },
     ]);
+
+    const getEvents = async () => {
+        const all = await client.graphql({ query: listEvents });
+        setEvents(all.data.listEvents.items);
+        console.log("ALL", events);
+    };
+
+    useEffect(() => {
+        getEvents();
+    }, []);
+
+    useEffect(() => {
+        if (!events[0].header) {
+            const updatedEvents = events.map((e) => {
+                return {
+                    ...e,
+                    header: `https://res.cloudinary.com/dngcyqfpe/image/upload/v1703908805/${e.title
+                        .replace(" ", "")
+                        .toLowerCase()}-head.jpg`,
+                };
+            });
+
+            setEvents(updatedEvents);
+        }
+    }, [events]);
 
     const [currentPage, setCurrentPage] = useState(1);
     const [eventsPerPage] = useState(3);
@@ -59,38 +68,54 @@ const Events = () => {
 
     useEffect(() => {
         const timer = setInterval(() => {
-            setCurrentEventIndex((currentEventIndex + 1) % events.length);
+            setCurrentEventIndex(
+                (currentEventIndex + 1) % upcomingEvents.length
+            );
         }, 10000);
 
         return () => clearInterval(timer);
     }, [currentEventIndex, events.length]);
 
+    const formattedDate = () => {
+        try {
+            const date = new Date(events[currentEventIndex].date);
+            let hours = date.getHours();
+            const minutes = String(date.getMinutes()).padStart(2, "0");
+            const ampm = hours >= 12 ? "PM" : "AM";
+            hours = hours % 12;
+            hours = hours ? hours : 12; // the hour '0' should be '12'
+            const formatted = `${
+                date.getMonth() + 1
+            }/${date.getDate()}/${date.getFullYear()} ${hours}:${minutes} ${ampm}`;
+            return formatted;
+        } catch {
+            return;
+        }
+    };
+
+    const upcomingEvents = events.filter((event) => event.isUpcoming);
+
     return (
         <div>
-            {/* <h1>EVENTS</h1>
-            <video width="320" height="240" controls>
-                <source src={videoSrc} type="video/mp4" />
-                Your browser does not support the video tag.
-            </video>
-
-            <iframe src={pdfSrc} width="90%" height="500px" /> */}
             <div
                 className="upcoming-container"
                 style={{
-                    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${events[currentEventIndex].image})`,
+                    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${upcomingEvents[currentEventIndex].header})`,
                 }}
             >
                 <h1>Upcoming Events</h1>
                 <div className="event">
-                    <h2>{events[currentEventIndex].title}</h2>
-                    <p>{events[currentEventIndex].descr}</p>
+                    <h2>{upcomingEvents[currentEventIndex].title}</h2>
+                    <h5>{upcomingEvents[currentEventIndex].location}</h5>
+                    <h6>{formattedDate()}</h6>
+                    <p>{upcomingEvents[currentEventIndex].summary}</p>
                     <NavLink
                         to={{
-                            pathname: `/HerAI_Web/events/${events[
+                            pathname: `/HerAI_Web/events/${upcomingEvents[
                                 currentEventIndex
                             ].title.replace(" ", "")}`,
                         }}
-                        state={events[currentEventIndex]}
+                        state={upcomingEvents[currentEventIndex]}
                         className="check-btn"
                     >
                         Check Out
@@ -98,7 +123,7 @@ const Events = () => {
                 </div>
             </div>
             <div className="dots">
-                {events.map((event, index) => (
+                {upcomingEvents.map((event, index) => (
                     <span
                         key={index}
                         className="dot"

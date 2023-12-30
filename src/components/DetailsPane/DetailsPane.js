@@ -1,13 +1,24 @@
-const DetailsPane = () => {
-    return (
-        <div>
-            <h2>Event Details</h2>
-            <h6>Date</h6>
-            <h6>Guests: </h6>
-            <h6>Presenters:</h6>
-            <h6>Sponsors?</h6>
+import "./style.css";
 
-            <p>longer Description</p>
+const DetailsPane = ({ event, fDate }) => {
+    return (
+        <div className="details-pane">
+            <h2>Event Details</h2>
+            <div className="details-box">
+                <h6>
+                    <strong>Location: </strong> {event.location}
+                </h6>
+                <h6>
+                    <strong>Date: </strong>
+                    {fDate}
+                </h6>
+                <h6>
+                    <strong>Presenters: </strong>
+                    {event.presenters}
+                </h6>
+
+                <p>{event.description}</p>
+            </div>
         </div>
     );
 };

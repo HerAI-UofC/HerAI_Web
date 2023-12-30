@@ -1,65 +1,111 @@
 import { useLocation, useParams } from "react-router-dom";
 import "../styles/event.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import VideoPane from "../components/VideoPane/VideoPane";
 import SlidesPane from "../components/SlidesPane/SlidesPane";
 import GalleryPane from "../components/GalleryPane/GalleryPane";
 import DetailsPane from "../components/DetailsPane/DetailsPane";
+import { getUrl } from "aws-amplify/storage";
+import awsconfig from "../aws-exports";
+import { fetchAuthSession } from "aws-amplify/auth";
+import AccessDeniedPane from "../components/AccessDeniedPane/AccessDeniedPane";
+import UpcomingPane from "../components/UpcomingPane/UpcomingPane";
 
 const Event = () => {
     const location = useLocation();
     const event = location.state;
 
     const [activeOption, setActiveOption] = useState("vid");
+    const [vidSrc, setVidSrc] = useState(null);
+    const [pdfSrc, setPdfSrc] = useState(null);
+
+    const [file, setFile] = useState(null);
+    const [signedIn, setSignedIn] = useState(false);
+
+    const isUser = async () => {
+        try {
+            await fetchAuthSession();
+            setSignedIn(true);
+        } catch {
+            setSignedIn(false);
+        }
+    };
+
+    useEffect(() => {
+        if (!event.isUpcoming) {
+            isUser();
+        }
+    }, []);
+
+    useEffect(() => {
+        if (signedIn) {
+            getUrls();
+        }
+    }, [signedIn]);
+
+    const getUrls = async () => {
+        //if()
+        const getVidUrl = await getUrl({
+            key: event.title.replace(" ", "").toLowerCase() + ".mp4",
+        });
+        const getPdfUrl = await getUrl({
+            key: event.title.replace(" ", "").toLowerCase() + ".pdf",
+        });
+        setVidSrc(getVidUrl.url.href);
+        setPdfSrc(getPdfUrl.url.href);
+    };
 
     if (event === null) {
         return <h1>NOT FOUND</h1>;
     }
 
-    const testList = [
-        "https://picsum.photos/id/237/200/300",
-        "https://picsum.photos/id/238/200/300",
-        "https://picsum.photos/id/239/200/300",
-        "https://picsum.photos/id/240/200/300",
-        "https://picsum.photos/id/241/200/300",
-        "https://picsum.photos/id/242/200/300",
-        "https://picsum.photos/id/243/200/300",
-        "https://picsum.photos/id/244/200/300",
-        "https://picsum.photos/id/245/200/300",
-        "https://picsum.photos/id/246/200/300",
-        "https://picsum.photos/id/247/200/300",
-        "https://picsum.photos/id/248/200/300",
-        "https://picsum.photos/id/249/200/300",
-        "https://picsum.photos/id/250/200/300",
-        "https://picsum.photos/id/251/200/300",
-        "https://picsum.photos/id/252/200/300",
-        "https://picsum.photos/id/253/200/300",
-        "https://picsum.photos/id/254/200/300",
-        "https://picsum.photos/id/255/200/300",
-        "https://picsum.photos/id/256/200/300",
-    ];
+    const galleryUrls = Array.from(
+        { length: 5 },
+        (_, i) =>
+            `https://res.cloudinary.com/dngcyqfpe/image/upload/${event.title
+                .replace(" ", "")
+                .toLowerCase()}-${i + 1}.jpg`
+    );
 
     const setView = () => {
+        if (
+            event.isUpcoming &&
+            (activeOption === "vid" ||
+                activeOption === "pdf" ||
+                activeOption === "pic")
+        ) {
+            return <UpcomingPane />;
+        }
+
+        if (!signedIn && (activeOption === "vid" || activeOption === "pdf")) {
+            return <AccessDeniedPane />;
+        }
+
         if (activeOption === "vid") {
-            return (
-                <VideoPane
-                    src={
-                        "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
-                    }
-                />
-            );
+            return <VideoPane src={vidSrc} descr={event.videoDescription} />;
         } else if (activeOption === "pdf") {
-            return (
-                <SlidesPane
-                    src={
-                        "https://www.clickdimensions.com/links/TestPDFfile.pdf"
-                    }
-                />
-            );
+            return <SlidesPane src={pdfSrc} descr={event.pdfDescription} />;
         } else if (activeOption === "pic") {
-            return <GalleryPane imgs={testList} />;
+            return <GalleryPane imgs={galleryUrls} />;
         } else if (activeOption === "info") {
-            return <DetailsPane />;
+            return <DetailsPane event={event} fDate={formattedDate()} />;
+        }
+    };
+
+    const formattedDate = () => {
+        try {
+            const date = new Date(event.date);
+            let hours = date.getHours();
+            const minutes = String(date.getMinutes()).padStart(2, "0");
+            const ampm = hours >= 12 ? "PM" : "AM";
+            hours = hours % 12;
+            hours = hours ? hours : 12; // the hour '0' should be '12'
+            const formatted = `${
+                date.getMonth() + 1
+            }/${date.getDate()}/${date.getFullYear()} ${hours}:${minutes} ${ampm}`;
+            return formatted;
+        } catch {
+            return;
         }
     };
 
@@ -68,13 +114,14 @@ const Event = () => {
             <div
                 className="event-backdrop"
                 style={{
-                    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${event.image})`,
+                    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${event.header})`,
                 }}
             >
                 <div>
-                    <h1>{event.title}</h1>
-                    <h4>December 21, 2023</h4>
-                    <p>{event.descr}</p>
+                    <h1 onClick={() => test()}>{event.title}</h1>
+                    <h5>{event.location}</h5>
+                    <h6>{formattedDate()}</h6>
+                    <p>{event.summary}</p>
                 </div>
             </div>
             <div className="event-options">

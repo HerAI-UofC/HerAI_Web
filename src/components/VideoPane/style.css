@@ -11,8 +11,9 @@
 
 .vid-container p{
     font-family: lato;
+    font-weight: 300;
     font-size: 14pt;
-    margin-bottom: 20px;
+    margin: 20px 75px;
 }
 
 .vid-container video{

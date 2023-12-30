@@ -12,6 +12,8 @@
 .pdf-section p{
     font-family: lato;
     font-size: 14pt;
+    font-weight: 300;
+    margin: 20px 75px;
 }
 
 .pdf-section iframe{

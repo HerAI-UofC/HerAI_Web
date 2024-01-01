@@ -3,26 +3,36 @@ import img from "../img/titleImg.jpg";
 import img2 from "../img/2.jpg";
 import img3 from "../img/3.jpg";
 import { NavLink } from "react-router-dom";
+import { useEffect, useRef } from "react";
 
 const Home = () => {
-    window.addEventListener("scroll", () => {
-        const txt = document.getElementById("blurb");
-        //console.log(txt);
-        if (txt) {
-            //console.log("THERE");
-            const winHeight = window.innerHeight;
-            const txtTop = txt.getBoundingClientRect().top;
+    const ref = useRef(null);
 
-            if (txtTop - winHeight <= 0) {
-                //console.log("STARTED");
-                txt.classList.add("fade-in");
-            } else {
-                txt.classList.remove("fade-in");
+    useEffect(() => {
+        if (window.innerWidth <= 768) {
+            if (ref.current) {
+                ref.current.classList.add("fade-in");
             }
         } else {
-            //console.log("NOT THERE");
+            const checkScroll = () => {
+                if (ref.current) {
+                    const winHeight = window.innerHeight;
+                    const txtTop = ref.current.getBoundingClientRect().top;
+                    if (txtTop - winHeight <= 0) {
+                        ref.current.classList.add("fade-in");
+                    } else {
+                        ref.current.classList.remove("fade-out");
+                    }
+                }
+            };
+
+            window.addEventListener("scroll", checkScroll);
+
+            return () => {
+                window.removeEventListener("scroll", checkScroll);
+            };
         }
-    });
+    }, []);
 
     return (
         <>
@@ -32,7 +42,7 @@ const Home = () => {
             </div>
             <img src={img} alt="x" id="title-img"></img>
             <div className="about-blurb">
-                <h2 id="blurb">
+                <h2 id="blurb" ref={ref}>
                     HerAI is a forward-thinking Women in Artificial Intelligence
                     and Machine Learning (AI/ML) club dedicated to amplifying
                     the voices and contributions of women in the tech landscape.

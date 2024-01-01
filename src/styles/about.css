@@ -77,7 +77,7 @@
     background-image: url("../img/4.jpg");
     background-size:cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment:fixed;
     align-items: center;
     padding: 100px 0;
     
@@ -123,4 +123,74 @@
 .slide-in{
     visibility: visible;
     animation: slide-in 2s forwards;
+}
+
+/* Existing CSS... */
+
+@media (max-width: 768px) {
+    .body-header {
+        padding: 60px 0;
+    }
+
+    .body-header h1 {
+        font-size: 24pt;
+    }
+
+    .about-section {
+        padding: 50px 30px;
+    }
+
+    .about-section h3 {
+        font-size: 20pt;
+    }
+
+    .about-section p {
+        font-size: 14pt;
+    }
+
+    .vision-section {
+        flex-direction: column;
+        padding: 50px 30px;
+    }
+
+    .vision-section h2 {
+        font-size: 20pt;
+        width: 100%;
+        text-align: left;
+        border-right: none;
+        padding:0;
+        margin: 0 0 15px 0;
+    }
+
+    .vision-section p {
+        font-size: 14pt;
+        
+    }
+
+    .contact-section {
+        padding: 20px 10px;
+    }
+
+    .scroll-img-container {
+        flex-direction: column;
+        padding: 40px;
+    }
+
+    .txt-container {
+        width: 100%;
+        padding: 30px 20px;
+    }
+
+    .txt-container h4 {
+        font-size: 20pt;
+    }
+
+    .txt-container p {
+        font-size: 12pt;
+        margin: 20px 0;
+    }
+
+    .txt-container a {
+        padding: 10px 25px;
+    }
 }

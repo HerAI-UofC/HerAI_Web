@@ -11,14 +11,14 @@ const About = () => {
         console.log("CALLED");
     };
 
-    window.addEventListener("scroll", function () {
-        const parallax = this.document.getElementById("scroll-effect");
-        if (parallax) {
-            let scrollPosition = this.window.pageYOffset;
-            parallax.style.backgroundPositionY =
-                scrollPosition * -0.75 + 1000 + "px";
-        }
-    });
+    // window.addEventListener("scroll", function () {
+    //     const parallax = this.document.getElementById("scroll-effect");
+    //     if (parallax) {
+    //         let scrollPosition = this.window.pageYOffset;
+    //         parallax.style.backgroundPositionY =
+    //             scrollPosition * -0.75 + 1000 + "px";
+    //     }
+    // });
 
     return (
         <>

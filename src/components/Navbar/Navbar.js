@@ -1,11 +1,16 @@
 import "./style.css";
-import { NavLink } from "react-router-dom";
-import { useState } from "react";
+import { NavLink, useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
 import React from "react";
 import logo from "../../img/logo.png";
 
 const Navbar = () => {
     const [isNavVisible, setNavVisible] = useState(false);
+    const location = useLocation();
+
+    useEffect(() => {
+        setNavVisible(false);
+    }, [location]);
 
     const toggleNav = () => {
         setNavVisible(!isNavVisible);

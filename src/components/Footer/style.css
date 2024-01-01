@@ -3,7 +3,7 @@
     margin: 0;
     display: flex;
     justify-content: space-between;
-    font-size: 10pt;
+    font-size: 10px;
     padding: 75px 50px;
     align-items:flex-start;
 }
@@ -18,6 +18,13 @@
     color: black;
     font-family: "Lato";
     margin-bottom: 10px;
+    font-size: 11pt;
+}
+
+.footer p{
+    font-family: lato;
+    font-weight: 300;
+    font-size: 12pt;
 }
 
 #footer-logo{
@@ -29,5 +36,33 @@
 #contact-btn{
     background-color: black;
     color: white;
-    padding: 15px 70px;
+    font-size: 10pt;
+    padding: 10px 60px;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    #footer-logo{
+       height: 60px;
+       margin: 10px 0;
+    }
+
+    #contact-btn {
+        text-align: center; 
+    }
+
+    .links-column{
+        font-size: 11pt;
+    }
+
+    .footer p{
+        font-size: 12pt;
+        margin: 10px 0;
+    }
 }

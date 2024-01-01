@@ -55,3 +55,53 @@ nav.scrolled{
 .login.active{
     font-weight: normal;
 }
+
+
+.links, .login {
+    display: flex;
+}
+
+.menu-icon {
+    display: none;
+}
+
+@media (max-width: 1000px) {
+    nav{
+        flex-direction: column;
+        padding: 20px 50px;
+    }
+
+    .mobile-menu{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .links, .login {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+        font-size: 20pt;
+        color: black;
+    }
+
+    .show {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px;
+        font-size: 14pt;
+    }
+
+    .show a {
+        margin: 2px 0;
+        border-bottom: 0.5px solid grey;
+    }
+
+    .login{
+        width: fit-content;
+        align-items: center;
+        margin: 0 auto;
+    }
+}

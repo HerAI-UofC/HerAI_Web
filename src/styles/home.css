@@ -39,6 +39,9 @@ body{
     text-align: center;
     font-family: "Alice";
     padding: 100px 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .about-blurb h2{
@@ -50,6 +53,7 @@ body{
 .about-btn{
     text-decoration: none;
     background-color: black;
+    width: fit-content;
     padding: 15px 75px;
     color: white;
 }
@@ -123,4 +127,63 @@ body{
 
 #blurb.fade-in{
     opacity: 1;
+}
+
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .title-head {
+        padding: 50px;
+    }
+
+    .title-head h1 {
+        font-size: 30pt;
+    }
+
+    .title-head h4 {
+        font-size: 16pt;
+    }
+
+    .about-blurb {
+        padding: 40px 25px;
+    }
+    .about-blurb h2 {
+        font-size: 16pt;
+        margin-bottom: 20px;
+    }
+
+    .about-btn {
+        padding: 10px 40px;
+        font-size: 10pt;
+    }
+
+    .statement-img-img {
+        padding: 40px 25px;
+    }
+
+    .statement-img-img h1 {
+        font-size: 20pt;
+        margin-bottom: 25px;
+    }
+
+    .why-join-section {
+        font-size: 20pt;
+        padding: 40px 25px;
+    }
+
+    .text-container {
+        margin: 0;
+        flex-direction: column;
+    }
+
+    .text-container div {
+        padding-top: 30px;
+    }
+
+    .text-container h6 {
+        font-size: 14pt;
+    }
+    .text-container p {
+        font-size: 10pt;
+    }
 }

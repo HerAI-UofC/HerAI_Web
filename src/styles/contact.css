@@ -8,8 +8,7 @@
 .email-column{
     flex: 1;
     padding: 20px;
-    font-family: "Alice";
-    font-size: 35px;
+    font-size: 210%;
     text-align: center;
 }
 
@@ -19,10 +18,10 @@
     padding-bottom: 575px;
 }
 
-/*contact form*/
+/* contact form */
 .email-form{
     margin: auto;
-    font-size: 16px;
+    font-size: 50%;
     text-align: left;
 }
 
@@ -84,7 +83,7 @@
 .contact-info {
     background-color: white;
     display: flex;
-    height: 500px;
+    height: auto;
     padding: 100px 150px;
 }
 
@@ -94,14 +93,52 @@
 }
 
 .info-section h1 {
-    font-size: 35px;
+    font-size: 210%;
 }
 
 .info-section p {
     padding-top: 25px;
-    font-size: 18px;
+    font-size: 120%;
 }
 
 .highlight {
     color: #985252;
 }
+
+/* Responsive design */
+@media only screen and (max-width: 768px) {
+    .email-header{
+        flex-direction: column;
+        height:600px;
+        padding: 50px;
+    }
+    
+    .email-column {
+        padding: 30px 0px;
+        text-align: center;
+    }
+
+    .email-column:nth-child(2){
+        background-color: white;
+        padding: 55px 50px;
+        padding-bottom: 100px;
+    }
+    
+    .email-form button {
+        width: 100%;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        padding: 30px 20px;
+    }
+
+    .maps {
+        padding: 50px 0;
+    }
+
+    .maps iframe {
+        height: auto;
+        width: auto;
+    }
+} 

@@ -1,6 +1,6 @@
 import "../styles/contact.css";
 import img from "../img/contact-logo.png";
-import {useState} from 'react'; // TODO
+import {useState} from 'react';
 
 const Contact = () => {
 

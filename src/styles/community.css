@@ -21,10 +21,8 @@
 }
 
 #heart-img {
-    /* padding-top: 20px; */
     margin: 20px auto;
     width: 100px;
-    /* margin-left: 43%; */
 }
 
 #triangle-img{
@@ -113,7 +111,8 @@
 }
 
 .instagram img{
-    width: 75px;
+    width: 65%;
+    margin: auto;
 }
 
 .instagram a:hover{
@@ -121,7 +120,8 @@
 }
 
 .discord img{
-    width: 125px;
+    width: 75%;
+    margin: auto;
 } 
 
 .discord a:hover{
@@ -129,9 +129,37 @@
 }
 
 .linkedin img{
-    width: 100px;
+    width: 65%;
+    margin: auto;
 }
 
 .linkedin a:hover{
     color: #985252;
 }
+
+/* Responsive design */
+@media only screen and (max-width: 768px) {
+    .title{
+        flex-direction: column;
+        height: 800px;
+    }
+
+    #triangle-img{
+        margin: 50px auto;
+        height: 75%;
+        width: 75%;
+    }
+
+    .divider{
+        margin: auto;
+    }
+
+    .sign-up p{
+        padding: 20px 0;
+    }
+
+    .links-section-2{
+        padding: 25px 50px;
+    }
+
+} 

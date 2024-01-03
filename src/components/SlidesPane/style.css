@@ -18,6 +18,23 @@
 
 .pdf-section iframe{
     width: 90%;
-    height: 750px;
+    height: 90vh;
     margin: 20px 0;
+}
+
+@media screen and (max-width: 768px) {
+    .pdf-section h2 {
+        font-size: 20pt;
+        margin-top: 10px;
+    }
+
+    .pdf-section p {
+        font-size: 12pt;
+        margin: 10px 20px;
+    }
+
+    .pdf-section iframe {
+        width: 95%;
+        height: 50vh;
+    }
 }

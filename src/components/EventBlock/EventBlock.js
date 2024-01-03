@@ -21,14 +21,22 @@ const EventBlock = ({ event, dir }) => {
         }
     };
 
+    const setFlexDirection = () => {
+        if (window.innerWidth < 600) {
+            return "column";
+        }
+
+        if (dir) {
+            return "row-reverse";
+        } else {
+            return "row";
+        }
+    };
+
     return (
         <div
             className="event-block"
-            style={
-                dir
-                    ? { flexDirection: "row-reverse" }
-                    : { flexDirection: "row" }
-            }
+            style={{ flexDirection: setFlexDirection() }}
         >
             <div className="event-img">
                 <img src={event.header}></img>

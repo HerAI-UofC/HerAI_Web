@@ -35,3 +35,29 @@
     font-family: lato;
     font-weight: 300;
 }
+
+@media screen and (max-width: 600px) {
+    .event-block {
+        display: flex;
+        flex-direction: column;
+        padding: 0 20px;
+        margin: 50px 0;
+    }
+
+    .event-img {
+        height: auto;
+        width: 100%;
+    }
+
+    .event-preview {
+        width: 100%;
+    }
+
+    .event-preview h2 {
+        font-size: 20pt;
+    }
+
+    .event-preview p {
+        font-size: 12pt;
+    }
+}

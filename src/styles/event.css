@@ -58,3 +58,48 @@
    width: 50px;
    filter: invert(1);
 }
+
+@media screen and (max-width: 1000px) {
+    .event-backdrop div{
+        width: 75%;
+    }
+    .event-backdrop p{
+        font-size: 12pt;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .event-backdrop {
+        padding: 20px;
+        height: auto;
+    }
+
+    .event-backdrop div {
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    .event-backdrop h1 {
+        font-size: 20pt;
+    }
+
+    .event-backdrop p{
+        font-size: 11pt;
+    }
+
+    .event-options {
+        font-size: 10pt;
+    }
+
+    .event-options div {
+        width: 100%;
+        border-right: none;
+        border-bottom: 2px solid black;
+    }
+
+    .event-options img {
+        width: 20px;
+        margin: 5px 0;
+    }
+}
+

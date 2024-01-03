@@ -35,3 +35,56 @@
     font-family: lato;
     font-weight: 300;
 }
+
+@media screen and (max-width: 768px) {
+    .event-block {
+        display: flex;
+        flex-direction: column;
+        padding: 0 20px;
+        margin: 50px 0;
+    }
+
+    .event-img {
+        height: auto;
+        width: 100%;
+    }
+
+    .event-preview {
+        width: 100%;
+    }
+
+    .event-preview h2 {
+        font-size: 20pt;
+    }
+
+    .event-preview p {
+        font-size: 12pt;
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
+    .event-block {
+
+        padding: 0 40px;
+        margin: 75px 0;
+    }
+
+    .event-img {
+        height: auto;
+        width: 100%;
+        margin-right: 20px;
+    }
+
+    .event-preview {
+        width: 100%;
+    }
+
+    .event-preview h2 {
+        font-size: 25pt;
+    }
+
+    .event-preview p {
+        font-size: 13pt;
+    }
+}

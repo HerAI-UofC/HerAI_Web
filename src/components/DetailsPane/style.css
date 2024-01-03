@@ -27,8 +27,44 @@ h6 strong{
 }
 
 .details-box p{
-    font-size: 12pt;
+    font-size: 16pt;
     margin: 10px 0;
     font-weight: 300;
+}
+
+@media screen and (max-width: 1000px) {
+    .details-pane h2 {
+        font-size: 20pt;
+    }
+
+    .details-box {
+        padding: 10px;
+    }
+
+    .details-box h6 {
+        font-size: 12pt;
+    }
+
+    .details-box p {
+        font-size: 14pt;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .details-pane h2 {
+        font-size: 20pt;
+    }
+
+    .details-box {
+        padding: 10px;
+    }
+
+    .details-box h6 {
+        font-size: 12pt;
+    }
+
+    .details-box p {
+        font-size: 12pt;
+    }
 }
 

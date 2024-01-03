@@ -16,6 +16,7 @@ export const getEvents = /* GraphQL */ `
       presenters
       createdAt
       updatedAt
+      __typename
     }
   }
 `;
@@ -39,8 +40,48 @@ export const listEvents = /* GraphQL */ `
         presenters
         createdAt
         updatedAt
+        __typename
       }
       nextToken
+      __typename
+    }
+  }
+`;
+export const getCandidate = /* GraphQL */ `
+  query GetCandidate($id: ID!) {
+    getCandidate(id: $id) {
+      id
+      firstname
+      lastname
+      message
+      number
+      email
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const listCandidates = /* GraphQL */ `
+  query ListCandidates(
+    $filter: ModelCandidateFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listCandidates(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        firstname
+        lastname
+        message
+        number
+        email
+        createdAt
+        updatedAt
+        __typename
+      }
+      nextToken
+      __typename
     }
   }
 `;
@@ -52,6 +93,7 @@ export const getTodo = /* GraphQL */ `
       description
       createdAt
       updatedAt
+      __typename
     }
   }
 `;
@@ -68,8 +110,10 @@ export const listTodos = /* GraphQL */ `
         description
         createdAt
         updatedAt
+        __typename
       }
       nextToken
+      __typename
     }
   }
 `;

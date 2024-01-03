@@ -23,6 +23,14 @@
           "EMAILMESSAGE": "Hello,To complete your registration and unlock t",
           "deploymentBucketName": "amplify-heraiamplifyauth-dev-103549-deployment",
           "s3Key": "amplify-builds/heraiamplifyauth9cda9675CustomMessage-39744968466956535468-build.zip"
+        },
+        "getformdata": {
+          "sesEmail": "connect.herai@gmail.com"
+        },
+        "getcontactinfo": {
+          "deploymentBucketName": "amplify-heraiamplifyauth-dev-103549-deployment",
+          "s3Key": "amplify-builds/getcontactinfo-5275676d594e4d676a72-build.zip",
+          "sesEmail": "connect.herai@gmail.com"
         }
       },
       "api": {

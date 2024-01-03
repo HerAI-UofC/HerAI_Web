@@ -16,6 +16,7 @@ export const onCreateEvents = /* GraphQL */ `
       presenters
       createdAt
       updatedAt
+      __typename
     }
   }
 `;
@@ -34,6 +35,7 @@ export const onUpdateEvents = /* GraphQL */ `
       presenters
       createdAt
       updatedAt
+      __typename
     }
   }
 `;
@@ -52,6 +54,58 @@ export const onDeleteEvents = /* GraphQL */ `
       presenters
       createdAt
       updatedAt
+      __typename
+    }
+  }
+`;
+export const onCreateCandidate = /* GraphQL */ `
+  subscription OnCreateCandidate(
+    $filter: ModelSubscriptionCandidateFilterInput
+  ) {
+    onCreateCandidate(filter: $filter) {
+      id
+      firstname
+      lastname
+      message
+      number
+      email
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const onUpdateCandidate = /* GraphQL */ `
+  subscription OnUpdateCandidate(
+    $filter: ModelSubscriptionCandidateFilterInput
+  ) {
+    onUpdateCandidate(filter: $filter) {
+      id
+      firstname
+      lastname
+      message
+      number
+      email
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const onDeleteCandidate = /* GraphQL */ `
+  subscription OnDeleteCandidate(
+    $filter: ModelSubscriptionCandidateFilterInput
+  ) {
+    onDeleteCandidate(filter: $filter) {
+      id
+      firstname
+      lastname
+      message
+      number
+      email
+      createdAt
+      updatedAt
+      __typename
     }
   }
 `;
@@ -63,6 +117,7 @@ export const onCreateTodo = /* GraphQL */ `
       description
       createdAt
       updatedAt
+      __typename
     }
   }
 `;
@@ -74,6 +129,7 @@ export const onUpdateTodo = /* GraphQL */ `
       description
       createdAt
       updatedAt
+      __typename
     }
   }
 `;
@@ -85,6 +141,7 @@ export const onDeleteTodo = /* GraphQL */ `
       description
       createdAt
       updatedAt
+      __typename
     }
   }
 `;

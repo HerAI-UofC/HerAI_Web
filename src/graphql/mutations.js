@@ -19,6 +19,7 @@ export const createEvents = /* GraphQL */ `
       presenters
       createdAt
       updatedAt
+      __typename
     }
   }
 `;
@@ -40,6 +41,7 @@ export const updateEvents = /* GraphQL */ `
       presenters
       createdAt
       updatedAt
+      __typename
     }
   }
 `;
@@ -61,6 +63,61 @@ export const deleteEvents = /* GraphQL */ `
       presenters
       createdAt
       updatedAt
+      __typename
+    }
+  }
+`;
+export const createCandidate = /* GraphQL */ `
+  mutation CreateCandidate(
+    $input: CreateCandidateInput!
+    $condition: ModelCandidateConditionInput
+  ) {
+    createCandidate(input: $input, condition: $condition) {
+      id
+      firstname
+      lastname
+      message
+      number
+      email
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const updateCandidate = /* GraphQL */ `
+  mutation UpdateCandidate(
+    $input: UpdateCandidateInput!
+    $condition: ModelCandidateConditionInput
+  ) {
+    updateCandidate(input: $input, condition: $condition) {
+      id
+      firstname
+      lastname
+      message
+      number
+      email
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const deleteCandidate = /* GraphQL */ `
+  mutation DeleteCandidate(
+    $input: DeleteCandidateInput!
+    $condition: ModelCandidateConditionInput
+  ) {
+    deleteCandidate(input: $input, condition: $condition) {
+      id
+      firstname
+      lastname
+      message
+      number
+      email
+      createdAt
+      updatedAt
+      __typename
     }
   }
 `;
@@ -75,6 +132,7 @@ export const createTodo = /* GraphQL */ `
       description
       createdAt
       updatedAt
+      __typename
     }
   }
 `;
@@ -89,6 +147,7 @@ export const updateTodo = /* GraphQL */ `
       description
       createdAt
       updatedAt
+      __typename
     }
   }
 `;
@@ -103,6 +162,7 @@ export const deleteTodo = /* GraphQL */ `
       description
       createdAt
       updatedAt
+      __typename
     }
   }
 `;

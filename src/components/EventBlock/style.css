@@ -36,7 +36,7 @@
     font-weight: 300;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
     .event-block {
         display: flex;
         flex-direction: column;

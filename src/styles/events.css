@@ -107,7 +107,7 @@
     background-color: #8C6D6C;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
     .upcoming-container {
         padding: 0 20px;
         height: 50vh;
@@ -162,3 +162,35 @@
         margin: 20px auto 10px auto;
     }
 }
+
+@media screen and (max-width: 1000px) {
+    .upcoming-container{
+        height: 50vh;
+    }
+
+    .event p {
+        width: 75%;
+    }
+
+    .sign-up-container {
+        flex-direction: column;
+        margin: 50px 25px;
+        padding: 20px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .sign-up-container h3{
+        font-size: 18pt;
+        margin-bottom: 20px;
+    }
+
+    .sign-up-container-body {
+        width: 100%;
+    }
+
+    .sign-up-container-body a{
+        padding: 10px 40px;
+        margin: 20px auto 10px auto;
+    }
+}   

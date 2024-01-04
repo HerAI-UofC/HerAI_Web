@@ -1,6 +1,10 @@
 import "../styles/contact.css";
 import img from "../img/contact-logo.png";
-import {useState} from 'react';
+import {Amplify} from 'aws-amplify'
+import {createCandidate} from '../graphql/mutations'
+import { generateClient } from "aws-amplify/api";
+import {useState} from 'react'; // TODO
+
 
 const Contact = () => {
 
@@ -21,15 +25,33 @@ const Contact = () => {
         phone: '',
         message: ''
     });
-
+    const client = generateClient();
     const handleChange = (event) => {
         const { name, value } = event.target;
         setFormData({...formData, [name]: value})
     };
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
         console.log("Form submitted", formData)
+        const firstname = formData.firstName
+        const lastname = formData.lastName
+        const email = formData.email
+        const number = formData.phone
+        const message = formData.message
+        console.log(firstname,message);
+        await client.graphql({
+            query: createCandidate,
+            variables: {
+                input: {
+                    firstname,
+                    lastname,
+                    email,
+                    number,
+                    message,
+                }
+            }
+        })
     };
 
     return(

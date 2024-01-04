@@ -1,0 +1,7 @@
+[
+  {
+    "Action": ["ses:SendEmail"],
+    "Effect": "Allow",
+    "Resource": ["arn:aws:ses:*:*:identity/connect.herai@gmail.com"]
+  }
+]

@@ -62,6 +62,21 @@
     }
   },
   "function": {
+    "getcontactinfo": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "GraphQLAPIIdOutput",
+            "GraphQLAPIEndpointOutput"
+          ],
+          "category": "api",
+          "resourceName": "heraiamplifyauth"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
     "heraiamplifyauth9cda9675CustomMessage": {
       "build": true,
       "providerPlugin": "awscloudformation",
@@ -69,6 +84,38 @@
     }
   },
   "parameters": {
+    "AMPLIFY_function_getcontactinfo_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "getcontactinfo"
+        }
+      ]
+    },
+    "AMPLIFY_function_getcontactinfo_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "getcontactinfo"
+        }
+      ]
+    },
+    "AMPLIFY_function_getcontactinfo_sesEmail": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "getcontactinfo"
+        }
+      ]
+    },
+    "AMPLIFY_function_getformdata_sesEmail": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "getformdata"
+        }
+      ]
+    },
     "AMPLIFY_function_heraiamplifyauth9cda9675CustomMessage_EMAILMESSAGE": {
       "usedBy": [
         {

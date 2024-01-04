@@ -18,6 +18,13 @@ export type AmplifyDependentResourcesAttributes = {
     }
   },
   "function": {
+    "getcontactinfo": {
+      "Arn": "string",
+      "LambdaExecutionRole": "string",
+      "LambdaExecutionRoleArn": "string",
+      "Name": "string",
+      "Region": "string"
+    },
     "heraiamplifyauth9cda9675CustomMessage": {
       "Arn": "string",
       "LambdaExecutionRole": "string",

@@ -13,10 +13,11 @@ import {
   SwitchField,
   TextField,
 } from "@aws-amplify/ui-react";
-import { getOverrideProps } from "@aws-amplify/ui-react/internal";
-import { Events } from "../models";
-import { fetchByPath, validateField } from "./utils";
-import { DataStore } from "aws-amplify";
+import { fetchByPath, getOverrideProps, validateField } from "./utils";
+import { generateClient } from "aws-amplify/api";
+import { getEvents } from "../graphql/queries";
+import { updateEvents } from "../graphql/mutations";
+const client = generateClient();
 export default function EventsUpdateForm(props) {
   const {
     id: idProp,
@@ -75,7 +76,12 @@ export default function EventsUpdateForm(props) {
   React.useEffect(() => {
     const queryData = async () => {
       const record = idProp
-        ? await DataStore.query(Events, idProp)
+        ? (
+            await client.graphql({
+              query: getEvents.replaceAll("__typename", ""),
+              variables: { id: idProp },
+            })
+          )?.data?.getEvents
         : eventsModelProp;
       setEventsRecord(record);
     };
@@ -136,15 +142,15 @@ export default function EventsUpdateForm(props) {
       onSubmit={async (event) => {
         event.preventDefault();
         let modelFields = {
-          title,
-          location,
-          date,
-          isUpcoming,
-          summary,
-          description,
-          videoDescription,
-          pdfDescription,
-          presenters,
+          title: title ?? null,
+          location: location ?? null,
+          date: date ?? null,
+          isUpcoming: isUpcoming ?? null,
+          summary: summary ?? null,
+          description: description ?? null,
+          videoDescription: videoDescription ?? null,
+          pdfDescription: pdfDescription ?? null,
+          presenters: presenters ?? null,
         };
         const validationResponses = await Promise.all(
           Object.keys(validations).reduce((promises, fieldName) => {
@@ -170,21 +176,26 @@ export default function EventsUpdateForm(props) {
         }
         try {
           Object.entries(modelFields).forEach(([key, value]) => {
-            if (typeof value === "string" && value.trim() === "") {
-              modelFields[key] = undefined;
+            if (typeof value === "string" && value === "") {
+              modelFields[key] = null;
             }
           });
-          await DataStore.save(
-            Events.copyOf(eventsRecord, (updated) => {
-              Object.assign(updated, modelFields);
-            })
-          );
+          await client.graphql({
+            query: updateEvents.replaceAll("__typename", ""),
+            variables: {
+              input: {
+                id: eventsRecord.id,
+                ...modelFields,
+              },
+            },
+          });
           if (onSuccess) {
             onSuccess(modelFields);
           }
         } catch (err) {
           if (onError) {
-            onError(modelFields, err.message);
+            const messages = err.errors.map((e) => e.message).join("\n");
+            onError(modelFields, messages);
           }
         }
       }}

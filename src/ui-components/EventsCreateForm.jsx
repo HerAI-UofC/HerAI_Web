@@ -13,10 +13,10 @@ import {
   SwitchField,
   TextField,
 } from "@aws-amplify/ui-react";
-import { getOverrideProps } from "@aws-amplify/ui-react/internal";
-import { Events } from "../models";
-import { fetchByPath, validateField } from "./utils";
-import { DataStore } from "aws-amplify";
+import { fetchByPath, getOverrideProps, validateField } from "./utils";
+import { generateClient } from "aws-amplify/api";
+import { createEvents } from "../graphql/mutations";
+const client = generateClient();
 export default function EventsCreateForm(props) {
   const {
     clearOnSuccess = true,
@@ -155,11 +155,18 @@ export default function EventsCreateForm(props) {
         }
         try {
           Object.entries(modelFields).forEach(([key, value]) => {
-            if (typeof value === "string" && value.trim() === "") {
-              modelFields[key] = undefined;
+            if (typeof value === "string" && value === "") {
+              modelFields[key] = null;
             }
           });
-          await DataStore.save(new Events(modelFields));
+          await client.graphql({
+            query: createEvents.replaceAll("__typename", ""),
+            variables: {
+              input: {
+                ...modelFields,
+              },
+            },
+          });
           if (onSuccess) {
             onSuccess(modelFields);
           }
@@ -168,7 +175,8 @@ export default function EventsCreateForm(props) {
           }
         } catch (err) {
           if (onError) {
-            onError(modelFields, err.message);
+            const messages = err.errors.map((e) => e.message).join("\n");
+            onError(modelFields, messages);
           }
         }
       }}

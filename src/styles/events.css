@@ -1,6 +1,6 @@
 .upcoming-container {
     
-    height: 600px;
+    height: 75vh;
     background-size: cover;
     background-position: center;
     color: white;
@@ -8,7 +8,7 @@
     align-items: left;
     justify-content: center;
     flex-direction: column;
-    padding-left: 100px;
+    padding:0 100px;
    
 }
 
@@ -106,3 +106,91 @@
 #active-page{
     background-color: #8C6D6C;
 }
+
+@media screen and (max-width: 768px) {
+    .upcoming-container {
+        padding: 0 20px;
+        height: 50vh;
+    }
+
+    .upcoming-container h1 {
+        font-size: 20pt;
+        
+    }
+
+    .event h2{
+        font-size: 16pt;
+    }
+
+    .event h5{
+        font-size: 12pt;
+    }
+
+    .event h6{
+        font-size: 10pt;
+    }
+
+    .event p {
+        width: 85%;
+        font-size: 10pt;
+    }
+
+    .check-btn {
+        font-size: 10pt;
+        padding: 10px 30px;
+        margin-top: 20px;
+    }
+
+    .sign-up-container {
+        flex-direction: column;
+        margin: 20px;
+        padding: 20px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .sign-up-container h3{
+        font-size: 18pt;
+        margin-bottom: 20px;
+    }
+
+    .sign-up-container-body {
+        width: 100%;
+    }
+
+    .sign-up-container-body a{
+        margin: 20px auto 10px auto;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .upcoming-container{
+        height: 50vh;
+    }
+
+    .event p {
+        width: 75%;
+    }
+
+    .sign-up-container {
+        flex-direction: column;
+        margin: 50px 25px;
+        padding: 20px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .sign-up-container h3{
+        font-size: 18pt;
+        margin-bottom: 20px;
+    }
+
+    .sign-up-container-body {
+        width: 100%;
+    }
+
+    .sign-up-container-body a{
+        padding: 10px 40px;
+        margin: 20px auto 10px auto;
+    }
+}   

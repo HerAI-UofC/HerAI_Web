@@ -3,14 +3,17 @@ import "./style.css";
 
 const GalleryPane = ({ imgs }) => {
     const [fullscreenImage, setFullscreenImage] = useState(null);
-    const columns = [[], [], []];
+    //const columns = [[], [], []];
 
     if (imgs === null) {
         return <h1>NOT FOUND</h1>;
     }
 
+    const isMobile = window.innerWidth <= 768;
+    const columns = isMobile ? [[], []] : [[], [], []];
+
     imgs.forEach((src, index) => {
-        columns[index % 3].push(
+        columns[index % (isMobile ? 2 : 3)].push(
             <img
                 src={src}
                 alt=""
@@ -26,7 +29,7 @@ const GalleryPane = ({ imgs }) => {
             <div className="gallery-columns">
                 <div>{columns[0]}</div>
                 <div>{columns[1]}</div>
-                <div>{columns[2]}</div>
+                {isMobile ? null : <div>{columns[2]}</div>}
             </div>
             {fullscreenImage && (
                 <>

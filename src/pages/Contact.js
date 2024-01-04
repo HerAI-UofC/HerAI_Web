@@ -5,6 +5,7 @@ import {createCandidate} from '../graphql/mutations'
 import { generateClient } from "aws-amplify/api";
 import {useState} from 'react'; // TODO
 
+
 const Contact = () => {
 
     window.addEventListener("scroll", function () {

@@ -105,7 +105,7 @@
 .txt-container a{
     text-decoration: none;
     color: white;
-    padding: 10px 50px;
+    padding: 15px 50px;
     background-color: #8C6D6C;
 }
 
@@ -125,7 +125,18 @@
     animation: slide-in 2s forwards;
 }
 
-/* Existing CSS... */
+
+@media (max-width: 1000px){
+    .vision-section{
+        padding: 50px 20px;
+    }
+
+    .txt-container{
+        width: 50%;
+    }
+
+    
+}
 
 @media (max-width: 768px) {
     .body-header {

@@ -19,3 +19,19 @@
 .vid-container video{
     margin-bottom: 20px;
 }
+
+@media screen and (max-width: 768px) {
+    .vid-container h2 {
+        font-size: 20pt;
+        margin-top: 10px;
+    }
+
+    .vid-container p {
+        font-size: 12pt;
+        margin: 10px 20px;
+    }
+
+    .vid-container video {
+        width: 95%;
+    }
+}

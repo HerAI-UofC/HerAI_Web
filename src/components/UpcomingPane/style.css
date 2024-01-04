@@ -23,3 +23,18 @@
     text-align: center;
     color: #666;
 }
+
+@media screen and (max-width: 768px) {
+    .upcoming-pane {
+        height: 50vh;
+        padding: 20px;
+    }
+
+    .upcoming-pane h2 {
+        font-size: 1.5em;
+    }
+
+    .upcoming-pane h4 {
+        font-size: 1em;
+    }
+}

@@ -98,6 +98,7 @@
 
 .info-section p {
     padding-top: 25px;
+    padding-right: 75px;
     font-size: 120%;
 }
 
@@ -106,7 +107,13 @@
 }
 
 /* Responsive design */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 574px){
+    .email-column h1{
+        font-size: 5vw;
+    }
+}
+
+@media only screen and (max-width: 780px) {
     .email-header{
         flex-direction: column;
         height:600px;
@@ -127,18 +134,25 @@
     .email-form button {
         width: 100%;
     }
+} 
 
+@media only screen and (max-width: 1010px){
     .contact-info {
         flex-direction: column;
-        padding: 30px 20px;
     }
 
     .maps {
-        padding: 50px 0;
+        padding: 50px 0px;
     }
 
     .maps iframe {
         height: auto;
-        width: auto;
+        width: 80vw;
     }
-} 
+}
+
+@media only screen and (max-width: 1200px){
+    .contact-info {
+        padding: 30px 50px;
+    }
+}

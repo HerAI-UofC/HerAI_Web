@@ -78,7 +78,6 @@
     background-color: #fef2ec;
     border-radius: 30px;
     border: 1px solid black;
-    /* padding: 10px 450px; */
     padding: 10px 0;
     width: 75%;
     margin-top: 50px;
@@ -103,7 +102,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 25px 400px;
+    padding: 0px 400px;
     font-family: "Lato";
     font-weight: bold;
     font-size: 18px;
@@ -138,16 +137,81 @@
 }
 
 /* Responsive design */
-@media only screen and (max-width: 768px) {
-    .title{
-        flex-direction: column;
-        height: 800px;
+@media only screen and (max-width: 500px){
+    .title-column-text{
+        padding-top: 50px;
+    }
+
+    .title-column-text h1{
+        font-size: 8vw;
+    }
+
+    #heart-img{
+        width: 20%;
     }
 
     #triangle-img{
-        margin: 50px auto;
+        margin: auto auto;
+        width: auto;
+        height: auto;
+    }
+
+    .sign-up h1{
+        margin: auto 10px;
+        font-size: 8vw;
+    }
+
+    .sign-up p{
+        font-size: 4vw;
+    }
+
+    .signUp-btn{
+        padding: 15px 30px;
+    }
+
+    .stay-connected{
+        width: 75%;
+        font-size: 8vw;
+    }
+
+    .links-section-2{
+        flex-direction: column;
+        height: 300px;
+    }
+
+    .instagram{
+        width: 60px;
+        margin-top: 10px;
+    }
+    
+    .discord{
+        width: 70px;
+    }
+
+    .linkedin {
+        width: 65px;
+        margin-top: 0px;
+        margin-bottom: 50px;
+    }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 768px){
+    .title-column-text{
+        padding-top: 100px;
+    }
+
+    #triangle-img{
+        margin: auto auto;
         height: 75%;
         width: 75%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .title{
+        flex-direction: column;
+        height: auto;
+        padding-bottom: 20px;
     }
 
     .divider{
@@ -155,11 +219,46 @@
     }
 
     .sign-up p{
-        padding: 20px 0;
+        padding: 20px 40px;
     }
 
     .links-section-2{
-        padding: 25px 50px;
+        padding: 0px 50px;
     }
 
 } 
+
+@media only screen and (min-width: 768px) and (max-width: 1000px) {
+    .title{
+        flex-direction: column;
+        height: 800px;
+    }
+
+    .title-column-text{
+        padding-top: 100px;
+    }
+    
+    #triangle-img{
+        margin: auto auto;
+        height: auto;
+        max-width: 75%;
+    }
+
+    .sign-up p{
+        padding: 20px 60px;
+    }
+
+    .links-section-2{
+        padding: 25px 20%;
+    }
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1200px){
+    .sign-up p{
+        padding: 20px 100px;
+    }
+
+    .links-section-2{
+        padding: 0px 30%;
+    }
+}

@@ -122,6 +122,15 @@ const Event = () => {
                     <h5>{event.location}</h5>
                     <h6>{formattedDate()}</h6>
                     <p>{event.summary}</p>
+                    {event.isUpcoming ? (
+                        <a
+                            className="book-btn"
+                            href="https://www.google.com"
+                            target="_blank"
+                        >
+                            Book Your Spot!
+                        </a>
+                    ) : null}
                 </div>
             </div>
             <div className="event-options">

@@ -13,6 +13,8 @@
 
 .event-backdrop div{
     width: 50%;
+    display: flex;
+    flex-direction: column;
 }
 
 .event-backdrop h1{
@@ -59,6 +61,18 @@
    filter: invert(1);
 }
 
+.book-btn{
+    background-color: #8C6D6C;
+    color:white;
+    border-radius: 10px;;
+    padding: 15px 50px;
+    margin-top: 20px;
+    width: fit-content;
+    font-family: lato;
+    font-weight: 800;
+    
+}
+
 @media screen and (max-width: 1000px) {
     .event-backdrop div{
         width: 75%;
@@ -100,6 +114,11 @@
     .event-options img {
         width: 20px;
         margin: 5px 0;
+    }
+
+    .book-btn{
+        font-size: 10pt;
+        padding: 15px 30px;
     }
 }
 

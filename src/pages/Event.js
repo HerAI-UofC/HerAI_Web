@@ -15,7 +15,7 @@ const Event = () => {
     const location = useLocation();
     const event = location.state;
 
-    const [activeOption, setActiveOption] = useState("vid");
+    const [activeOption, setActiveOption] = useState("info");
     const [vidSrc, setVidSrc] = useState(null);
     const [pdfSrc, setPdfSrc] = useState(null);
 
@@ -135,6 +135,13 @@ const Event = () => {
             </div>
             <div className="event-options">
                 <div
+                    className={activeOption === "info" ? "active" : ""}
+                    onClick={() => setActiveOption("info")}
+                >
+                    <img src="https://static.thenounproject.com/png/2490660-200.png"></img>
+                    <h6>Details</h6>
+                </div>
+                <div
                     className={activeOption === "vid" ? "active" : ""}
                     onClick={() => setActiveOption("vid")}
                 >
@@ -154,13 +161,6 @@ const Event = () => {
                 >
                     <img src="https://icons.iconarchive.com/icons/praveen/minimal-outline/512/gallery-icon.png"></img>
                     <h6>Gallery</h6>
-                </div>
-                <div
-                    className={activeOption === "info" ? "active" : ""}
-                    onClick={() => setActiveOption("info")}
-                >
-                    <img src="https://static.thenounproject.com/png/2490660-200.png"></img>
-                    <h6>Details</h6>
                 </div>
             </div>
             {setView()}

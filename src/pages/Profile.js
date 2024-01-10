@@ -30,27 +30,10 @@ const Profile = () => {
         }
     };
 
-    const handleUpdateUserAttributeNextSteps = (output) => {
-        const { nextStep } = output;
-        console.log(nextStep);
-        switch (nextStep.updateAttributeStep) {
-            case "CONFIRM_ATTRIBUTE_WITH_CODE":
-                const codeDeliveryDetails = nextStep.codeDeliveryDetails;
-                console.log(
-                    `Confirmation code was sent to ${codeDeliveryDetails?.deliveryMedium}.`
-                );
-                // Collect the confirmation code from the user and pass to confirmUserAttribute.
-                break;
-            case "DONE":
-                console.log(`attribute was successfully updated.`);
-                break;
-        }
-    };
-
     const updateEmail = async (attributeKey, value) => {
-        console.log(userAttributes, value);
+        //console.log(userAttributes, value);
         if (value === userAttributes.email) {
-            console.log("NOPE");
+            //console.log("NOPE");
             return;
         }
         try {
@@ -62,9 +45,8 @@ const Profile = () => {
             });
             setUpdateFailed(false);
             setVerificationSent(true);
-            handleUpdateUserAttributeNextSteps(output);
         } catch (error) {
-            console.log(error);
+            //console.log(error);
             setUpdateFailed(true);
         }
     };
@@ -75,7 +57,7 @@ const Profile = () => {
             setCodeFailed(false);
             window.location.reload();
         } catch (e) {
-            console.log(e);
+            //console.log(e);
             setCodeFailed(true);
         }
     };
@@ -102,8 +84,6 @@ const Profile = () => {
         getUserAttributes();
     }, []);
 
-    // console.log("HERE", userAttributes);
-    // console.log("CODE", code);
     return (
         <div className="profile-body">
             <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"></img>

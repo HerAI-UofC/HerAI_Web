@@ -7,6 +7,7 @@ import {
     deleteUser,
 } from "aws-amplify/auth";
 import { useNavigate } from "react-router-dom";
+import { signOut } from "aws-amplify/auth";
 
 const Profile = () => {
     const nav = useNavigate();
@@ -88,6 +89,15 @@ const Profile = () => {
         }
     };
 
+    const userSignOut = async () => {
+        try {
+            await signOut();
+            nav("/HerAI_Web");
+        } catch (e) {
+            console.log(e);
+        }
+    };
+
     useEffect(() => {
         getUserAttributes();
     }, []);
@@ -101,6 +111,9 @@ const Profile = () => {
                 <h1>
                     Hello{userAttributes ? ", " + userAttributes.name : ""}!
                 </h1>
+                <button id="signout-btn" onClick={() => userSignOut()}>
+                    Signout
+                </button>
                 <div className="email-section">
                     <h6>Email: </h6>
                     <div>

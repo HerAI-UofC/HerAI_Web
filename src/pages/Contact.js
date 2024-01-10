@@ -25,6 +25,9 @@ const Contact = () => {
         phone: '',
         message: ''
     });
+
+    const [submitMessage, setSubmitMessage] = useState('');
+
     const client = generateClient();
     const handleChange = (event) => {
         const { name, value } = event.target;
@@ -52,6 +55,17 @@ const Contact = () => {
                 }
             }
         })
+
+        setSubmitMessage('Form submitted successfully');
+
+        // clear form
+        setFormData({
+            firstName: '',
+            lastName: '',
+            email: '',
+            phone: '',
+            message: ''
+        });
     };
 
     return(
@@ -93,6 +107,7 @@ const Contact = () => {
                                     name="email"
                                     value={formData.email || ""}
                                     onChange={handleChange}
+                                    required
                                 />
                             </label>
                             <label>
@@ -111,9 +126,11 @@ const Contact = () => {
                                     name="message"
                                     value={formData.message || ""}
                                     onChange={handleChange}
+                                    required
                                 />
                             </label>
                             <button type="submit">Send Message</button>
+                            <p>{submitMessage}</p>
                         </form>
                     </div>
                 </div>

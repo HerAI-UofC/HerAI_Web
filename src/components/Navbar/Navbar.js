@@ -1,13 +1,16 @@
 import "./style.css";
-import { NavLink, useLocation } from "react-router-dom";
+import { useNavigate,NavLink, useLocation } from "react-router-dom";
 import { useEffect, useState, useRef } from "react";
+import { fetchAuthSession,signOut } from "aws-amplify/auth";
 import React from "react";
 import logo from "../../img/logo.png";
 
 const Navbar = () => {
     const [isNavVisible, setNavVisible] = useState(false);
+    const [isLoggedIn, setLoggedIn] = useState(false); // Add state for login status
     const navbarRef = useRef(null);
     const location = useLocation();
+    const navigate = useNavigate();
 
     useEffect(() => {
         setNavVisible(false);
@@ -17,7 +20,17 @@ const Navbar = () => {
         setNavVisible(!isNavVisible);
     };
 
+    const toggleLogin = async () => {
+        try {
+            await fetchAuthSession();
+            setLoggedIn(true);
+        } catch {
+            setLoggedIn(false);
+        }
+    };
+
     useEffect(() => {
+        toggleLogin();
         const handleScroll = () => {
             if (window.scrollY > 100) {
                 navbarRef.current.classList.add("scrolled");
@@ -31,7 +44,7 @@ const Navbar = () => {
         return () => {
             window.removeEventListener("scroll", handleScroll);
         };
-    }, []);
+    }, [location.pathname]);
 
     return (
         <nav ref={navbarRef}>
@@ -59,12 +72,15 @@ const Navbar = () => {
                 </NavLink>
             </div>
 
-            <NavLink
-                className={`login ${isNavVisible ? "show" : ""}`}
-                to="/HerAI_Web/login"
-            >
-                Login
-            </NavLink>
+            {isLoggedIn ? (
+                <NavLink className={`login ${isNavVisible ? "show" : ""}`} to="/HerAI_Web/login">
+                    Logout
+                </NavLink>
+            ) : (
+                <NavLink className={`login ${isNavVisible ? "show" : ""}`} to="/HerAI_Web/login">
+                    Login
+                </NavLink>
+            )}
         </nav>
     );
 };

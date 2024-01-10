@@ -11,6 +11,7 @@ import Events from "./pages/Events.js";
 import Event from "./pages/Event.js";
 
 import ScrollToTop from "./components/ScrollToTop.js";
+import Profile from "./pages/Profile.js";
 
 function App() {
     return (
@@ -25,6 +26,7 @@ function App() {
                 <Route path="/HerAI_Web/events" Component={Events} />
                 <Route path="/HerAI_Web/login" Component={Login} />
                 <Route path="/HerAI_Web/events/:eventTitle" Component={Event} />
+                <Route path="/HerAI_Web/profile" Component={Profile} />
             </Routes>
             <Footer />
         </Router>

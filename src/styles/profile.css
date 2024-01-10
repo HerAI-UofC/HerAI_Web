@@ -1,0 +1,140 @@
+.profile-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px;
+    background-color: #f4f4f4;
+    font-family: lato;
+    
+}
+
+.profile-body img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.profile-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #333;
+}
+
+.profile-text h1 {
+    font-family: alice;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.email-section {
+    display: flex;
+    justify-content: center;
+    align-items: first baseline;
+    width: 100%;
+    max-width: 500px;
+}
+
+.profile-body button {
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: none;
+    width: fit-content;
+    border-radius: 5px;
+    background-color: #8C6D6C;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.profile-body button:hover {
+    background-color: #5c4b4b;
+}
+
+.profile-body input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 20px;
+}
+
+.failed-form {
+    color:red;
+}
+
+.profile-page p{
+    text-align: center;
+}
+
+.delete-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.delete-section button{
+    padding: 10px 20px;
+}
+
+.choice-section{
+    display: flex;
+    justify-content:space-between;
+    width: 25%;
+}
+
+#delete-btn{
+    margin-top: 25px;
+}
+
+
+@media (max-width: 768px) {
+    .profile-body {
+        padding: 50px 10px;
+    }
+
+    .profile-body img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .profile-text{
+        width: 100%;
+    }
+
+    .profile-text h1 {
+        font-size: 1.5em;
+    }
+
+
+
+    .email-section {
+        display: flex;
+        justify-content: space-around;
+        font-size: 0.75em;
+    }
+
+    .profile-body button {
+       
+        margin: 10px 0;
+    }
+
+    .profile-body input {
+        
+        margin: 10px 0;
+    }
+
+    .delete-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    
+
+    .choice-section {
+        
+        width: 50%;
+    }
+}

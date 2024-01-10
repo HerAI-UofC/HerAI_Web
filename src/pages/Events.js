@@ -42,7 +42,7 @@ const Events = () => {
             const updatedEvents = events.map((e) => {
                 return {
                     ...e,
-                    header: `https://res.cloudinary.com/dngcyqfpe/image/upload/v1703908805/${e.title
+                    header: `https://res.cloudinary.com/dngcyqfpe/image/upload/${e.title
                         .replace(" ", "")
                         .toLowerCase()}-head.jpg`,
                 };

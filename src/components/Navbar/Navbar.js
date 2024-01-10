@@ -1,7 +1,7 @@
 import "./style.css";
-import { useNavigate,NavLink, useLocation } from "react-router-dom";
+import {NavLink, useLocation } from "react-router-dom";
 import { useEffect, useState, useRef } from "react";
-import { fetchAuthSession,signOut } from "aws-amplify/auth";
+import { fetchAuthSession } from "aws-amplify/auth";
 import React from "react";
 import logo from "../../img/logo.png";
 
@@ -10,7 +10,6 @@ const Navbar = () => {
     const [isLoggedIn, setLoggedIn] = useState(false); // Add state for login status
     const navbarRef = useRef(null);
     const location = useLocation();
-    const navigate = useNavigate();
 
     useEffect(() => {
         setNavVisible(false);

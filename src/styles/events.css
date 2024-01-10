@@ -1,6 +1,5 @@
 .upcoming-container {
-    
-    height: 75vh;
+    min-height: 75vh;
     background-size: cover;
     background-position: center;
     color: white;
@@ -110,7 +109,7 @@
 @media screen and (max-width: 768px) {
     .upcoming-container {
         padding: 0 20px;
-        height: 50vh;
+        min-height: 50vh;
     }
 
     .upcoming-container h1 {
@@ -165,7 +164,7 @@
 
 @media screen and (max-width: 1000px) {
     .upcoming-container{
-        height: 50vh;
+        min-height: 50vh;
     }
 
     .event p {

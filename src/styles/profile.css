@@ -20,7 +20,6 @@
 .profile-text {
     display: flex;
     flex-direction: column;
-    text-align: center;
     align-items: center;
     color: #333;
 }
@@ -33,6 +32,7 @@
 
 .email-section {
     display: flex;
+    justify-content: center;
     align-items: first baseline;
     width: 100%;
     max-width: 500px;
@@ -87,4 +87,54 @@
 
 #delete-btn{
     margin-top: 25px;
+}
+
+
+@media (max-width: 768px) {
+    .profile-body {
+        padding: 50px 10px;
+    }
+
+    .profile-body img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .profile-text{
+        width: 100%;
+    }
+
+    .profile-text h1 {
+        font-size: 1.5em;
+    }
+
+
+
+    .email-section {
+        display: flex;
+        justify-content: space-around;
+        font-size: 0.75em;
+    }
+
+    .profile-body button {
+       
+        margin: 10px 0;
+    }
+
+    .profile-body input {
+        
+        margin: 10px 0;
+    }
+
+    .delete-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    
+
+    .choice-section {
+        
+        width: 50%;
+    }
 }

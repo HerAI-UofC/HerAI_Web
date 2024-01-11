@@ -21,7 +21,7 @@ const Navbar = () => {
 
     const toggleLogin = async () => {
         try {
-            console.log("CALLED");
+            //console.log("CALLED");
             await fetchAuthSession();
             setLoggedIn(true);
         } catch {

@@ -1,5 +1,5 @@
 import "./style.css";
-import {NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { useEffect, useState, useRef } from "react";
 import { fetchAuthSession } from "aws-amplify/auth";
 import React from "react";
@@ -21,6 +21,7 @@ const Navbar = () => {
 
     const toggleLogin = async () => {
         try {
+            console.log("CALLED");
             await fetchAuthSession();
             setLoggedIn(true);
         } catch {
@@ -72,11 +73,17 @@ const Navbar = () => {
             </div>
 
             {isLoggedIn ? (
-                <NavLink className={`login ${isNavVisible ? "show" : ""}`} to="/HerAI_Web/login">
-                    Logout
+                <NavLink
+                    className={`login ${isNavVisible ? "show" : ""}`}
+                    to="/HerAI_Web/profile"
+                >
+                    Profile
                 </NavLink>
             ) : (
-                <NavLink className={`login ${isNavVisible ? "show" : ""}`} to="/HerAI_Web/login">
+                <NavLink
+                    className={`login ${isNavVisible ? "show" : ""}`}
+                    to="/HerAI_Web/login"
+                >
                     Login
                 </NavLink>
             )}

@@ -144,6 +144,9 @@ const Profile = () => {
                         ) : null}
                     </div>
                 </div>
+                {verificationSent ? (
+                    <p>A verification code was sent to your email</p>
+                ) : null}
                 {updateFailed ? <p>Please enter a valid email</p> : null}
                 {codeFailed ? <p>Incorrect Code</p> : null}
                 <button id="delete-btn" onClick={() => setAskAgain(true)}>

@@ -55,19 +55,19 @@ const Navbar = () => {
                 </button>
             </div>
             <div className={`links ${isNavVisible ? "show" : ""}`}>
-                <NavLink className={"link"} to="/HerAI_Web" end>
+                <NavLink className={"link"} to="/" end>
                     Home
                 </NavLink>
-                <NavLink className={"link"} to="/HerAI_Web/about">
+                <NavLink className={"link"} to="/about">
                     About
                 </NavLink>
-                <NavLink className={"link"} to="/HerAI_Web/events">
+                <NavLink className={"link"} to="/events">
                     Events
                 </NavLink>
-                <NavLink className={"link"} to="/HerAI_Web/community">
+                <NavLink className={"link"} to="/community">
                     Community
                 </NavLink>
-                <NavLink className={"link"} to="/HerAI_Web/contact">
+                <NavLink className={"link"} to="/contact">
                     Contact
                 </NavLink>
             </div>
@@ -75,14 +75,14 @@ const Navbar = () => {
             {isLoggedIn ? (
                 <NavLink
                     className={`login ${isNavVisible ? "show" : ""}`}
-                    to="/HerAI_Web/profile"
+                    to="/profile"
                 >
                     Profile
                 </NavLink>
             ) : (
                 <NavLink
                     className={`login ${isNavVisible ? "show" : ""}`}
-                    to="/HerAI_Web/login"
+                    to="/login"
                 >
                     Login
                 </NavLink>

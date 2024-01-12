@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar.js";
 import Footer from "./components/Footer/Footer.js";
 import Home from "./pages/Home";
@@ -15,18 +15,18 @@ import Profile from "./pages/Profile.js";
 
 function App() {
     return (
-        <Router basename="/">
+        <Router>
             <ScrollToTop />
             <Navbar />
             <Routes>
-                <Route path="/HerAI_Web" exact Component={Home} />
-                <Route path="/HerAI_Web/about" Component={About} />
-                <Route path="/HerAI_Web/community" Component={Community} />
-                <Route path="/HerAI_Web/contact" Component={Contact} />
-                <Route path="/HerAI_Web/events" Component={Events} />
-                <Route path="/HerAI_Web/login" Component={Login} />
-                <Route path="/HerAI_Web/events/:eventTitle" Component={Event} />
-                <Route path="/HerAI_Web/profile" Component={Profile} />
+                <Route path="/" exact Component={Home} />
+                <Route path="/about" Component={About} />
+                <Route path="/community" Component={Community} />
+                <Route path="/contact" Component={Contact} />
+                <Route path="/events" Component={Events} />
+                <Route path="/login" Component={Login} />
+                <Route path="/events/:eventTitle" Component={Event} />
+                <Route path="/profile" Component={Profile} />
             </Routes>
             <Footer />
         </Router>

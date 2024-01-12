@@ -111,7 +111,7 @@ const Events = () => {
                     <p>{upcomingEvents[currentEventIndex].summary}</p>
                     <NavLink
                         to={{
-                            pathname: `/HerAI_Web/events/${upcomingEvents[
+                            pathname: `/events/${upcomingEvents[
                                 currentEventIndex
                             ].title.replace(" ", "")}`,
                         }}
@@ -167,7 +167,7 @@ const Events = () => {
                         Get access to all of our workshop content and get
                         notified of upcoming events
                     </p>
-                    <NavLink to={"/HerAI_Web/login"} className={"check-btn"}>
+                    <NavLink to={"/login"} className={"check-btn"}>
                         Sign Up
                     </NavLink>
                 </div>

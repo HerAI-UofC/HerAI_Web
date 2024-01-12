@@ -54,7 +54,7 @@ const Community = () => {
                     access to exclusive resources and workshop content, and
                     learn about AI/ML
                 </p>
-                <NavLink className="signUp-btn" to="/HerAI_Web/login">
+                <NavLink className="signUp-btn" to="/login">
                     Sign Up
                 </NavLink>
             </div>
@@ -67,36 +67,38 @@ const Community = () => {
 
             <div className="links-section-2">
                 <div className="instagram">
-                    <img src={img3} alt="instagram logo"></img>
                     <a
                         href="https://www.instagram.com/herai_uofc/"
                         target="_blank"
                         rel="noreferrer"
                         title="herai_uofc"
                     >
-                        Instagram
+                        <img src={img3} alt="instagram logo"></img>
+                        <p>Instagram</p>
                     </a>
                 </div>
                 <div className="discord">
-                    <img src={img4} alt="discord logo"></img>
                     <a
                         href="https://discord.com/invite/HFJW7aH3PF"
                         target="_blank"
                         rel="noreferrer"
                         title="Discord Invite"
                     >
-                        Discord
+                        <img src={img4} alt="discord logo"></img>
+
+                        <p>Discord</p>
                     </a>
                 </div>
                 <div className="linkedin">
-                    <img src={img5} alt="linkedin logo"></img>
                     <a
                         href="https://www.linkedin.com/company/herai-women-in-ai-ml/mycompany/"
                         target="_blank"
                         rel="noreferrer"
                         title="HerAI: Women in AI/ML"
                     >
-                        LinkedIn
+                        <img src={img5} alt="linkedin logo"></img>
+
+                        <p>LinkedIn</p>
                     </a>
                 </div>
             </div>

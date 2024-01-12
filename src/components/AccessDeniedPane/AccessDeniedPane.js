@@ -6,7 +6,7 @@ const AccessDeniedPane = () => {
         <div className="access-denied-pane">
             <h1>Oops!</h1>
             <p>You need to be signed in to view this content.</p>
-            <NavLink id={"access-btn"} to="/HerAI_Web/login">
+            <NavLink id={"access-btn"} to="/login">
                 Sign In
             </NavLink>
         </div>

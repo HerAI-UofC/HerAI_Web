@@ -7,16 +7,16 @@ const Footer = () => {
         <div className="footer">
             <img src={logo} alt="logo" id="footer-logo"></img>
             <div className="links-column">
-                <NavLink to="/HerAI_Web" end>
+                <NavLink to="/" end>
                     Home
                 </NavLink>
-                <NavLink to="/HerAI_Web/about">About</NavLink>
-                <NavLink to="/HerAI_Web/events">Events</NavLink>
-                <NavLink to="/HerAI_Web/community">Community</NavLink>
-                <NavLink to="/HerAI_Web/contact">Contact</NavLink>
+                <NavLink to="/about">About</NavLink>
+                <NavLink to="/events">Events</NavLink>
+                <NavLink to="/community">Community</NavLink>
+                <NavLink to="/contact">Contact</NavLink>
             </div>
             <p>connect.herai@gmail.com</p>
-            <NavLink to="/HerAI_Web/contact" id="contact-btn">
+            <NavLink to="/contact" id="contact-btn">
                 Contact Us
             </NavLink>
         </div>

@@ -109,27 +109,48 @@
     text-align: center;
 }
 
+.instagram a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
 .instagram img{
     width: 65%;
-    margin: auto;
+    margin: 0;
 }
 
 .instagram a:hover{
     color: #985252;
 }
 
+.discord a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
 .discord img{
     width: 75%;
-    margin: auto;
+    margin: 0;
 } 
 
 .discord a:hover{
     color: #985252;
 }
 
+.linkedin a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
 .linkedin img{
     width: 65%;
-    margin: auto;
+    margin: 0;
 }
 
 .linkedin a:hover{

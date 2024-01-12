@@ -47,7 +47,7 @@ const Home = () => {
                     and Machine Learning (AI/ML) club dedicated to amplifying
                     the voices and contributions of women in the tech landscape.
                 </h2>
-                <NavLink className="about-btn" to="/HerAI_Web/about">
+                <NavLink className="about-btn" to="/about">
                     About Us
                 </NavLink>
             </div>

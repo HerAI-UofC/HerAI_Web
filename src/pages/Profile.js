@@ -57,7 +57,7 @@ const Profile = () => {
             setCodeFailed(false);
             window.location.reload();
         } catch (e) {
-            //console.log(e);
+            console.log(e);
             setCodeFailed(true);
         }
     };
@@ -65,7 +65,7 @@ const Profile = () => {
     const deleteAccount = async () => {
         try {
             await deleteUser();
-            nav("/HerAI_Web");
+            nav("/");
         } catch (e) {
             console.log(e);
         }
@@ -74,7 +74,7 @@ const Profile = () => {
     const userSignOut = async () => {
         try {
             await signOut();
-            nav("/HerAI_Web");
+            nav("/");
         } catch (e) {
             console.log(e);
         }

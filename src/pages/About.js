@@ -65,7 +65,7 @@ const About = () => {
                             Join us and be at the forefront of innovation, where
                             diverse perspectives power the future of technology.
                         </p>
-                        <NavLink to="/HerAI_Web/contact">Contact Us</NavLink>
+                        <NavLink to="/contact">Contact Us</NavLink>
                     </div>
                 </div>
             </div>

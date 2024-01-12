@@ -7,7 +7,7 @@ import { Authenticator } from "@aws-amplify/ui-react";
 const Login = () => {
     const navigate = useNavigate();
     const redirectToProfile = () => {
-        navigate("/HerAI_Web/profile");
+        navigate("/profile");
     };
     return (
         <div style={{ margin: "50px 0" }}>

@@ -48,10 +48,7 @@ const EventBlock = ({ event, dir }) => {
                 <p>{event.summary}</p>
                 <NavLink
                     to={{
-                        pathname: `/HerAI_Web/events/${event.title.replace(
-                            " ",
-                            ""
-                        )}`,
+                        pathname: `/events/${event.title.replace(" ", "")}`,
                     }}
                     state={event}
                     className={"check-btn"}

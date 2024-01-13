@@ -12,17 +12,10 @@ const Login = () => {
     return (
         <div style={{ margin: "50px 0" }}>
             <Authenticator>
-                {({ signOut, user }) =>
-                    //what shows after login - Probably direct whats inside here to another page file
-                    // <main className="main">
-                    //     <h1>Hello {user.username}</h1>
-                    //     <button onClick={signOut}>Sign out</button>
-                    // </main>
-                    {
-                        console.log("USER", user);
-                        redirectToProfile();
-                    }
-                }
+                {({ signOut, user }) => {
+                    //console.log("USER", user);
+                    redirectToProfile();
+                }}
             </Authenticator>
         </div>
     );

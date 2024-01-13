@@ -34,13 +34,13 @@ const Contact = () => {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        console.log("Form submitted", formData);
+        //console.log("Form submitted", formData);
         const firstname = formData.firstName;
         const lastname = formData.lastName;
         const email = formData.email;
         const number = formData.phone;
         const message = formData.message;
-        console.log(firstname, message);
+        //console.log(firstname, message);
         await client.graphql({
             query: createCandidate,
             variables: {
@@ -143,7 +143,9 @@ const Contact = () => {
                     <h1>Our Contact Info</h1>
                     <p>
                         Email:{" "}
-                        <span class="highlight">connect.herai@gmail.com</span>
+                        <span className="highlight">
+                            connect.herai@gmail.com
+                        </span>
                     </p>
                 </div>
                 <div className="maps">
@@ -152,9 +154,9 @@ const Contact = () => {
                         title="ucalgary"
                         width="600"
                         height="300"
-                        allowfullscreen=""
+                        allowFullScreen=""
                         loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"
+                        referrerPolicy="no-referrer-when-downgrade"
                     ></iframe>
                 </div>
             </div>

@@ -13,24 +13,13 @@ const Events = () => {
 
     const client = generateClient();
 
-    const [events, setEvents] = useState([
-        {
-            title: "LOADING",
-            location: "LOADING",
-            date: "LOADING",
-            isUpcoming: true,
-            summary: "LOADING",
-            description: "LOADING",
-            videoDescription: "LOADING",
-            pdfDescription: "LOADING",
-            presenters: "LOADING",
-        },
-    ]);
+    const [events, setEvents] = useState([]);
 
     const getEvents = async () => {
         const all = await client.graphql({ query: listEvents });
+
         setEvents(all.data.listEvents.items);
-        console.log("ALL", events);
+        //console.log("ALL", events);
     };
 
     useEffect(() => {
@@ -38,7 +27,7 @@ const Events = () => {
     }, []);
 
     useEffect(() => {
-        if (!events[0].header) {
+        if (events[0] && !events[0].header) {
             const updatedEvents = events.map((e) => {
                 return {
                     ...e,
@@ -95,7 +84,7 @@ const Events = () => {
 
     const upcomingEvents = events.filter((event) => event.isUpcoming);
 
-    return (
+    return events.length > 0 ? (
         <div>
             <div
                 className="upcoming-container"
@@ -172,6 +161,11 @@ const Events = () => {
                     </NavLink>
                 </div>
             </div>
+        </div>
+    ) : (
+        <div className="no-events-section">
+            <h2>Stay Tuned for Upcoming Events</h2>
+            <NavLink to="/community">Explore Our Community</NavLink>
         </div>
     );
 };

@@ -8,7 +8,7 @@ const About = () => {
 
     const onEnterView = () => {
         setVisible(true);
-        console.log("CALLED");
+        //console.log("CALLED");
     };
 
     // window.addEventListener("scroll", function () {

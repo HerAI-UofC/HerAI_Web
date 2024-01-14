@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/HerAI_Web/static/css/main.60f1afdf.css",
-    "main.js": "/HerAI_Web/static/js/main.eced22d8.js",
-    "static/media/community-img.png": "/HerAI_Web/static/media/community-img.0715be13c31c511ededc.png",
-    "static/media/contact-img.jpg": "/HerAI_Web/static/media/contact-img.cd6e3b61d6f3b2f8b03b.jpg",
-    "static/media/4.jpg": "/HerAI_Web/static/media/4.fc1f50dfd059137ffffd.jpg",
-    "static/media/titleImg.jpg": "/HerAI_Web/static/media/titleImg.e73b3eb7b38658e9df5d.jpg",
-    "static/media/2.jpg": "/HerAI_Web/static/media/2.bee320efc78b23551475.jpg",
-    "static/media/logo.png": "/HerAI_Web/static/media/logo.cc23f18f9a769dab6d85.png",
-    "static/media/3.jpg": "/HerAI_Web/static/media/3.61c107d6f4b16b9bde52.jpg",
-    "index.html": "/HerAI_Web/index.html",
-    "main.60f1afdf.css.map": "/HerAI_Web/static/css/main.60f1afdf.css.map",
-    "main.eced22d8.js.map": "/HerAI_Web/static/js/main.eced22d8.js.map"
+    "main.css": "/static/css/main.5457c187.css",
+    "main.js": "/static/js/main.176bac43.js",
+    "static/media/community-img.png": "/static/media/community-img.0715be13c31c511ededc.png",
+    "static/media/contact-img.jpg": "/static/media/contact-img.cd6e3b61d6f3b2f8b03b.jpg",
+    "static/media/4.jpg": "/static/media/4.fc1f50dfd059137ffffd.jpg",
+    "static/media/titleImg.jpg": "/static/media/titleImg.e73b3eb7b38658e9df5d.jpg",
+    "static/media/2.jpg": "/static/media/2.bee320efc78b23551475.jpg",
+    "static/media/logo.png": "/static/media/logo.cc23f18f9a769dab6d85.png",
+    "static/media/3.jpg": "/static/media/3.61c107d6f4b16b9bde52.jpg",
+    "index.html": "/index.html",
+    "main.5457c187.css.map": "/static/css/main.5457c187.css.map",
+    "main.176bac43.js.map": "/static/js/main.176bac43.js.map"
   },
   "entrypoints": [
-    "static/css/main.60f1afdf.css",
-    "static/js/main.eced22d8.js"
+    "static/css/main.5457c187.css",
+    "static/js/main.176bac43.js"
   ]
 }

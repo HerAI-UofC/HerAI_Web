@@ -70,6 +70,9 @@ const Navbar = () => {
                 <NavLink className={"link"} to="/contact">
                     Contact
                 </NavLink>
+                <NavLink className={"link"} to="/getStarted">
+                    Get Started
+                </NavLink>
             </div>
 
             {isLoggedIn ? (

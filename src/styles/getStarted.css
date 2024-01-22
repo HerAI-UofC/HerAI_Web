@@ -1,0 +1,14 @@
+.about-btn{
+    text-decoration: none;
+    background-color: black;
+    width: fit-content;
+    padding: 15px 75px;
+    color: white;
+}
+
+#icon{
+    width: 50px; /* Adjust the size of the image as needed */
+    height: 50px;
+    object-fit: cover; /* Ensure the image retains its aspect ratio */
+    border-radius: 50%; /* Optional: Rounded corners */
+}

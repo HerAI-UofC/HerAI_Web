@@ -7,6 +7,7 @@ import About from "./pages/About";
 import Community from "./pages/Community";
 import Contact from "./pages/Contact";
 import Login from "./pages/Login";
+import GetStarted from "./pages/getStarted";
 import Events from "./pages/Events.js";
 import Event from "./pages/Event.js";
 
@@ -27,6 +28,7 @@ function App() {
                 <Route path="/login" Component={Login} />
                 <Route path="/events/:eventTitle" Component={Event} />
                 <Route path="/profile" Component={Profile} />
+                <Route path="/getStarted" Component={GetStarted} />
             </Routes>
             <Footer />
         </Router>

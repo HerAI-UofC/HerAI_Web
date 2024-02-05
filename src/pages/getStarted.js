@@ -2,15 +2,15 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import img from "../img/triangle1.png";
 import img2 from "../img/triangle2.png";
-import "../styles/login.css";
+import "../styles/getStarted.css";
 
 const getStarted = () => {
   
     return (
-      <div >
-        <h1> Get Started </h1>
-        <div>
-          <div class="triangle&text">
+      <div class="mainContent">
+        <h1 class ="largeHeading"> Get Started </h1>
+        <div class = "sideWaysContainer">
+          <div class="triangletext">
             <img src={img} alt="x" id="icon"></img>
             <div class="text">
               <h3> Fill in the form </h3>
@@ -21,7 +21,7 @@ const getStarted = () => {
               </p>
             </div>
           </div>
-          <div class="triangle&text">
+          <div class="triangletext">
             <img src={img2} alt="x" id="icon"></img>
             <div class="text">
               <h3> Get a customized study plan </h3>
@@ -33,9 +33,11 @@ const getStarted = () => {
             </div>
           </div>
         </div>
+        <div class = "button">
         <NavLink className="about-btn" to="/about">
-                    About Us
+                    Begin
                 </NavLink>
+        </div>
       </div>
     );
 };

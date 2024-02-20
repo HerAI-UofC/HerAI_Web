@@ -1,41 +1,33 @@
 /**
  * @type {import('@types/aws-lambda').APIGatewayProxyHandler}
  */
-const { SESClient, SendEmailCommand } = require("@aws-sdk/client-ses");
-const ses = new SESClient({ region: "us-east-1" });
+const aws = require('aws-sdk')
+const ses = new aws.SES()
 
 exports.handler = async (event) => {
-    console.log("running this event");
-    // for (const streamedItem of event.Records) {}
-    //     if (streamedItem.eventName === "INSERT") {}
-    //         const candidateFirstName =
-    //             streamedItem.dynamodb.NewImage.firstname.S;
-    //         const candidateLastName = streamedItem.dynamodb.NewImage.lastname.S;
-    //         const candidatePhone = streamedItem.dynamodb.NewImage.phone.S;
-    //         const candidateEmail = streamedItem.dynamodb.NewImage.email.S;
-    //         const candidateMessage = streamedItem.dynamodb.NewImage.message.S;
+  console.log("running this event")
+  for (const streamedItem of event.Records) {
+    if(streamedItem.eventName === 'INSERT') {
+      const candidateFirstName = streamedItem.dynamodb.NewImage.firstname.S
+      const candidateLastName = streamedItem.dynamodb.NewImage.lastname.S
+      const candidatePhone = streamedItem.dynamodb.NewImage.phone.S
+      const candidateEmail = streamedItem.dynamodb.NewImage.email.S
+      const candidateMessage = streamedItem.dynamodb.NewImage.message.S
 
-    const params = {
+      await ses.sendEmail({
         Destination: {
-            ToAddresses: ["connect.herai@gmail.com"],
+          ToAddresses: ['connect.herai@gmail.com'],
         },
         Source: "connect.herai@gmail.com",
         Message: {
-            Subject: { Data: "Candidate Submission" },
-            Body: {
-                Text: {
-                    Data: "Work",
-                },
-            },
+          Subject: {Data: 'Candidate Submission'},
+          Body: {
+            Text: {Data: `My name is ${candidateFirstName}. You can reach me at ${candidateEmail}.`},
+          },
         },
-    };
-
-    try {
-        const data = await ses.send(new SendEmailCommand(params));
-        console.log("SUCCESS", data);
-    } catch {
-        console.log("ERROR", error);
+      })
+      .promise()
     }
-
-    return { status: "done" };
+  }
+  return {status: 'done'}
 };

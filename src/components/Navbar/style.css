@@ -21,12 +21,12 @@ nav.scrolled{
     /* margin-left: 100px; */
 }
 
-.links{
+.links, .resources{
     display: flex;
     margin: 0 10px;
 }
 
-.link{
+.link, .resources{
     margin: auto 30px;
     text-decoration: none;
     color: black;
@@ -57,13 +57,55 @@ nav.scrolled{
 }
 
 
-.links, .login {
+.links, .resources, .login {
     display: flex;
 }
 
 .menu-icon {
     display: none;
 }
+
+/*Resources dropdown menu*/
+.resources {
+    position: relative;
+    display: inline-block;
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 15px 5px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content:hover{
+    background-color: #f1f1f1;
+}
+
+.resources:hover, .dropdown-content {
+    display: block;
+}
+
+.arrow-up {
+    transform: rotate(180deg);
+    transition: transform 0.3 ease;
+    display: inline-block;
+}
+
+/* .arrow-down {
+    display: inline-block;
+} */
 
 @media (max-width: 1000px) {
     nav{

@@ -3,7 +3,7 @@ import img from "../img/contact-logo.png";
 import { Amplify } from "aws-amplify";
 import { createCandidate } from "../graphql/mutations";
 import { generateClient } from "aws-amplify/api";
-import { useState } from "react"; // TODO
+import { useState } from "react";
 
 const Contact = () => {
     window.addEventListener("scroll", function () {

@@ -80,7 +80,7 @@ const Navbar = () => {
                     </button> 
                     {isDropdownOpen && (
                         <div className="dropdown-content">
-                            <NavLink className={"link"} to=""> 
+                            <NavLink className={"link"} to="/studyPlan"> 
                                 Study Plan
                             </NavLink>
                         </div>

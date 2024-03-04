@@ -44,7 +44,7 @@ const Home = () => {
             <div className="about-blurb">
                 <h2 id="blurb" ref={ref}>
                     HerAI is a forward-thinking Women in Artificial Intelligence
-                    and Machine Learning (AI/ML) club dedicated to amplifying
+                    and Machine Learning (AI/ML) start-up dedicated to amplifying
                     the voices and contributions of women in the tech landscape.
                 </h2>
                 <NavLink className="about-btn" to="/about">

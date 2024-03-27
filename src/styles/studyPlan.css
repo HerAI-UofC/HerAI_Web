@@ -1,0 +1,171 @@
+/* Header */ 
+.study-header {
+    background-image: url('../img/couch-design.png');
+    background-size: 100%;
+    background-position: center;
+    height: 380px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+.title-header {
+    background-color: #cbaeae; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0.5, 0.2);
+    width: 85%;
+    height: 40%;
+    padding: 20px;
+    text-align: center;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+}
+
+.title-header h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Intro Section */ 
+.intro-section {
+    display: flex;
+    height: 500px;
+    background-color: #f8f6ee;
+}
+
+.intro-text {
+    flex: 1;
+    padding: 40px 15px;
+    padding-left: 100px;
+}
+
+.intro-text h2 {
+    font-size: 35px;
+    text-align: center;
+}
+
+.intro-text hr {
+    border-top: 2px solid gray;
+    margin: 20px auto;
+    width: 50%;
+}
+
+.intro-text p {
+    font-family: Lato;
+    font-weight: lighter;
+    padding: 5px 50px;
+}
+
+.button {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.intro-button {
+    background-color: #8c6d6c;
+    color: white;
+    font-family: Arial;
+    font-weight: lighter;
+    text-align: center;
+    padding: 15px 30px;
+    width: 35%;
+    font-size: 14px;
+}
+
+.intro-image {
+    flex: 1;
+}
+
+.intro-image img {
+    max-height: 75%;
+    margin-top: 50px;
+}
+
+/* Study Plan */
+.study-plan-container {
+    display: flex;
+    justify-content: center;
+    background-color: #f8f6ee;
+}
+
+.study-plan {
+    height: auto;
+    width: 90%;
+    background-color: #e1dbcc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add shadow directly to .study-plan */
+    padding: 20px;
+}
+
+.study-plan .toggle-button {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.study-plan .list h4 {
+    font-size: 20px;
+    font-family: Lato;
+    margin-top: 20px;
+}
+
+.study-plan .list p {
+    font-family: Lato;
+    font-weight: lighter;
+    margin-top: 10px;
+}
+
+.list hr {
+    border-top: 1px solid rgb(150, 150, 150);
+    margin: 20px auto;
+}
+
+.list button {
+    margin-top: 20px;
+    font-family: Lato;
+    color: white;
+    background-color: #8c6d6c;
+    padding: 12px 75px;
+}
+
+/* Closing section - motivational */
+.motivate-section {
+    display: flex;
+    height: 500px;
+    background-color: #f8f6ee;
+}
+
+.motivate-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#arch-img {
+    max-height: 65%;
+    margin-top: 50px;
+    margin-left: 50px;
+    border-radius: 25px;
+}
+
+.motivate-text {
+    flex: 0.6;
+    margin: auto;
+    margin-right: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.motivate-text h2 {
+    font-size: 50px;
+    color: #cbaeae;
+}
+
+.motivate-text p {
+    font-family: Lato;
+    font-weight: bold;
+}
+
+
+  

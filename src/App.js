@@ -10,6 +10,7 @@ import Login from "./pages/Login";
 import GetStarted from "./pages/getStarted";
 import Events from "./pages/Events.js";
 import Event from "./pages/Event.js";
+import StudyPlan from "./pages/studyPlan.js";
 
 import ScrollToTop from "./components/ScrollToTop.js";
 import Profile from "./pages/Profile.js";
@@ -29,6 +30,7 @@ function App() {
                 <Route path="/events/:eventTitle" Component={Event} />
                 <Route path="/profile" Component={Profile} />
                 <Route path="/getStarted" Component={GetStarted} />
+                <Route path="/studyPlan" Component={StudyPlan} />
             </Routes>
             <Footer />
         </Router>

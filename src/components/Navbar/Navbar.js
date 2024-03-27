@@ -46,6 +46,16 @@ const Navbar = () => {
         };
     }, [location.pathname]);
 
+    // Dropdown component
+    const [isDropdownOpen, setDropdownOpen] = useState(false);
+    const handleMouseEnter = () => {
+        setDropdownOpen(true);
+    }
+    const handleMouseLeave = () => {
+        setDropdownOpen(false);
+    }
+
+
     return (
         <nav ref={navbarRef}>
             <div className="mobile-menu">
@@ -64,6 +74,18 @@ const Navbar = () => {
                 <NavLink className={"link"} to="/events">
                     Events
                 </NavLink>
+                <div className="resources" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+                    <button className="resources-btn">
+                    Resources <span className={isDropdownOpen ? 'arrow-up' : ''}>&#11167;</span>
+                    </button> 
+                    {isDropdownOpen && (
+                        <div className="dropdown-content">
+                            <NavLink className={"link"} to="/studyPlan"> 
+                                Study Plan
+                            </NavLink>
+                        </div>
+                    )}
+                </div>
                 <NavLink className={"link"} to="/community">
                     Community
                 </NavLink>

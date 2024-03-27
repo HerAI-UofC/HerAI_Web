@@ -50,8 +50,7 @@ body{
     margin-bottom: 50px;
 }
 
-.about-btn{
-    text-decoration: none;
+.about-button{
     background-color: black;
     width: fit-content;
     padding: 15px 75px;

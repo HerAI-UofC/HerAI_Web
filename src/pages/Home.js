@@ -47,7 +47,7 @@ const Home = () => {
                     and Machine Learning (AI/ML) start-up dedicated to amplifying
                     the voices and contributions of women in the tech landscape.
                 </h2>
-                <NavLink className="about-btn" to="/about">
+                <NavLink className="about-button" to="/about">
                     About Us
                 </NavLink>
             </div>

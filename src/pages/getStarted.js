@@ -34,7 +34,7 @@ const getStarted = () => {
           </div>
         </div>
         <div class = "button">
-        <NavLink className="about-btn" to="/about">
+        <NavLink className="about-btn" to="/Questions">
                     Begin
                 </NavLink>
         </div>

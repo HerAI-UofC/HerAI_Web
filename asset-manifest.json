@@ -1,20 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.789430b3.css",
-    "main.js": "/static/js/main.562bb747.js",
+    "main.css": "/static/css/main.d67249e4.css",
+    "main.js": "/static/js/main.7a58d782.js",
     "static/media/community-img.png": "/static/media/community-img.0715be13c31c511ededc.png",
     "static/media/contact-img.jpg": "/static/media/contact-img.cd6e3b61d6f3b2f8b03b.jpg",
+    "static/media/couch-design.png": "/static/media/couch-design.d3e3e6dc89f5f254b089.png",
     "static/media/4.jpg": "/static/media/4.fc1f50dfd059137ffffd.jpg",
     "static/media/titleImg.jpg": "/static/media/titleImg.e73b3eb7b38658e9df5d.jpg",
     "static/media/2.jpg": "/static/media/2.bee320efc78b23551475.jpg",
     "static/media/logo.png": "/static/media/logo.cc23f18f9a769dab6d85.png",
     "static/media/3.jpg": "/static/media/3.61c107d6f4b16b9bde52.jpg",
+    "static/media/arch.png": "/static/media/arch.e8c702bb61be4bc07fc2.png",
+    "static/media/sky.png": "/static/media/sky.47ef6d8de228445c3b14.png",
     "index.html": "/index.html",
-    "main.789430b3.css.map": "/static/css/main.789430b3.css.map",
-    "main.562bb747.js.map": "/static/js/main.562bb747.js.map"
+    "main.d67249e4.css.map": "/static/css/main.d67249e4.css.map",
+    "main.7a58d782.js.map": "/static/js/main.7a58d782.js.map"
   },
   "entrypoints": [
-    "static/css/main.789430b3.css",
-    "static/js/main.562bb747.js"
+    "static/css/main.d67249e4.css",
+    "static/js/main.7a58d782.js"
   ]
 }

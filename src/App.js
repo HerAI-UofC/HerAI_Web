@@ -8,6 +8,7 @@ import Community from "./pages/Community";
 import Contact from "./pages/Contact";
 import Login from "./pages/Login";
 import GetStarted from "./pages/getStarted";
+import Questions from "./pages/Questions";
 import Events from "./pages/Events.js";
 import Event from "./pages/Event.js";
 import StudyPlan from "./pages/studyPlan.js";
@@ -31,6 +32,7 @@ function App() {
                 <Route path="/profile" Component={Profile} />
                 <Route path="/getStarted" Component={GetStarted} />
                 <Route path="/studyPlan" Component={StudyPlan} />
+                <Route path="/Questions" Component={Questions} />
             </Routes>
             <Footer />
         </Router>

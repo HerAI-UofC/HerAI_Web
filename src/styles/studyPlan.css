@@ -30,14 +30,14 @@
 /* Intro Section */ 
 .intro-section {
     display: flex;
-    height: 500px;
+    height: auto;
     background-color: #f8f6ee;
 }
 
 .intro-text {
     flex: 1;
     padding: 40px 15px;
-    padding-left: 100px;
+    padding-left: auto;
 }
 
 .intro-text h2 {
@@ -76,6 +76,8 @@
 
 .intro-image {
     flex: 1;
+    display: flex;
+    justify-content: center;
 }
 
 .intro-image img {
@@ -94,7 +96,7 @@
     height: auto;
     width: 90%;
     background-color: #e1dbcc;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add shadow directly to .study-plan */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     padding: 20px;
 }
 
@@ -131,7 +133,7 @@
 /* Closing section - motivational */
 .motivate-section {
     display: flex;
-    height: 500px;
+    height: auto;
     background-color: #f8f6ee;
 }
 
@@ -165,6 +167,82 @@
 .motivate-text p {
     font-family: Lato;
     font-weight: bold;
+}
+
+@media (max-width: 840px) {
+    .study-header {
+        height: 200px;
+    }
+
+    .title-header h1 {
+        font-size: 30px;
+    }
+
+    .intro-section,
+    .motivate-section {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .intro-text {
+        padding-left: 15px;
+    }
+
+    .intro-image {
+        max-inline-size: 75%;
+        align-self: center;
+        padding-bottom: 5em;
+    }
+
+    .study-plan .toggle-button {
+        font-size: 20px;
+    }
+
+    .study-plan .list h4 {
+        font-size: 18px;
+    }
+
+    .list button {
+        padding: 10px 20px;
+    }
+
+    .motivate-text {
+        padding-left: 20%;
+        padding-bottom: 20%;
+    }
+
+    .motivate-text h2 {
+        font-size: 30px;
+    }
+
+    .motivate-image {
+        max-inline-size: 75%;
+        align-self: center;
+        padding-bottom: 5em;
+    }
+
+    #arch-img {
+        margin: 0 0px;
+        margin-top: 20%;
+    }
+}
+
+@media (min-width: 840px) and (max-width: 1000px) {
+    .intro-image {
+        align-self: center;
+    }
+
+    .intro-image img {
+        padding-right: 25px;
+    }
+
+    .motivate-section {
+        padding: 50px 0px;
+    }
+    
+    #arch-img {
+        height: auto;
+    }
 }
 
 

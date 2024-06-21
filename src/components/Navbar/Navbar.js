@@ -88,6 +88,9 @@ const Navbar = () => {
                         </div>
                     )}
                 </div>
+                <NavLink className={"link"} to="/blog">
+                    Blog
+                </NavLink>
                 <NavLink className={"link"} to="/community">
                     Community
                 </NavLink>

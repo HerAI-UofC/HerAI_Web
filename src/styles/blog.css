@@ -1,99 +1,194 @@
 .grid-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    padding: 10px;
-    width: 40%;
-  }
-  
-  .grid-item {
-    position: relative;
-    text-align: center;
-    color: white;
-    overflow: hidden;
-    cursor: pointer;
-  }
-  
-  .grid-item img {
-    width: 100%;
-    height: auto;
-    transition: transform 0.3s ease;
-  }
-  
-  .grid-item:hover img {
-    transform: scale(1.1);
-  }
-  
-  .overlay {
-    position: absolute;
-    bottom: 8px;
-    left: 16px;
-    font-size: 1.5em;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 5px 10px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .grid-item:hover .overlay {
-    background-color: rgba(0, 0, 0, 0.7);
-  }
-  
-  .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.75);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-  }
-  
-  .modal {
-    position: relative;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    outline: none;
-    max-width: 90%;
-    max-height: 90%;
-    text-align: center;
-  }
-  
-  .modal img {
-    max-width: 100%;
-    max-height: 80vh;
-  }
-  
-  .close-button,
-  .prev-button,
-  .next-button {
-    background: none;
-    border: none;
-    font-size: 2em;
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    color: white;
-  }
-  
-  .close-button {
-    top: 10px;
-    right: 10px;
-    font-size: 1.5em;
-    background: #333;
-    border-radius: 50%;
-    padding: 0 0.3em;
-  }
-  
-  .prev-button {
-    left: 10px;
-  }
-  
-  .next-button {
-    right: 10px;
-  }
-  
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  padding: 10px;
+  width: 40%;
+}
+
+.grid-item {
+  position: relative;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.grid-item img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.grid-item:hover img {
+  transform: scale(1.1);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  font-size: 1.5em;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+  transition: background-color 0.3s ease;
+}
+
+.grid-item:hover .overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  position: relative;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  outline: none;
+  max-width: 90%;
+  max-height: 90%;
+  text-align: center;
+}
+
+.modal img {
+  max-width: 100%;
+  max-height: 80vh;
+}
+
+.close-button,
+.prev-button,
+.next-button {
+  background: none;
+  border: none;
+  font-size: 2em;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+}
+
+.close-button {
+  top: 10px;
+  right: 10px;
+  font-size: 1.5em;
+  background: #333;
+  border-radius: 50%;
+  padding: 0 0.3em;
+}
+
+.prev-button {
+  left: 10px;
+}
+
+.next-button {
+  right: 10px;
+}
+
+.top-image {
+  width: 100%;
+  height: 300px;
+  display: block;
+}
+
+.blog-header {
+  text-align: center;
+  position: relative;
+  margin-top: -50px; /* Adjust this value to overlap the image */
+  z-index: 2;
+}
+
+.blog-header h1 {
+  font-size: 2.5em; /* Adjust font size for larger text */
+  color: #b56576;
+  padding: 30px 40px; /* Adjust padding for the desired height */
+  border: 2px solid #b56576;
+  display: inline-block;
+  margin: 0 auto; /* Center horizontally */
+  background-color: #ffffff;
+  position: relative;
+  z-index: 2;
+  width: 50%; /* Adjust the width to fit the content */
+}
+
+.author-publish-container {
+  background-color: #ffffff;
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+  position: relative;
+  margin-top: 20px; /* Adjust to position correctly */
+}
+
+.author-label,
+.publish-label {
+  font-size: 1em;
+  color: #333;
+}
+
+.author-label strong {
+  font-weight: bold;
+}
+
+.blog-container {
+  width: 100%;
+  padding: 20px;
+  background-color: #f7f5eb; /* Light yellow background */
+  margin-top: 20px; /* Adjusted to ensure subtitle visibility */
+  position: relative;
+  z-index: 1;
+  align-items: center;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 350px;
+  gap: 100px;
+}
+
+.content-text {
+  width: 100%;
+  max-width: 700px; /* Maximum width for the text content */
+  text-align: left; /* Left align text within the content area */
+  line-height: 33px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 100;
+}
+
+.content-image {
+  width: 100%;
+  max-width: 500px; /* Maximum width for the image */
+  margin-top: -50px;
+}
+
+.subtitle-font {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: left; /* Ensures subtitle is clearly visible */
+  margin-left: 350px;
+}
+
+.extra-space {
+  height: 3px; /* Adjust the height for the extra white space */
+  background-color: #ffffff; /* Ensure it matches the background color */
+}

@@ -6,10 +6,10 @@ import SlidesPane from "../components/SlidesPane/SlidesPane";
 import GalleryPane from "../components/GalleryPane/GalleryPane";
 import DetailsPane from "../components/DetailsPane/DetailsPane";
 import { getUrl } from "aws-amplify/storage";
-import awsconfig from "../aws-exports";
 import { fetchAuthSession } from "aws-amplify/auth";
 import AccessDeniedPane from "../components/AccessDeniedPane/AccessDeniedPane";
 import UpcomingPane from "../components/UpcomingPane/UpcomingPane";
+
 
 const Event = () => {
     const location = useLocation();

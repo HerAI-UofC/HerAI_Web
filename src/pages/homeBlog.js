@@ -36,11 +36,8 @@ const HomeBlog = () => {
                     <NavLink className="blog-button" to="/blog">Create a Blog</NavLink>
                     <h4>Reading List<hr></hr></h4>
                     <img src={blog1} alt="palmTree" id="blog-img1"></img>
-                    <p class="rl-blog-title">Saved Blog 1</p>
                     <img src={blog2} alt="sand" id="blog-img1"></img>
-                    <p class="rl-blog-title">Saved Blog 2</p>
                     <img src={blog3} alt="chasm" id="blog-img1"></img>
-                    <p class="rl-blog-title">Saved Blog 3</p>
                 </div> 
 
             </div>

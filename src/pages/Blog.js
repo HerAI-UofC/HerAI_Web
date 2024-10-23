@@ -7,8 +7,8 @@ import img8 from "../img/laptop.png";
 import img9 from "../img/robot.png";
 import { NavLink } from "react-router-dom";
 import topImage from "../img/sky.png";  // Adjust the path accordingly
-import "slick-carousel/slick/slick.css"; 
-import "slick-carousel/slick/slick-theme.css";
+// import "slick-carousel/slick/slick.css"; 
+// import "slick-carousel/slick/slick-theme.css";
 
 const Blog = () => {
   const images = [

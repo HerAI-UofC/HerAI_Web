@@ -4,7 +4,8 @@ import Navbar from "./components/Navbar/Navbar.js";
 import Footer from "./components/Footer/Footer.js";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Blog from "./pages/Blog";
+import HomeBlog from "./pages/homeBlog.js";
+import Blog from "./pages/Blog.js";
 import Community from "./pages/Community";
 import Contact from "./pages/Contact";
 import Login from "./pages/Login";
@@ -34,6 +35,7 @@ function App() {
                 <Route path="/getStarted" Component={GetStarted} />
                 <Route path="/studyPlan" Component={StudyPlan} />
                 <Route path="/Questions" Component={Questions} />
+                <Route path="/homeBlog" Component={HomeBlog}/>
                 <Route path="/Blog" Component={Blog} />
             </Routes>
             <Footer />

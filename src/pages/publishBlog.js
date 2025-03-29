@@ -1,74 +1,66 @@
-import React, {useState} from 'react';
-import {Amplify} from 'aws-amplify';
-import {createBlog} from '../graphql/mutations';
+import React, { useState } from "react";
+import ReactQuill from "react-quill";
+import "react-quill/dist/quill.snow.css";
 
 const PublishBlog = () => {
-    const [title, setTitle] = useState('');
-    const [description, setDescription] = useState('');
-    const [pic, setPic] = useState('');
-    const [date, setDate] = useState(new Date().toISOString());
+  const [title, setTitle] = useState("");
+  const [content, setContent] = useState("");
+  const [category, setCategory] = useState("Technology");
 
-    const handleSubmit = async (event) => {
-        event.preventDefault();
+  const handlePublish = () => {
+    if (!title.trim() || !content.trim()) {
+      alert("Title and content cannot be empty.");
+      return;
+    }
 
-        try {
-            const newBlog = {
-                title,
-                description,
-                pic,
-                date
-            };
-
-            const result = await Amplify.graphql({
-                query: createBlog,
-                variables: {input: newBlog}
-            });
-
-            console.log(result); // or re-direct to new blog or show success message
-        } catch (error) {
-            console.error("Error creating blog", error);
-        }
+    const blogData = {
+      title,
+      content,
+      category,
+      date: new Date().toISOString(),
     };
+    
+    console.log("Blog Published:", blogData);
+    alert("Blog published successfully!");
+  };
 
-    return (
-        <div>
-            <h1>Publish your Blog!</h1>
-            <form onSubmit={handleSubmit}>
-                <label>
-                    Title:
-                    <input
-                        type = "text"
-                        value = {title}
-                        onChange = {(e) => setTitle(e.target.value)}
-                        required
-                    />
-                </label>
-                <br/>
+  return (
+    <div className="max-w-3xl mx-auto p-6 bg-white rounded-lg shadow-md">
+      <h2 className="text-2xl font-bold mb-4">Publish Your Blog</h2>
 
-                <label>
-                    Description:
-                    <textarea
-                        value = {description}
-                        onChange = {(e) => setDescription(e.target.value)}
-                    />
-                </label>
-                <br/>
+      <input
+        type="text"
+        placeholder="Blog Title"
+        value={title}
+        onChange={(e) => setTitle(e.target.value)}
+        className="w-full p-2 mb-4 border rounded"
+      />
 
-                <label>
-                    Picture (URL):
-                    <input
-                        type = "text"
-                        value = {pic}
-                        onChange = {(e) => setPic(e.target.value)}
-                    />
-                </label>
-                <br/>
-                
-                <button type="submit">Publish</button>
-            </form>
-        </div>
-    );
+      <select
+        value={category}
+        onChange={(e) => setCategory(e.target.value)}
+        className="w-full p-2 mb-4 border rounded"
+      >
+        <option value="Technology">Technology (General)</option>
+        <option value="AI">AI</option>
+        <option value="Machine Learning">Machine Learning</option>
+        <option value="Bioinformatics">Bioinformatics</option>
+      </select>
 
+      <ReactQuill
+        value={content}
+        onChange={setContent}
+        className="mb-4"
+      />
+
+      <button
+        onClick={handlePublish}
+        className="w-full bg-blue-600 text-white p-2 rounded"
+      >
+        Publish
+      </button>
+    </div>
+  );
 };
 
 export default PublishBlog;

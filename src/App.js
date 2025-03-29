@@ -14,6 +14,7 @@ import Questions from "./pages/Questions";
 import Events from "./pages/Events.js";
 import Event from "./pages/Event.js";
 import StudyPlan from "./pages/studyPlan.js";
+import PublishBlog from "./pages/publishBlog.js";
 
 import ScrollToTop from "./components/ScrollToTop.js";
 import Profile from "./pages/Profile.js";
@@ -37,6 +38,7 @@ function App() {
                 <Route path="/Questions" Component={Questions} />
                 <Route path="/homeBlog" Component={HomeBlog}/>
                 <Route path="/Blog" Component={Blog} />
+                <Route path="/publishBlog" Component={PublishBlog} />
             </Routes>
             <Footer />
         </Router>

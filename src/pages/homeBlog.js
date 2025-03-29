@@ -33,7 +33,7 @@ const HomeBlog = () => {
                 </div>
 
                 <div class="reading-list">
-                    <NavLink className="blog-button" to="/blog">Create a Blog</NavLink>
+                    <NavLink className="blog-button" to="/publishBlog">Create a Blog</NavLink>
                     <h4>Reading List<hr></hr></h4>
                     <img src={blog1} alt="palmTree" id="blog-img1"></img>
                     <img src={blog2} alt="sand" id="blog-img1"></img>

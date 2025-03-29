@@ -166,3 +166,13 @@ export const deleteTodo = /* GraphQL */ `
     }
   }
 `;
+
+export const createBlog = /* GraphQL */ `
+  mutation CreateBlog($input: CreateBlogInput!) {
+    createBlog(input: $input) {
+      id
+      title
+      content
+    }
+  }
+`;

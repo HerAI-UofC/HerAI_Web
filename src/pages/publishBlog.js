@@ -1,3 +1,4 @@
+import "../styles/publishBlog.css";
 import React, { useState } from "react";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
@@ -9,7 +10,7 @@ const PublishBlog = () => {
 
   const handlePublish = () => {
     if (!title.trim() || !content.trim()) {
-      alert("Title and content cannot be empty.");
+      alert("Title and content cannot be empty!");
       return;
     }
 
@@ -25,8 +26,9 @@ const PublishBlog = () => {
   };
 
   return (
-    <div className="max-w-3xl mx-auto p-6 bg-white rounded-lg shadow-md">
-      <h2 className="text-2xl font-bold mb-4">Publish Your Blog</h2>
+    /*mt and mb adds padding above and below the ReactQuill text editor */
+    <div className="max-w-3xl mx-auto p-6 bg-white rounded-lg shadow-md mt-10 mb-10">
+      <h2 className="blog-heading">your blog. your space</h2>
 
       <input
         type="text"
@@ -55,7 +57,7 @@ const PublishBlog = () => {
 
       <button
         onClick={handlePublish}
-        className="w-full bg-blue-600 text-white p-2 rounded"
+        className="publish-button mx-auto block"
       >
         Publish
       </button>

@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.bd211076.css",
-    "main.js": "/static/js/main.9a449f9d.js",
-    "static/media/community-img.png": "/static/media/community-img.0715be13c31c511ededc.png",
-    "static/media/contact-img.jpg": "/static/media/contact-img.cd6e3b61d6f3b2f8b03b.jpg",
-    "static/media/couch-design.png": "/static/media/couch-design.d3e3e6dc89f5f254b089.png",
-    "static/media/4.jpg": "/static/media/4.fc1f50dfd059137ffffd.jpg",
-    "static/media/titleImg.jpg": "/static/media/titleImg.e73b3eb7b38658e9df5d.jpg",
-    "static/media/2.jpg": "/static/media/2.bee320efc78b23551475.jpg",
-    "static/media/logo.png": "/static/media/logo.cc23f18f9a769dab6d85.png",
-    "static/media/3.jpg": "/static/media/3.61c107d6f4b16b9bde52.jpg",
-    "static/media/arch.png": "/static/media/arch.e8c702bb61be4bc07fc2.png",
-    "static/media/sky.png": "/static/media/sky.47ef6d8de228445c3b14.png",
-    "index.html": "/index.html",
-    "main.bd211076.css.map": "/static/css/main.bd211076.css.map",
-    "main.9a449f9d.js.map": "/static/js/main.9a449f9d.js.map"
+    "main.css": "/HerAI_Web/static/css/main.06229143.css",
+    "main.js": "/HerAI_Web/static/js/main.439694c2.js",
+    "static/media/community-img.png": "/HerAI_Web/static/media/community-img.0715be13c31c511ededc.png",
+    "static/media/contact-img.jpg": "/HerAI_Web/static/media/contact-img.cd6e3b61d6f3b2f8b03b.jpg",
+    "static/media/couch-design.png": "/HerAI_Web/static/media/couch-design.d3e3e6dc89f5f254b089.png",
+    "static/media/4.jpg": "/HerAI_Web/static/media/4.fc1f50dfd059137ffffd.jpg",
+    "static/media/titleImg.jpg": "/HerAI_Web/static/media/titleImg.e73b3eb7b38658e9df5d.jpg",
+    "static/media/2.jpg": "/HerAI_Web/static/media/2.bee320efc78b23551475.jpg",
+    "static/media/logo.png": "/HerAI_Web/static/media/logo.cc23f18f9a769dab6d85.png",
+    "static/media/3.jpg": "/HerAI_Web/static/media/3.61c107d6f4b16b9bde52.jpg",
+    "static/media/arch.png": "/HerAI_Web/static/media/arch.e8c702bb61be4bc07fc2.png",
+    "static/media/sky.png": "/HerAI_Web/static/media/sky.47ef6d8de228445c3b14.png",
+    "index.html": "/HerAI_Web/index.html",
+    "main.06229143.css.map": "/HerAI_Web/static/css/main.06229143.css.map",
+    "main.439694c2.js.map": "/HerAI_Web/static/js/main.439694c2.js.map"
   },
   "entrypoints": [
-    "static/css/main.bd211076.css",
-    "static/js/main.9a449f9d.js"
+    "static/css/main.06229143.css",
+    "static/js/main.439694c2.js"
   ]
 }

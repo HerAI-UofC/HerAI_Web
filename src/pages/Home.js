@@ -8,48 +8,23 @@ import { useEffect, useRef } from "react";
 const Home = () => {
     const ref = useRef(null);
 
-    useEffect(() => {
-        if (window.innerWidth <= 768) {
-            if (ref.current) {
-                ref.current.classList.add("fade-in");
-            }
-        } else {
-            const checkScroll = () => {
-                if (ref.current) {
-                    const winHeight = window.innerHeight;
-                    const txtTop = ref.current.getBoundingClientRect().top;
-                    if (txtTop - winHeight <= 0) {
-                        ref.current.classList.add("fade-in");
-                    } else {
-                        ref.current.classList.remove("fade-out");
-                    }
-                }
-            };
-
-            window.addEventListener("scroll", checkScroll);
-
-            return () => {
-                window.removeEventListener("scroll", checkScroll);
-            };
-        }
-    }, []);
-
     return (
         <>
             <div className="title-head">
                 <h1>HerAI</h1>
                 <h4>Women in AI/ML</h4>
             </div>
-            <img src={img} alt="x" id="title-img"></img>
             <div className="about-blurb">
-                <h2 id="blurb" ref={ref}>
-                    HerAI is a forward-thinking Women in Artificial Intelligence
-                    and Machine Learning (AI/ML) start-up dedicated to amplifying
-                    the voices and contributions of women in the tech landscape.
-                </h2>
-                <NavLink className="about-button" to="/about">
-                    About Us
-                </NavLink>
+                <div className="about-bubble">
+                    <h2 id="blurb" ref={ref}>
+                        HerAI is a forward-thinking Women in Artificial Intelligence
+                        and Machine Learning (AI/ML) start-up dedicated to amplifying
+                        the voices and contributions of women in the tech landscape.
+                    </h2>
+                    <NavLink className="about-button" to="/about">
+                        About Us <span className="arrow">→</span>
+                    </NavLink>
+                </div>
             </div>
             <div className="statement-img-img">
                 <h1>Empowering Women in the AI Revolution</h1>

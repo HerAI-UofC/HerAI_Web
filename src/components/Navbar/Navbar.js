@@ -59,7 +59,9 @@ const Navbar = () => {
     return (
         <nav ref={navbarRef}>
             <div className="mobile-menu">
-                <img id="nav-logo" src={logo} alt="not found"></img>
+                <NavLink to="/" end>
+                    <img id="nav-logo" src={logo} alt="not found" style={{ cursor: "pointer" }}></img>
+                </NavLink>
                 <button onClick={toggleNav} className="menu-icon">
                     &#9776;
                 </button>

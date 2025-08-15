@@ -3,11 +3,12 @@ body{
     font-family: "Alice";
 }
 
+
+
 .title-head{
-    background-color: white;
+    background-color: #8c6d6c;
     margin: none;
-    /* height: 200px; */
-    padding: 75px;
+    padding: 30px;
     text-align: center;
     
 }
@@ -17,14 +18,25 @@ body{
     padding: 0;
     font-family: "Alice"; 
     font-size: 50pt;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    color: whitesmoke;
+    display: inline-block;
+    cursor: default;
+}
+
+.title-head h1:hover {
+  transform: scale(1.08); /* Slight pop-out */
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.25); /* Soft halo effect */
 }
 
 .title-head h4{
     margin: 0;
     padding: 0;
     font-family: "Lato";
-    font-size: 20pt;
-    font-weight:lighter;
+    font-size: 24pt;
+    font-weight: lighter;
+    text-shadow: 0 0 6px rgba(245, 245, 245, 0.6);
+    cursor: default;
 }
 
 #title-img{
@@ -35,26 +47,51 @@ body{
 }
 
 .about-blurb{
-    background-color: #8C6D6C;
+    background-color: #8c6d6c;
     text-align: center;
     font-family: "Alice";
-    padding: 100px 75px;
+    padding: 50px 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-bubble{
+    background-color: rgba(245, 245, 245, 0.8); /* whitesmoke with 80% opacity */
+    padding: 50px 10px;
+    border-radius: 50px; /* pill-like rounded corners */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2); /* soft outer shadow */
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .about-blurb h2{
-    font-size: 40pt;
+    font-size: 20pt;
     margin: 0;
     margin-bottom: 50px;
 }
 
 .about-button{
-    background-color: black;
     width: fit-content;
-    padding: 15px 75px;
     color: white;
+    /* animation - fade in */
+    opacity: 0;
+    animation: fadeInBlurb 2s ease forwards;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent; /* or subtle background */
+    border: 2px solid #333;
+    border-radius: 50px;
+    padding: 15px 25px;
+    font-size: 18px;
+    color: #333;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
 }
 
 .statement-img-img{
@@ -119,13 +156,18 @@ body{
     font-weight: 300;
 }
 
-#blurb{
+#blurb {
     opacity: 0;
-    transition: opacity 3s;
+    animation: fadeInBlurb 2s ease forwards;
 }
 
-#blurb.fade-in{
-    opacity: 1;
+@keyframes fadeInBlurb {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 

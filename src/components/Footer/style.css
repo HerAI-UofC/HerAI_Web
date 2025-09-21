@@ -1,5 +1,5 @@
 .footer{
-    background-color: #FFF2EB;
+    background-color: #8c6d6cea;
     margin: 0;
     display: flex;
     justify-content: space-between;
@@ -34,7 +34,7 @@
 }
 
 #contact-btn{
-    background-color: black;
+    background-color: #2E353B;
     color: white;
     font-size: 10pt;
     padding: 10px 60px;

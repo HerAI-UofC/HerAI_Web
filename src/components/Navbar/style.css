@@ -4,7 +4,7 @@ nav {
     z-index: 200;
     display: flex;
     justify-content:space-between;
-    background-color: #FFF2EB;
+    background-color: #8c6d6cea;
     margin: 0;
     padding: 20px 100px;
     width:auto;
@@ -12,7 +12,7 @@ nav {
 }
 
 nav.scrolled{
-    background-color: white;
+    background-color: #FFF2EB;
     padding: 15px 100px;
 }
 
@@ -36,17 +36,10 @@ nav.scrolled{
     font-weight: bold;
 }
 
-/* button{
-    background-color: black;
-    padding: 10px 75px;
-    margin: 0;
-    border: none;
-} */
-
 .login{
     display: flex;
     text-decoration: none;
-    background-color: black;
+    background-color: #2E353B;
     padding: 10px 75px;
     margin: 5px 0;
     color: white;
@@ -76,7 +69,7 @@ nav.scrolled{
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #f9f9f9;
+    background-color: #8c6d6c;
     min-width: 160px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     z-index: 1;
@@ -90,7 +83,8 @@ nav.scrolled{
 }
 
 .dropdown-content:hover{
-    background-color: #f1f1f1;
+    background-color: #8c6d6c;
+    font-weight: bold;
 }
 
 .resources:hover, .dropdown-content {

@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/HerAI_Web/static/css/main.866c1250.css",
-    "main.js": "/HerAI_Web/static/js/main.fc95ee06.js",
+    "main.css": "/HerAI_Web/static/css/main.dcfc754b.css",
+    "main.js": "/HerAI_Web/static/js/main.00c461c4.js",
     "static/media/community-img.png": "/HerAI_Web/static/media/community-img.0715be13c31c511ededc.png",
     "static/media/contact-img.jpg": "/HerAI_Web/static/media/contact-img.cd6e3b61d6f3b2f8b03b.jpg",
     "static/media/couch-design.png": "/HerAI_Web/static/media/couch-design.d3e3e6dc89f5f254b089.png",
     "static/media/4.jpg": "/HerAI_Web/static/media/4.fc1f50dfd059137ffffd.jpg",
-    "static/media/titleImg.jpg": "/HerAI_Web/static/media/titleImg.e73b3eb7b38658e9df5d.jpg",
-    "static/media/2.jpg": "/HerAI_Web/static/media/2.bee320efc78b23551475.jpg",
+    "static/media/women-in-stem.png": "/HerAI_Web/static/media/women-in-stem.620e01c600a9112e1244.png",
     "static/media/3.jpg": "/HerAI_Web/static/media/3.61c107d6f4b16b9bde52.jpg",
     "static/media/logo.png": "/HerAI_Web/static/media/logo.3c35ac05baf2b36036d8.png",
     "static/media/arch.png": "/HerAI_Web/static/media/arch.e8c702bb61be4bc07fc2.png",
+    "static/media/home-title.png": "/HerAI_Web/static/media/home-title.bf8133f6a6b8340f398a.png",
     "static/media/sky.png": "/HerAI_Web/static/media/sky.47ef6d8de228445c3b14.png",
     "index.html": "/HerAI_Web/index.html",
-    "main.866c1250.css.map": "/HerAI_Web/static/css/main.866c1250.css.map",
-    "main.fc95ee06.js.map": "/HerAI_Web/static/js/main.fc95ee06.js.map"
+    "main.dcfc754b.css.map": "/HerAI_Web/static/css/main.dcfc754b.css.map",
+    "main.00c461c4.js.map": "/HerAI_Web/static/js/main.00c461c4.js.map"
   },
   "entrypoints": [
-    "static/css/main.866c1250.css",
-    "static/js/main.fc95ee06.js"
+    "static/css/main.dcfc754b.css",
+    "static/js/main.00c461c4.js"
   ]
 }

@@ -1,25 +1,26 @@
 {
   "files": {
-    "main.css": "/HerAI_Web/static/css/main.99430f14.css",
-    "main.js": "/HerAI_Web/static/js/main.f86f623f.js",
-    "static/media/about-viv.jpg": "/HerAI_Web/static/media/about-viv.f51462fc27a1e0bec45f.jpg",
-    "static/media/about-habiba.jpg": "/HerAI_Web/static/media/about-habiba.abe27386a5ba7f7c56d8.jpg",
-    "static/media/community-img.png": "/HerAI_Web/static/media/community-img.0715be13c31c511ededc.png",
-    "static/media/contact-img.jpg": "/HerAI_Web/static/media/contact-img.cd6e3b61d6f3b2f8b03b.jpg",
-    "static/media/couch-design.png": "/HerAI_Web/static/media/couch-design.d3e3e6dc89f5f254b089.png",
-    "static/media/women-in-stem.png": "/HerAI_Web/static/media/women-in-stem.620e01c600a9112e1244.png",
-    "static/media/about-britt.jpg": "/HerAI_Web/static/media/about-britt.5c459ff7eae5c9227fa5.jpg",
-    "static/media/logo.png": "/HerAI_Web/static/media/logo.3c35ac05baf2b36036d8.png",
-    "static/media/arch.png": "/HerAI_Web/static/media/arch.e8c702bb61be4bc07fc2.png",
-    "static/media/home-title.png": "/HerAI_Web/static/media/home-title.bf8133f6a6b8340f398a.png",
-    "static/media/sky.png": "/HerAI_Web/static/media/sky.47ef6d8de228445c3b14.png",
-    "static/media/about-fatema.jpg": "/HerAI_Web/static/media/about-fatema.db18ade20b82f1c5ef97.jpg",
-    "index.html": "/HerAI_Web/index.html",
-    "main.99430f14.css.map": "/HerAI_Web/static/css/main.99430f14.css.map",
-    "main.f86f623f.js.map": "/HerAI_Web/static/js/main.f86f623f.js.map"
+    "main.css": "/static/css/main.15892df4.css",
+    "main.js": "/static/js/main.6bd201e7.js",
+    "static/media/about-viv.jpg": "/static/media/about-viv.f51462fc27a1e0bec45f.jpg",
+    "static/media/about-habiba.jpg": "/static/media/about-habiba.abe27386a5ba7f7c56d8.jpg",
+    "static/media/community-img.png": "/static/media/community-img.0715be13c31c511ededc.png",
+    "static/media/about-cassie.jpg": "/static/media/about-cassie.05d6010b9183dc7961ea.jpg",
+    "static/media/contact-img.jpg": "/static/media/contact-img.cd6e3b61d6f3b2f8b03b.jpg",
+    "static/media/couch-design.png": "/static/media/couch-design.d3e3e6dc89f5f254b089.png",
+    "static/media/women-in-stem.png": "/static/media/women-in-stem.620e01c600a9112e1244.png",
+    "static/media/about-britt.jpg": "/static/media/about-britt.5c459ff7eae5c9227fa5.jpg",
+    "static/media/logo.png": "/static/media/logo.3c35ac05baf2b36036d8.png",
+    "static/media/arch.png": "/static/media/arch.e8c702bb61be4bc07fc2.png",
+    "static/media/home-title.png": "/static/media/home-title.bf8133f6a6b8340f398a.png",
+    "static/media/sky.png": "/static/media/sky.47ef6d8de228445c3b14.png",
+    "static/media/about-fatema.jpg": "/static/media/about-fatema.db18ade20b82f1c5ef97.jpg",
+    "index.html": "/index.html",
+    "main.15892df4.css.map": "/static/css/main.15892df4.css.map",
+    "main.6bd201e7.js.map": "/static/js/main.6bd201e7.js.map"
   },
   "entrypoints": [
-    "static/css/main.99430f14.css",
-    "static/js/main.f86f623f.js"
+    "static/css/main.15892df4.css",
+    "static/js/main.6bd201e7.js"
   ]
 }

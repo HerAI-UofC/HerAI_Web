@@ -1,207 +1,165 @@
-.body-header{
-    position: relative;
-    background-image: url("../img/3.jpg");
-    background-position: 25% 40%;
-    background-repeat: no-repeat;
-    background-size:cover;
-    padding: 125px 0;
-    font-family: "Alice";
-    text-align: center;
-    
+.about-page {
+  padding: 60px 20px;
+  text-align: center;
+  font-family: 'Lato', 'Alice', sans-serif;
 }
 
-.body-header::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.6);
+.about-title {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: #8c6d6c;
+  position: relative;
 }
 
-.body-header h1{
-    margin: 0;
-    position: relative;
-    color: white;
-    font-size: 40pt;
+/* Optional: horizontal lines on sides */
+.about-title::before,
+.about-title::after {
+  content: "";
+  position: relative;
+  top: -1px;
+  display: inline-block;
+  width: 80px;
+  height: 2px;
+  background: #8c6d6c;
+  margin: 0 12px;
 }
 
-.about-section{
-    padding: 100px 75px;
-    text-align: center;
+/*Team section navigation*/
+.team-section {
+  margin-bottom: 50px; /* space between sections */
 }
 
-.about-section h3{
-    font-size: 36pt;
-    font-family: "Alice";
+.team-title {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #8c6d6c; /* matches theme */
+  border-bottom: 2px solid #ddd; /* subtle divider */
+  padding-bottom: 10px;
 }
 
-.about-section p{
-    font-size: 25pt;
-    font-family: "Lato";
-    font-weight: 300;
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 50px;
+  justify-items: center;   /* ✅ center the grid within container */
 }
 
-.vision-section{
-    background-color: red;
-    display: flex;
-    padding: 50px 150px;
-    font-family: "Alice";
-    align-items: center;
-    visibility: hidden;
+/* Card container with 3D perspective */
+.team-card {
+  width: 250px;
+  height: 320px;
+  perspective: 1000px; /* needed for 3D flip */
 }
 
-.vision-section h2{
-    border-right: 2px solid black;
-    font-size: 50pt;
-    text-align: right;
-    padding: 20px 40px;
-    margin-right: 40px;
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  border-radius: 12px;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
 }
 
-.vision-section p{
-    font-size: 20pt;
-    font-family: Lato;
-    font-weight: 300;
+/* Flip on hover */
+.team-card:hover .card-inner {
+  transform: rotateY(180deg);
 }
 
-.contact-section{
-    padding: 40px 20px;
-    text-align: center;
+/* Front and back faces */
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
 }
 
-.scroll-img-container{
-    display: flex;
-    justify-content: space-around;
-    background-image: url("../img/4.jpg");
-    background-size:cover;
-    background-repeat: no-repeat;
-    background-attachment:fixed;
-    align-items: center;
-    padding: 100px 0;
-    
+.card-front img {
+  width: 100%;     /* full card width */
+  height: 160px;   /* fixed height or use auto for proportional scaling */
+  object-fit: cover;
+  margin-bottom: 10px;
 }
 
-.txt-container{
-    background-color: white;
-    width: 30%;
-    padding: 50px;
+.card-front h3 {
+  margin: 10px 0 5px 0;
+  color: #333;
 }
 
-.txt-container h4{
-    font-family: "Alice";
-    font-size: 28pt;
-    margin: 0;
+.card-front p {
+  color: #555;
 }
 
-.txt-container p{
-    font-size: 12pt;
-    font-family: Lato;
-    font-weight: 300;
-    margin: 20px 0 40px;
+/* Back face */
+.card-back {
+  transform: rotateY(180deg);
+  background: #f9f9f9;
+  padding: 20px;
+  justify-content: center;
 }
 
-.txt-container a{
-    text-decoration: none;
-    color: white;
-    padding: 15px 50px;
-    background-color: #8C6D6C;
+.card-back p {
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 15px;
 }
 
-@keyframes slide-in {
-    0%{
-        transform: translateX(200px);
-        opacity: 0;
-    }
-    100%{
-        transform: translateX(0);
-        opacity: 1;
-    }
+.card-details h4 {
+  margin: 10px 0 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #8c6d6c; /* theme accent */
 }
 
-.slide-in{
-    visibility: visible;
-    animation: slide-in 2s forwards;
+.card-back a {
+  color: #8c6d6c;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-
-@media (max-width: 1000px){
-    .vision-section{
-        padding: 50px 20px;
-    }
-
-    .txt-container{
-        width: 50%;
-    }
-
-    
+.card-back a:hover {
+  text-decoration: underline;
 }
 
-@media (max-width: 768px) {
-    .body-header {
-        padding: 60px 0;
-    }
+/*Social media links*/
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 10px; 
+  margin-top: 15px;
+}
 
-    .body-header h1 {
-        font-size: 24pt;
-    }
+.linkedin-icon {
+  display: inline-block;
+  color: #0077b5;      /* LinkedIn blue */
+  font-size: 28px;     /* bigger logo */
+  margin-top: 10px;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
 
-    .about-section {
-        padding: 50px 30px;
-    }
+.linkedin-icon:hover {
+  transform: scale(1.2);
+  color: #005582;      /* darker blue on hover */
+}
 
-    .about-section h3 {
-        font-size: 20pt;
-    }
+.github-icon {
+  display: inline-block;
+  color: #333;      /* LinkedIn blue */
+  font-size: 28px;     /* bigger logo */
+  margin-top: 10px;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
 
-    .about-section p {
-        font-size: 14pt;
-    }
-
-    .vision-section {
-        flex-direction: column;
-        padding: 50px 30px;
-    }
-
-    .vision-section h2 {
-        font-size: 20pt;
-        width: 100%;
-        text-align: left;
-        border-right: none;
-        padding:0;
-        margin: 0 0 15px 0;
-    }
-
-    .vision-section p {
-        font-size: 14pt;
-        
-    }
-
-    .contact-section {
-        padding: 20px 10px;
-    }
-
-    .scroll-img-container {
-        flex-direction: column;
-        padding: 40px;
-    }
-
-    .txt-container {
-        width: 100%;
-        padding: 30px 20px;
-    }
-
-    .txt-container h4 {
-        font-size: 20pt;
-    }
-
-    .txt-container p {
-        font-size: 12pt;
-        margin: 20px 0;
-    }
-
-    .txt-container a {
-        padding: 10px 25px;
-    }
+.github-icon:hover {
+  transform: scale(1.2);
+  color: #000;      /* darker blue on hover */
 }

@@ -2,5 +2,7 @@
   "AppSyncApiName": "heraiamplifyauth",
   "DynamoDBBillingMode": "PAY_PER_REQUEST",
   "DynamoDBEnableServerSideEncryption": false,
-  "AuthModeLastUpdated": "2023-12-30T04:47:41.254Z"
+  "AuthModeLastUpdated": "2023-12-30T04:47:41.254Z",
+  "CreateAPIKey": 1,
+  "ApiKeyExpirationEpoch": 1785571200
 }

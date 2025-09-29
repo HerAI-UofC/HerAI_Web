@@ -2,6 +2,7 @@ import "../styles/about.css";
 import ScrollTrigger from "react-scroll-trigger";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { useEffect } from "react";
 import { FaLinkedin, FaGithub } from "react-icons/fa"
 
 /*Import all team member images - GET PERMISSION*/
@@ -16,6 +17,7 @@ import asma from "../img/about-asma.jpg";
 import ana from "../img/about-ana.jpg";
 import arfa from "../img/about-arfa.jpg";
 import daad from "../img/about-daad.jpg";
+import hira from "../img/about-hira.jpg";
 
 const teamMembers = [
   {
@@ -73,7 +75,7 @@ const teamMembers = [
         role: "VP Events", 
         bio: "4th Year Biomedical Engineering",
         linkedin: "https://www.linkedin.com/in/hirat1/", 
-        img: blank 
+        img: hira
       },
       { 
         name: 

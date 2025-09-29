@@ -2,16 +2,25 @@
   padding: 60px 20px;
   text-align: center;
   font-family: 'Lato', 'Alice', sans-serif;
+  background-color: #E4DAD0;
 }
 
 .about-title {
+  display: inline-block;      /* shrink box to fit text */
+  padding: 12px 24px;         /* spacing inside the box */
+  margin-bottom: 30px;        /* space between title and cards */
+  border: 2px solid #8c6d6c;  /* border color (change as needed) */
+  border-radius: 8px;         /* rounded corners */
+  background-color: #8c6d6c;
+  font-family: Alice;
   font-size: 2.5rem;
-  margin-bottom: 50px;
-  color: #8c6d6c;
-  position: relative;
+  font-weight: 600;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* soft shadow */
+  color: whitesmoke; 
+  padding-bottom: 10px;
 }
 
-/* Optional: horizontal lines on sides */
+/* Horizontal lines on sides */
 .about-title::before,
 .about-title::after {
   content: "";
@@ -31,18 +40,30 @@
 
 .team-title {
   font-size: 1.8rem;
-  margin-bottom: 20px;
-  text-align: center;
-  color: #8c6d6c; /* matches theme */
-  border-bottom: 2px solid #ddd; /* subtle divider */
-  padding-bottom: 10px;
+  margin-bottom: 50px;
+  color: #8c6d6c;
+  position: relative;
+}
+
+/* Horizontal lines on sides */
+.team-title::before,
+.team-title::after {
+  content: "";
+  position: relative;
+  top: -1px;
+  display: inline-block;
+  width: 80px;
+  height: 2px;
+  background: #8c6d6c;
+  margin: 0 12px;
 }
 
 .team-grid {
-  display: grid;
+  display: flex;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 50px;
-  justify-items: center;   /* ✅ center the grid within container */
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 /* Card container with 3D perspective */

@@ -167,7 +167,7 @@ const Events = () => {
             <h2>Stay Tuned for Upcoming Events</h2>
             <NavLink to="/community">Explore Our Community</NavLink>
         </div>
-    );
+    ); 
 };
 
 export default Events;

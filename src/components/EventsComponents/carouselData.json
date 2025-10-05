@@ -1,0 +1,41 @@
+{
+    "blacktie": {
+    "title": "BlackTie Event",
+    "description": "Photos from BlackTie Event",
+    "slides":[
+        {
+            "src":"/events-imgs/blacktie1.jpg",
+            "alt":"img1"
+        },
+        {
+            "src":"/events-imgs/blacktie2.jpg",
+            "alt":"img2"
+        },
+        {
+            "src":"/events-imgs/blacktie3.jpg",
+            "alt":"img3"
+        }
+        ]
+},
+    "youatucal":{ 
+    "title": "You at Ucalgary Event",
+    "description": "Photos from You at Ucalgary Event",
+    "slides": [
+            {
+                "src": "/events-imgs/youatucal1.JPG",
+                "alt":  "img1"
+            },
+            {
+                "src": "/events-imgs/youatucal2.JPG",
+                "alt":  "img2"
+            },
+            {
+                "src": "/events-imgs/youatucal33.png",
+                "alt":  "img3"
+            }
+
+            ]
+        }
+
+
+}

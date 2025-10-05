@@ -1,8 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
+import data from "./carouselData.json"
+import Carousel from "./Carousel"
+import "./previous.css";
 
-const Previous = () => {
+
+const Previous = ({ slides }) => {
+
     return(
-        <div>Previous Events</div>
+        <div>
+            {Object.entries(data).map(([key,event]) =>(
+                <Carousel
+                key ={key}
+                title={event.title}
+                description={event.description}
+                slides={event.slides}
+                />
+            ))}
+        </div>
     )
 }
 

@@ -1,5 +1,5 @@
 .about-page {
-  padding: 60px 20px;
+  padding: 30px 20px;
   text-align: center;
   font-family: 'Lato', 'Alice', sans-serif;
   background-color: #E4DAD0;
@@ -32,6 +32,15 @@
   background: #8c6d6c;
   margin: 0 12px;
 }
+
+/*Mission statement design*/
+.mission-statement {
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+  color: #8c6d6c;
+  text-align: center;
+}
+
 
 /*Team section navigation*/
 .team-section {

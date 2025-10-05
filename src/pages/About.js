@@ -143,6 +143,7 @@ const teamMembers = [
 const About = () => {
   return (
     <div className="about-page">
+      <h2 className="mission-statement">Our North Star is to make the AI/ML industry more accessible and inclusive.</h2>
       <h1 className="about-title">Meet the Team</h1>
 
       {teamMembers.map((section, teamIndex) => (

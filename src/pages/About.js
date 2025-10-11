@@ -1,9 +1,8 @@
 import "../styles/about.css";
 import ScrollTrigger from "react-scroll-trigger";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import { useEffect } from "react";
-import { FaLinkedin, FaGithub } from "react-icons/fa"
+import { FaLinkedin, FaGithub, FaArrowUp } from "react-icons/fa"
 
 /*Import all team member images - GET PERMISSION*/
 import blank from "../img/arch.png"; /*default blank placeholder*/
@@ -70,7 +69,7 @@ const teamMembers = [
     ]
   },
   {
-    team: "Event",
+    team: "Events",
     members:
     [
       { 
@@ -163,16 +162,60 @@ const teamMembers = [
 ];
 
 const About = () => {
+
+  const [showButton, setShowButton] = useState(false);
+
+  // show button only after scrolling down
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowButton(window.scrollY > 400);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // smooth scroll to top or header
+  const scrollToTop = () => {
+    const el = document.querySelector(".about-header");
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
+  
   return (
     <div className="about-page">
 
       <div className="about-team">
         <h1 className="about-title"> Meet the Team </h1>
         <img src={team} alt="Team Photo Fall 2025" className="team-img"/>
+
+        {/*tab navigation*/}
+        <div className="about-tabs">
+          {teamMembers.map((section, index) => {
+            const id = section.team.toLowerCase().replace(/\s+/g, "-");
+            return (
+              <button
+                key={index}
+                className="about-tab"
+                onClick={() => {
+                  const el = document.getElementById(id);
+                  if (el) {
+                    el.scrollIntoView({ behavior: "smooth", block: "start" });
+                  }
+                }}
+              >
+                {section.team}
+              </button>
+            );
+          })}
+        </div>
       </div>
       
       {teamMembers.map((section, teamIndex) => (
-        <div key={teamIndex} className="team-section">
+        <div key={teamIndex} className="team-section" id={section.team.toLowerCase().replace(/\s+/g, "-")}>
 
           <h2 className="team-title">{section.team}</h2>
 
@@ -214,6 +257,15 @@ const About = () => {
           </div>
         </div>
       ))}
+
+      {/* --- Scroll to Top Button --- */}
+      <button
+        className={`scroll-top-btn ${showButton ? "visible" : ""}`}
+        onClick={scrollToTop}
+      >
+        <FaArrowUp />
+      </button>
+
     </div>
   );
 };

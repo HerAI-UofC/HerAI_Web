@@ -7,6 +7,7 @@ import { FaLinkedin, FaGithub } from "react-icons/fa"
 
 /*Import all team member images - GET PERMISSION*/
 import blank from "../img/arch.png"; /*default blank placeholder*/
+import team from "../img/F25-team-photo.png";
 import vivian from "../img/about-viv.jpg";
 import fatema from "../img/about-fatema.jpg";
 import brittney from "../img/about-britt.jpg";
@@ -18,6 +19,8 @@ import ana from "../img/about-ana.jpg";
 import arfa from "../img/about-arfa.jpg";
 import daad from "../img/about-daad.jpg";
 import hira from "../img/about-hira.jpg";
+import aryam from "../img/about-aryam.jpg";
+import alishaba from "../img/about-alishaba.jpg";
 
 const teamMembers = [
   {
@@ -41,7 +44,7 @@ const teamMembers = [
     ]
   },
   {
-    team: "Internal Operations",
+    team: "Internal",
     members: 
     [
       { 
@@ -54,7 +57,7 @@ const teamMembers = [
     ]
   },
   {
-    team: "Finance Team",
+    team: "Finance",
     members:
     [
       { 
@@ -67,7 +70,7 @@ const teamMembers = [
     ]
   },
   {
-    team: "Event Leads",
+    team: "Event",
     members:
     [
       { 
@@ -87,7 +90,26 @@ const teamMembers = [
     ]
   },
   {
-    team: "Technology Team",
+    team: "Marketing",
+    members:
+    [
+      {
+        name: "Aryam Matalkeh",
+        role: "VP Marketing",
+        bio: "3rd year Data Science",
+        linkedin: "https://www.linkedin.com/in/aryam-matalkeh/",
+        img: aryam
+      },
+      {
+        name: "Alishaba Sarwar",
+        role: "VP Marketing",
+        bio: "3rd year Accounting",
+        img: alishaba
+      }
+    ]
+  },
+  {
+    team: "Technology",
     members: 
     [
       { 
@@ -143,8 +165,12 @@ const teamMembers = [
 const About = () => {
   return (
     <div className="about-page">
-      <h1 className="about-title">Meet the Team</h1>
 
+      <div className="about-team">
+        <h1 className="about-title"> Meet the Team </h1>
+        <img src={team} alt="Team Photo Fall 2025" className="team-img"/>
+      </div>
+      
       {teamMembers.map((section, teamIndex) => (
         <div key={teamIndex} className="team-section">
 

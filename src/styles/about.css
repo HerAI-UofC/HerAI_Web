@@ -5,19 +5,20 @@
   background-color: #E4DAD0;
 }
 
-.about-title {
-  display: inline-block;      /* shrink box to fit text */
-  padding: 12px 24px;         /* spacing inside the box */
-  margin-bottom: 30px;        /* space between title and cards */
+
+.about-team {
+  position: relative;
+  background-color: #8c6d6c;
+  padding: 20px 0px 50px 0;
+  margin-bottom: 75px;
   border: 2px solid #8c6d6c;  /* border color (change as needed) */
   border-radius: 8px;         /* rounded corners */
-  background-color: #8c6d6c;
+  text-align: center;
   font-family: Alice;
   font-size: 2.5rem;
-  font-weight: 600;
+  color: whitesmoke;
+  width: 100%;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* soft shadow */
-  color: whitesmoke; 
-  padding-bottom: 10px;
 }
 
 /* Horizontal lines on sides */
@@ -27,10 +28,22 @@
   position: relative;
   top: -1px;
   display: inline-block;
-  width: 80px;
+  width: 30%;
   height: 2px;
-  background: #8c6d6c;
+  background: whitesmoke;
   margin: 0 12px;
+}
+
+
+/*Team photo styling*/
+.team-img {
+  display: block; /* makes margin auto work */
+  margin: 20px auto; /* centers horizontally */
+  width: 10em;
+  height: 8em;
+  border-radius: 20px; /* rounded box corners */
+  object-fit: cover; /* maintains proportions */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* soft shadow */
 }
 
 /*Team section navigation*/

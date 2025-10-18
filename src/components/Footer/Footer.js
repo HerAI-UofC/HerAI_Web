@@ -12,7 +12,6 @@ const Footer = () => {
                 </NavLink>
                 <NavLink to="/about">About</NavLink>
                 <NavLink to="/events">Events</NavLink>
-                <NavLink to="/community">Community</NavLink>
                 <NavLink to="/contact">Contact</NavLink>
             </div>
             <p>connect.herai@gmail.com</p>

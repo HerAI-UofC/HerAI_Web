@@ -2,6 +2,7 @@ import "../styles/home.css";
 import homeTitle from "../img/home-title.png";
 import womenSTEM from "../img/women-in-stem.png";
 import { NavLink } from "react-router-dom";
+import "../styles/community.css";
 import { useEffect, useRef } from "react";
 
 const Home = () => {
@@ -81,6 +82,19 @@ const Home = () => {
                         <img src={womenSTEM}/>
                     </div>
                 </div>
+            </div>
+
+            <div className="sign-up">
+                <h1>HerAI Member Sign-Up</h1>
+                <div className="divider"></div>
+                <p>
+                    Join the community and be part of a supportive network, gain
+                    access to exclusive resources and workshop content, and
+                    learn about AI/ML
+                </p>
+                <NavLink className="signUp-btn" to="/login">
+                    Sign Up
+                </NavLink>
             </div>
         </>
     );

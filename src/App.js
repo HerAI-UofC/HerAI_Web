@@ -4,7 +4,6 @@ import Navbar from "./components/Navbar/Navbar.js";
 import Footer from "./components/Footer/Footer.js";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Community from "./pages/Community";
 import Contact from "./pages/Contact";
 import Login from "./pages/Login";
 import GetStarted from "./pages/getStarted";
@@ -24,7 +23,6 @@ function App() {
             <Routes>
                 <Route path="/" exact Component={Home} />
                 <Route path="/about" Component={About} />
-                <Route path="/community" Component={Community} />
                 <Route path="/contact" Component={Contact} />
                 <Route path="/events" Component={Events} />
                 <Route path="/login" Component={Login} />

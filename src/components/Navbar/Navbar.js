@@ -88,9 +88,6 @@ const Navbar = () => {
                         </div>
                     )}
                 </div>
-                <NavLink className={"link"} to="/community">
-                    Community
-                </NavLink>
                 <NavLink className={"link"} to="/contact">
                     Contact
                 </NavLink>

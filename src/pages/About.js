@@ -18,6 +18,7 @@ import ana from "../img/about-ana.jpg";
 import arfa from "../img/about-arfa.jpg";
 import daad from "../img/about-daad.jpg";
 import hira from "../img/about-hira.jpg";
+import northstar from "../img/northstar-background.png";
 
 const teamMembers = [
   {
@@ -143,9 +144,18 @@ const teamMembers = [
 const About = () => {
   return (
     <div className="about-page">
-      <h2 className="mission-statement">Our North Star is to make the AI/ML industry more accessible and inclusive.</h2>
+      <div className = "mission-block" style={{backgroundImage: `url(${northstar})`}}>
+        <div className = "mission-column">
+          <div className = "mission-left">
+            <h1 className = "mission-title" > North Star </h1>
+          </div>
+          <div className = "mission-right">
+            <h2 className = "mission-body" >Our aspiration is to make the AI/ML industry more accessible and inclusive</h2>
+            <h3 className = "mission-body-smaller" >We envision a future where anyone can learn and thrive in the world of Artificial Intelligence and Machine Learning. By creating opportunities that break down barriers and spark innovation, we’re building a movement that empowers people to learn boldly, think critically, and shape technology through their unique experiences. </h3>
+          </div>
+        </div>
+      </div>
       <h1 className="about-title">Meet the Team</h1>
-
       {teamMembers.map((section, teamIndex) => (
         <div key={teamIndex} className="team-section">
 

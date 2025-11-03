@@ -1,5 +1,7 @@
+
+
 .about-page {
-  padding: 30px 20px;
+  padding-bottom: 30px;
   text-align: center;
   font-family: 'Lato', 'Alice', sans-serif;
   background-color: #E4DAD0;
@@ -33,14 +35,64 @@
   margin: 0 12px;
 }
 
-/*Mission statement design*/
-.mission-statement {
-  font-size: 1.5rem;
-  margin-bottom: 25px;
-  color: #8c6d6c;
-  text-align: center;
+.mission-column {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  width: 100%;
 }
 
+.mission-block {
+  background-color: #fff2eb;
+  background-size: 65%;
+  background-repeat: no-repeat;
+  background-position: left;
+  padding: 150px;
+  margin-bottom: 80px;
+  font-family: 'Signika';
+}
+
+.mission-left {
+  text-align: left;
+  flex: 1.2;
+}
+
+.mission-right {
+  text-align: right;
+  flex: 2;
+  background-color: #daaca2;
+  padding: 40px;
+  margin-right: -50px;
+  border-radius: 10px;
+}
+
+.mission-title {
+  font-size: 3.25rem;
+  margin-bottom: 60px;
+  margin-top: 30px;
+  margin-left: 80px;
+  background: transparent;
+  text-align: left;
+  color: #2a2726;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/*Mission statement design*/
+.mission-body {
+  font-size: 1.75rem;
+  background: transparent;
+  text-align: center;
+  color: #2a2726;
+  padding-bottom: 40px;
+  font-style: italic;
+}
+
+.mission-body-smaller {
+  font-size: 1.5rem;
+  background: transparent;
+  text-align: center;
+  color: #725554;
+}
 
 /*Team section navigation*/
 .team-section {

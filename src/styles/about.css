@@ -40,21 +40,26 @@
   justify-content: space-between;
   align-items: center; 
   width: 100%;
+  flex-wrap: wrap;
+  gap: 40px;  
 }
 
 .mission-block {
   background-color: #fff2eb;
-  background-size: 65%;
-  background-repeat: no-repeat;
-  background-position: left;
-  padding: 150px;
+  padding: 140px;
   margin-bottom: 80px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 65vh;
+  width: 100%;
   font-family: 'Signika';
+  overflow: hidden;  
 }
 
 .mission-left {
   text-align: left;
   flex: 1.2;
+  min-width: 400px;
 }
 
 .mission-right {
@@ -64,17 +69,18 @@
   padding: 40px;
   margin-right: -50px;
   border-radius: 10px;
+  min-width: 400px;
 }
 
 .mission-title {
   font-size: 3.25rem;
-  margin-bottom: 60px;
-  margin-top: 30px;
+  margin-bottom: 50px;
   margin-left: 80px;
   background: transparent;
   text-align: left;
   color: #2a2726;
   text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  font-family: Alice;
 }
 
 /*Mission statement design*/

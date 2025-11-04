@@ -46,8 +46,9 @@
 
 .mission-block {
   background-color: #fff2eb;
-  padding: 125px;
-  margin-bottom: 80px;
+  padding-top: 125px;
+  padding-bottom: 125px;
+  margin-bottom: 100px;
   background-size: cover;
   background-repeat: no-repeat;
   height: 65vh;
@@ -59,7 +60,7 @@
 .mission-left {
   text-align: left;
   flex: 1.2;
-  min-width: 400px;
+  min-width: 500px;
 }
 
 .mission-right {
@@ -67,25 +68,28 @@
   flex: 2;
   background-color: #daaca2;
   padding: 40px;
-  margin-right: -50px;
   border-radius: 10px;
   min-width: 400px;
+  margin-right: clamp(10px, 5vh, 125px);
+  margin-left: clamp(10px, 5vh, 125px);
+  border: 5px solid #fff2eb;
 }
 
 .mission-title {
-  font-size: 3.25rem;
-  margin-bottom: 50px;
-  margin-left: 80px;
+  font-size: clamp(2.75rem, 5vw ,3.25rem);
   background: transparent;
-  text-align: left;
+  text-align: center;
   color: #2a2726;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
   font-family: Alice;
+  margin-left: 60px;
+  margin-right: 60px;
+  margin-top: -20px;
 }
 
 /*Mission statement design*/
 .mission-body {
-  font-size: 1.75rem;
+  font-size: clamp(1.15rem, 1.75vw, 1.75rem);
   background: transparent;
   text-align: center;
   color: #2a2726;
@@ -94,7 +98,7 @@
 }
 
 .mission-body-smaller {
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 1.65vw, 1.5rem);
   background: transparent;
   text-align: center;
   color: #725554;

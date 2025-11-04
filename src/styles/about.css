@@ -3,7 +3,7 @@
 .about-page {
   padding-bottom: 30px;
   text-align: center;
-  font-family: 'Lato', 'Alice', sans-serif;
+  font-family: 'Signika', 'Alice', sans-serif;
   background-color: #E4DAD0;
 }
 
@@ -46,7 +46,7 @@
 
 .mission-block {
   background-color: #fff2eb;
-  padding: 140px;
+  padding: 125px;
   margin-bottom: 80px;
   background-size: cover;
   background-repeat: no-repeat;

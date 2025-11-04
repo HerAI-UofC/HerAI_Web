@@ -150,7 +150,7 @@ const About = () => {
             <h1 className = "mission-title" > North Star </h1>
           </div>
           <div className = "mission-right">
-            <h2 className = "mission-body" >Our aspiration is to make the AI/ML industry more accessible and inclusive</h2>
+            <h2 className = "mission-body" >Our aspiration is to make the AI/ML industry more accessible and inclusive.</h2>
             <h3 className = "mission-body-smaller" >We envision a future where anyone can learn and thrive in the world of Artificial Intelligence and Machine Learning. By creating opportunities that break down barriers and spark innovation, we’re building a movement that empowers people to learn boldly, think critically, and shape technology through their unique experiences. </h3>
           </div>
         </div>

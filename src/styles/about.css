@@ -7,19 +7,20 @@
   background-color: #E4DAD0;
 }
 
-.about-title {
-  display: inline-block;      /* shrink box to fit text */
-  padding: 12px 24px;         /* spacing inside the box */
-  margin-bottom: 30px;        /* space between title and cards */
+
+.about-team {
+  position: relative;
+  background-color: #8c6d6c;
+  padding: 20px 0px 50px 0;
+  margin-bottom: 75px;
   border: 2px solid #8c6d6c;  /* border color (change as needed) */
   border-radius: 8px;         /* rounded corners */
-  background-color: #8c6d6c;
+  text-align: center;
   font-family: Alice;
   font-size: 2.5rem;
-  font-weight: 600;
+  color: whitesmoke;
+  width: 100%;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* soft shadow */
-  color: whitesmoke; 
-  padding-bottom: 10px;
 }
 
 /* Horizontal lines on sides */
@@ -29,9 +30,9 @@
   position: relative;
   top: -1px;
   display: inline-block;
-  width: 80px;
+  width: 30%;
   height: 2px;
-  background: #8c6d6c;
+  background: whitesmoke;
   margin: 0 12px;
 }
 
@@ -48,7 +49,6 @@
   background-color: #fff2eb;
   padding-top: 125px;
   padding-bottom: 125px;
-  margin-bottom: 100px;
   background-size: cover;
   background-repeat: no-repeat;
   height: 65vh;
@@ -104,9 +104,48 @@
   color: #725554;
 }
 
+
+/*Team photo styling*/
+.team-img {
+  display: block; /* makes margin auto work */
+  margin: 2rem auto 5rem; /* centers horizontally */
+  width: 10em;
+  height: 8em;
+  border-radius: 20px; /* rounded box corners */
+  object-fit: cover; /* maintains proportions */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* soft shadow */
+}
+
+.about-tabs {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+
+.about-tab {
+  color: whitesmoke;
+  font-family: Alice;
+  font-size: 1.2rem;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.about-tab:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
 /*Team section navigation*/
 .team-section {
   margin-bottom: 50px; /* space between sections */
+  scroll-margin-top: 120px;
 }
 
 .team-title {
@@ -254,4 +293,41 @@
 .github-icon:hover {
   transform: scale(1.2);
   color: #000;      /* darker blue on hover */
+}
+
+
+/*scroll up button*/
+.scroll-top-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #8c6d6c;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease, transform 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0; /* remove default button padding */
+}
+
+/* Hover effect */
+.scroll-top-btn:hover {
+  background-color: #2E353B;
+  transform: translateY(-3px);
+}
+
+/* When visible */
+.scroll-top-btn.visible {
+  opacity: 1;
+  pointer-events: auto;
 }

@@ -1,7 +1,7 @@
 {
     "blacktie": {
     "title": "BlackTie Event",
-    "description": "Photos from BlackTie Event",
+    "description": "A networking event where attendees got the opportunity to network with industry professionals and hearing inspiring speeches from guest speakers.",
     "slides":[
         {
             "src":"/events-imgs/blacktie1.jpg",
@@ -19,7 +19,7 @@
 },
     "youatucal":{ 
     "title": "You at Ucalgary Event",
-    "description": "Photos from You at Ucalgary Event",
+    "description": "An event to welcome incoming University of Calgary students and introduce them to HerAI to inspire students to join our club and help our initiative.",
     "slides": [
             {
                 "src": "/events-imgs/youatucal1.JPG",
@@ -32,7 +32,24 @@
            
 
             ]
-        }
+        },
+    
+    "hertechconnect":{
+        "title": "HerTech Connect",
+        "description": "An event catered to women in tech who are looking to network, learn more about the tech industry, and transform their lives.",
+        "slides": [
+            {
+                "src": "/events-imgs/hertechconnect1.jpg",
+                "alt":  "img1"
+            },
+            {
+                "src": "/events-imgs/hertechconnect2.JPG",
+                "alt":  "img2"
+            }
+
+        ]
+
+    }
 
 
 }

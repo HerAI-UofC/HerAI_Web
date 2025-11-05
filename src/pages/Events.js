@@ -5,6 +5,19 @@ import EventBlock from "../components/EventBlock/EventBlock";
 import { generateClient } from "aws-amplify/api";
 import { listEvents } from "../graphql/queries";
 
+const testEvent = {
+    title: "De-Stress Trivia Night",
+    location: "ENGG 224",
+    date: "2024-11-19T17:00:00.000Z", 
+    summary: "Join us for a fun De-Stress Trivia Night hosted by HerAI and AIC on November 19th from 5–8 PM in ENGG 224! Enjoy three rounds of trivia, board games, snacks, and chances to win prizes throughout the evening. Come relax, play games, and connect with others before finals!",
+    isUpcoming: true, 
+    header: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070&auto=format&fit=crop",
+    videoDescription: "This video will be available after the event.",
+    pdfDescription: "The slides will be available after the event."
+};
+
+
+
 const Events = () => {
     // const videoSrc = "https://test-grab-bucket.s3.amazonaws.com/sample-5s.mp4";
     // const pdfSrc = "https://test-grab-bucket.s3.amazonaws.com/sample.pdf";
@@ -13,7 +26,10 @@ const Events = () => {
 
     const client = generateClient();
 
-    const [events, setEvents] = useState([]);
+
+    const [events, setEvents] = useState([testEvent]);
+    // const [events, setEvents] = useState([]);
+
 
     const getEvents = async () => {
         const all = await client.graphql({ query: listEvents });
@@ -23,8 +39,9 @@ const Events = () => {
     };
 
     useEffect(() => {
-        getEvents();
+        // getEvents(); 
     }, []);
+
 
     useEffect(() => {
         if (events[0] && !events[0].header) {
@@ -55,19 +72,27 @@ const Events = () => {
 
     const [currentEventIndex, setCurrentEventIndex] = useState(0);
 
-    useEffect(() => {
-        const timer = setInterval(() => {
-            setCurrentEventIndex(
-                (currentEventIndex + 1) % upcomingEvents.length
-            );
-        }, 10000);
+    
+    const upcomingEvents = events.filter((event) => event.isUpcoming);
 
-        return () => clearInterval(timer);
-    }, [currentEventIndex, events.length]);
+    useEffect(() => {
+        
+        if (upcomingEvents.length > 0) {
+            const timer = setInterval(() => {
+                setCurrentEventIndex(
+                    (prevIndex) => (prevIndex + 1) % upcomingEvents.length
+                );
+            }, 10000);
+
+            return () => clearInterval(timer);
+        }
+    }, [currentEventIndex, upcomingEvents.length]); 
 
     const formattedDate = () => {
         try {
-            const date = new Date(events[currentEventIndex].date);
+            if (!upcomingEvents[currentEventIndex]) return;
+
+            const date = new Date(upcomingEvents[currentEventIndex].date);
             let hours = date.getHours();
             const minutes = String(date.getMinutes()).padStart(2, "0");
             const ampm = hours >= 12 ? "PM" : "AM";
@@ -81,46 +106,67 @@ const Events = () => {
             return;
         }
     };
+    
+    if (events.length === 0) {
+        return (
+            <div className="no-events-section">
+                <h2>Stay Tuned for Upcoming Events</h2>
+                <NavLink to="/community">Explore Our Community</NavLink>
+            </div>
+        );
+    }
+    
 
-    const upcomingEvents = events.filter((event) => event.isUpcoming);
+    const hasUpcomingEvents = upcomingEvents.length > 0;
 
-    return events.length > 0 ? (
+    return (
         <div>
-            <div
-                className="upcoming-container"
-                style={{
-                    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${upcomingEvents[currentEventIndex].header})`,
-                }}
-            >
-                <h1>Upcoming Events</h1>
-                <div className="event">
-                    <h2>{upcomingEvents[currentEventIndex].title}</h2>
-                    <h5>{upcomingEvents[currentEventIndex].location}</h5>
-                    <h6>{formattedDate()}</h6>
-                    <p>{upcomingEvents[currentEventIndex].summary}</p>
-                    <NavLink
-                        to={{
-                            pathname: `/events/${upcomingEvents[
-                                currentEventIndex
-                            ].title.replace(" ", "")}`,
+            {/* */}
+            {hasUpcomingEvents ? (
+                <>
+                    <div
+                        className="upcoming-container"
+                        style={{
+                            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${upcomingEvents[currentEventIndex].header})`,
                         }}
-                        state={upcomingEvents[currentEventIndex]}
-                        className="check-btn"
                     >
-                        Check Out
-                    </NavLink>
+                        <h1>Upcoming Events</h1>
+                        <div className="event">
+                            <h2>{upcomingEvents[currentEventIndex].title}</h2>
+                            <h5>{upcomingEvents[currentEventIndex].location}</h5>
+                            <h6>{formattedDate()}</h6>
+                            <p>{upcomingEvents[currentEventIndex].summary}</p>
+                            <NavLink
+                                to={{
+                                    pathname: `/events/${upcomingEvents[
+                                        currentEventIndex
+                                    ].title.replace(" ", "")}`,
+                                }}
+                                state={upcomingEvents[currentEventIndex]}
+                                className="check-btn"
+                            >
+                                Check Out
+                            </NavLink>
+                        </div>
+                    </div>
+                    <div className="dots">
+                        {upcomingEvents.map((event, index) => (
+                            <span
+                                key={index}
+                                className="dot"
+                                id={index === currentEventIndex ? "active-dot" : ""}
+                                onClick={() => setCurrentEventIndex(index)}
+                            ></span>
+                        ))}
+                    </div>
+                </>
+            ) : (
+                <div className="upcoming-container" style={{minHeight: "20vh", padding: "0 100px"}}>
+                     <h1>Past Events</h1>
                 </div>
-            </div>
-            <div className="dots">
-                {upcomingEvents.map((event, index) => (
-                    <span
-                        key={index}
-                        className="dot"
-                        id={index === currentEventIndex ? "active-dot" : ""}
-                        onClick={() => setCurrentEventIndex(index)}
-                    ></span>
-                ))}
-            </div>
+            )}
+
+            {/*  */}
             <div ref={eventsBlockRef}>
                 {currentEvents.map((event, index) => (
                     <EventBlock
@@ -161,11 +207,6 @@ const Events = () => {
                     </NavLink>
                 </div>
             </div>
-        </div>
-    ) : (
-        <div className="no-events-section">
-            <h2>Stay Tuned for Upcoming Events</h2>
-            <NavLink to="/community">Explore Our Community</NavLink>
         </div>
     );
 };

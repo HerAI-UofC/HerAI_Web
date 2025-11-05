@@ -19,7 +19,7 @@ const Carousel = ({slides, title, description}) =>{
         return(
             <div className="prev-container">
     
-            <div className="blacktie-description">
+            <div className="carousel-description">
                 <h3>{title}</h3>
                 <p>{description}</p>
             </div> 

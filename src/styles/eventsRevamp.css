@@ -29,3 +29,28 @@
 .content{
     display: block;
 }
+
+/*extra small devices (phones, etc)*/
+@media(max-width: 600px){
+    .events-re{
+        width: 200px;
+        height: 20px;
+    }
+}
+/*medium devices*/
+
+@media(min-width: 768px){
+    .events-re{
+        width: 400px;
+        height: 30px;
+    }
+}
+
+/*large devices (laptops*/
+@media(min-width: 992px){
+    .events-re{
+        width: 500px;
+        height: 30px;
+    }
+}
+

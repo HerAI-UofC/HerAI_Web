@@ -3,9 +3,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 550px;
-    height:550px;
-    margin: 20px;
+    width: 40%;
+    height:40%;
+    margin: 5% 10px 10% 40px;
+   
     
 }
 .prev-container{
@@ -64,23 +65,25 @@
     background-color: grey;
 }
 
-.blacktie-description{
+.carousel-description{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
     padding: 20px;
+    margin-right: 10px;
+    margin-left: 80px;
     border-radius: 5px;
 }
 
-.blacktie-description h3{
-    color: #8C6D6C; /* Change to match your site's color scheme */
+.carousel-description h3{
+    color: #8C6D6C; 
     font-size: 34px;
     margin-bottom: 20px;
 }
-.blacktie-description p{
-    color: #e1e1e1; /* Change to match your site's color scheme */
+.carousel-description p{
+    color: #e1e1e1; 
     font-size: 24px;
     margin-bottom: 20px;
     width: 500px;
@@ -88,5 +91,36 @@
     background-color: #8C6D6C;
     border-radius: 25px;
     box-shadow: 0px 0px 8px #666;
+
+}
+
+/*small screens*/
+@media(max-width: 600px){
+    .prev-container{
+        flex-direction: column;
+    }
+    .carousel-description{
+        font-size: 20px;
+
+    }
+     .carousel-description p{
+        font-size: 16px;
+        width: 400px;
+        height: 100px;
+
+    }
+    .carousel-description h3{
+        font-size: 30px;
+
+    }
+    .carousel{
+        margin-left: 37%;
+            
+    }
+
+}
+@media(max-width: 768px){
+    
+     
 
 }

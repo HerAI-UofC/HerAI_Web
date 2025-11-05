@@ -73,7 +73,8 @@ const Navbar = () => {
                 <NavLink className={"link"} to="/about">
                     About
                 </NavLink>
-                <NavLink className={"link"} to="/events">
+                
+                <NavLink className={"link"} to="/EventsRevamp">
                     Events
                 </NavLink>
                 <div className="resources" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>

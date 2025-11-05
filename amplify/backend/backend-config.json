@@ -11,7 +11,7 @@
           ],
           "defaultAuthentication": {
             "apiKeyConfig": {
-              "apiKeyExpirationDate": "2026-09-28T22:26:11.341Z",
+              "apiKeyExpirationDate": "2026-09-30T19:18:12.378Z",
               "apiKeyExpirationDays": 365,
               "description": "herai_API"
             },

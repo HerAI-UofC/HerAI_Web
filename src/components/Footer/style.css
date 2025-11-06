@@ -16,13 +16,13 @@
 .links-column a{
     text-decoration: none;
     color: black;
-    font-family: "Lato";
+    font-family: "Signika";
     margin-bottom: 10px;
     font-size: 11pt;
 }
 
 .footer p{
-    font-family: lato;
+    font-family: Signika;
     font-weight: 300;
     font-size: 12pt;
 }

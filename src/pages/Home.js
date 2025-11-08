@@ -39,7 +39,6 @@ const Home = () => {
             <div className="title-img" style={{backgroundImage: `url(${homeTitle})`}}>
                 <div className="title-head">
                     <h1>HerAI</h1>
-                    <h4>Women in AI/ML</h4>
                 </div>
                 <div className="about-blurb">
                     <div className="about-bubble">

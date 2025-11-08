@@ -125,7 +125,7 @@ const Event = () => {
                     {event.isUpcoming ? (
                         <a
                             className="book-btn"
-                            href="https://www.google.com"
+                            href="https://docs.google.com/forms/d/e/1FAIpQLScSFdMkfvDZG8nZWskCqaVXSQByAeEP5LsFSZ96gbHXdVWgzA/viewform"
                             target="_blank"
                         >
                             Book Your Spot!

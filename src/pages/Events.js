@@ -4,6 +4,7 @@ import "../styles/events.css";
 import EventBlock from "../components/EventBlock/EventBlock";
 import { generateClient } from "aws-amplify/api";
 import { listEvents } from "../graphql/queries";
+import eventImg from "../img/events-img.png";
 
 const testEvent = {
     title: "De-Stress Trivia Night",
@@ -11,7 +12,7 @@ const testEvent = {
     date: "2024-11-19T17:00:00.000Z", 
     summary: "Join us for a fun De-Stress Trivia Night hosted by HerAI and AIC on November 19th from 5–8 PM in ENGG 224! Enjoy three rounds of trivia, board games, snacks, and chances to win prizes throughout the evening. Come relax, play games, and connect with others before finals!",
     isUpcoming: true, 
-    header: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070&auto=format&fit=crop",
+    header: eventImg,
     videoDescription: "This video will be available after the event.",
     pdfDescription: "The slides will be available after the event."
 };
@@ -131,7 +132,7 @@ const Events = () => {
                         }}
                     >
                         <h1>Upcoming Events</h1>
-                        <div className="event">
+                        <div className="event event-card">
                             <h2>{upcomingEvents[currentEventIndex].title}</h2>
                             <h5>{upcomingEvents[currentEventIndex].location}</h5>
                             <h6>{formattedDate()}</h6>

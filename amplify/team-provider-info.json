@@ -31,6 +31,12 @@
           "deploymentBucketName": "amplify-heraiamplifyauth-dev-103549-deployment",
           "s3Key": "amplify-builds/getcontactinfo-6e76375044586b4a4136-build.zip",
           "sesEmail": "connect.herai@gmail.com"
+        },
+        "contactNotify": {
+          "deploymentBucketName": "amplify-heraiamplifyauth-dev-103549-deployment",
+          "s3Key": "amplify-builds/contactNotify-616850486c7a78567a36-build.zip",
+          "toEmail": "connect.herai@gmail.com",
+          "fromEmail": "connect.herai@gmail.com"
         }
       },
       "api": {

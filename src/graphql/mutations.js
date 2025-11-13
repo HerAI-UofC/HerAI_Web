@@ -17,6 +17,14 @@ export const createEvents = /* GraphQL */ `
       videoDescription
       pdfDescription
       presenters
+      favourites {
+        nextToken
+        __typename
+      }
+      followers {
+        nextToken
+        __typename
+      }
       createdAt
       updatedAt
       __typename
@@ -39,6 +47,14 @@ export const updateEvents = /* GraphQL */ `
       videoDescription
       pdfDescription
       presenters
+      favourites {
+        nextToken
+        __typename
+      }
+      followers {
+        nextToken
+        __typename
+      }
       createdAt
       updatedAt
       __typename
@@ -61,6 +77,14 @@ export const deleteEvents = /* GraphQL */ `
       videoDescription
       pdfDescription
       presenters
+      favourites {
+        nextToken
+        __typename
+      }
+      followers {
+        nextToken
+        __typename
+      }
       createdAt
       updatedAt
       __typename
@@ -160,6 +184,240 @@ export const deleteTodo = /* GraphQL */ `
       id
       name
       description
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const createFollower = /* GraphQL */ `
+  mutation CreateFollower(
+    $input: CreateFollowerInput!
+    $condition: ModelFollowerConditionInput
+  ) {
+    createFollower(input: $input, condition: $condition) {
+      id
+      userId
+      event {
+        id
+        title
+        location
+        date
+        isUpcoming
+        summary
+        description
+        videoDescription
+        pdfDescription
+        presenters
+        createdAt
+        updatedAt
+        __typename
+      }
+      createdAt
+      updatedAt
+      eventsFollowersId
+      __typename
+    }
+  }
+`;
+export const updateFollower = /* GraphQL */ `
+  mutation UpdateFollower(
+    $input: UpdateFollowerInput!
+    $condition: ModelFollowerConditionInput
+  ) {
+    updateFollower(input: $input, condition: $condition) {
+      id
+      userId
+      event {
+        id
+        title
+        location
+        date
+        isUpcoming
+        summary
+        description
+        videoDescription
+        pdfDescription
+        presenters
+        createdAt
+        updatedAt
+        __typename
+      }
+      createdAt
+      updatedAt
+      eventsFollowersId
+      __typename
+    }
+  }
+`;
+export const deleteFollower = /* GraphQL */ `
+  mutation DeleteFollower(
+    $input: DeleteFollowerInput!
+    $condition: ModelFollowerConditionInput
+  ) {
+    deleteFollower(input: $input, condition: $condition) {
+      id
+      userId
+      event {
+        id
+        title
+        location
+        date
+        isUpcoming
+        summary
+        description
+        videoDescription
+        pdfDescription
+        presenters
+        createdAt
+        updatedAt
+        __typename
+      }
+      createdAt
+      updatedAt
+      eventsFollowersId
+      __typename
+    }
+  }
+`;
+export const createFavourite = /* GraphQL */ `
+  mutation CreateFavourite(
+    $input: CreateFavouriteInput!
+    $condition: ModelFavouriteConditionInput
+  ) {
+    createFavourite(input: $input, condition: $condition) {
+      id
+      userId
+      event {
+        id
+        title
+        location
+        date
+        isUpcoming
+        summary
+        description
+        videoDescription
+        pdfDescription
+        presenters
+        createdAt
+        updatedAt
+        __typename
+      }
+      createdAt
+      updatedAt
+      eventsFavouritesId
+      __typename
+    }
+  }
+`;
+export const updateFavourite = /* GraphQL */ `
+  mutation UpdateFavourite(
+    $input: UpdateFavouriteInput!
+    $condition: ModelFavouriteConditionInput
+  ) {
+    updateFavourite(input: $input, condition: $condition) {
+      id
+      userId
+      event {
+        id
+        title
+        location
+        date
+        isUpcoming
+        summary
+        description
+        videoDescription
+        pdfDescription
+        presenters
+        createdAt
+        updatedAt
+        __typename
+      }
+      createdAt
+      updatedAt
+      eventsFavouritesId
+      __typename
+    }
+  }
+`;
+export const deleteFavourite = /* GraphQL */ `
+  mutation DeleteFavourite(
+    $input: DeleteFavouriteInput!
+    $condition: ModelFavouriteConditionInput
+  ) {
+    deleteFavourite(input: $input, condition: $condition) {
+      id
+      userId
+      event {
+        id
+        title
+        location
+        date
+        isUpcoming
+        summary
+        description
+        videoDescription
+        pdfDescription
+        presenters
+        createdAt
+        updatedAt
+        __typename
+      }
+      createdAt
+      updatedAt
+      eventsFavouritesId
+      __typename
+    }
+  }
+`;
+export const createContactMessage = /* GraphQL */ `
+  mutation CreateContactMessage(
+    $input: CreateContactMessageInput!
+    $condition: ModelContactMessageConditionInput
+  ) {
+    createContactMessage(input: $input, condition: $condition) {
+      id
+      firstName
+      lastName
+      email
+      phone
+      message
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const updateContactMessage = /* GraphQL */ `
+  mutation UpdateContactMessage(
+    $input: UpdateContactMessageInput!
+    $condition: ModelContactMessageConditionInput
+  ) {
+    updateContactMessage(input: $input, condition: $condition) {
+      id
+      firstName
+      lastName
+      email
+      phone
+      message
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const deleteContactMessage = /* GraphQL */ `
+  mutation DeleteContactMessage(
+    $input: DeleteContactMessageInput!
+    $condition: ModelContactMessageConditionInput
+  ) {
+    deleteContactMessage(input: $input, condition: $condition) {
+      id
+      firstName
+      lastName
+      email
+      phone
+      message
       createdAt
       updatedAt
       __typename

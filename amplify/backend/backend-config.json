@@ -1,12 +1,26 @@
 {
   "api": {
     "heraiamplifyauth": {
-      "dependsOn": [],
+      "dependsOn": [
+        {
+          "attributes": [
+            "UserPoolId"
+          ],
+          "category": "auth",
+          "resourceName": "heraiamplifyauth9cda9675"
+        }
+      ],
       "output": {
         "authConfig": {
           "additionalAuthenticationProviders": [
             {
               "authenticationType": "AWS_IAM"
+            },
+            {
+              "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+              "userPoolConfig": {
+                "userPoolId": "authheraiamplifyauth9cda9675"
+              }
             }
           ],
           "defaultAuthentication": {
@@ -63,6 +77,12 @@
     }
   },
   "function": {
+    "contactNotify": {
+      "build": true,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
     "getcontactinfo": {
       "build": true,
       "dependsOn": [
@@ -85,6 +105,38 @@
     }
   },
   "parameters": {
+    "AMPLIFY_function_contactNotify_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "contactNotify"
+        }
+      ]
+    },
+    "AMPLIFY_function_contactNotify_fromEmail": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "contactNotify"
+        }
+      ]
+    },
+    "AMPLIFY_function_contactNotify_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "contactNotify"
+        }
+      ]
+    },
+    "AMPLIFY_function_contactNotify_toEmail": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "contactNotify"
+        }
+      ]
+    },
     "AMPLIFY_function_getcontactinfo_deploymentBucketName": {
       "usedBy": [
         {

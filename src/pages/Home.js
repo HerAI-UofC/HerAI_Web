@@ -92,9 +92,14 @@ const Home = () => {
                     access to exclusive resources and workshop content, and
                     learn about AI/ML
                 </p>
-                <NavLink className="signUp-btn" to="/login">
+                <a
+                    className="signUp-btn"
+                    href="https://docs.google.com/forms/d/1wcLaBSMzv9GZXwaGuGvz2loUfcC9eIC9mGes4GMr3Ws/viewform?edit_requested=true"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
                     Sign Up
-                </NavLink>
+                </a>
             </div>
         </>
     );

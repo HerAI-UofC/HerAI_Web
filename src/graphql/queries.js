@@ -14,6 +14,14 @@ export const getEvents = /* GraphQL */ `
       videoDescription
       pdfDescription
       presenters
+      favourites {
+        nextToken
+        __typename
+      }
+      followers {
+        nextToken
+        __typename
+      }
       createdAt
       updatedAt
       __typename
@@ -108,6 +116,138 @@ export const listTodos = /* GraphQL */ `
         id
         name
         description
+        createdAt
+        updatedAt
+        __typename
+      }
+      nextToken
+      __typename
+    }
+  }
+`;
+export const getFollower = /* GraphQL */ `
+  query GetFollower($id: ID!) {
+    getFollower(id: $id) {
+      id
+      userId
+      event {
+        id
+        title
+        location
+        date
+        isUpcoming
+        summary
+        description
+        videoDescription
+        pdfDescription
+        presenters
+        createdAt
+        updatedAt
+        __typename
+      }
+      createdAt
+      updatedAt
+      eventsFollowersId
+      __typename
+    }
+  }
+`;
+export const listFollowers = /* GraphQL */ `
+  query ListFollowers(
+    $filter: ModelFollowerFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listFollowers(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        userId
+        createdAt
+        updatedAt
+        eventsFollowersId
+        __typename
+      }
+      nextToken
+      __typename
+    }
+  }
+`;
+export const getFavourite = /* GraphQL */ `
+  query GetFavourite($id: ID!) {
+    getFavourite(id: $id) {
+      id
+      userId
+      event {
+        id
+        title
+        location
+        date
+        isUpcoming
+        summary
+        description
+        videoDescription
+        pdfDescription
+        presenters
+        createdAt
+        updatedAt
+        __typename
+      }
+      createdAt
+      updatedAt
+      eventsFavouritesId
+      __typename
+    }
+  }
+`;
+export const listFavourites = /* GraphQL */ `
+  query ListFavourites(
+    $filter: ModelFavouriteFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listFavourites(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        userId
+        createdAt
+        updatedAt
+        eventsFavouritesId
+        __typename
+      }
+      nextToken
+      __typename
+    }
+  }
+`;
+export const getContactMessage = /* GraphQL */ `
+  query GetContactMessage($id: ID!) {
+    getContactMessage(id: $id) {
+      id
+      firstName
+      lastName
+      email
+      phone
+      message
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const listContactMessages = /* GraphQL */ `
+  query ListContactMessages(
+    $filter: ModelContactMessageFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listContactMessages(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        firstName
+        lastName
+        email
+        phone
+        message
         createdAt
         updatedAt
         __typename

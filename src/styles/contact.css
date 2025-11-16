@@ -163,7 +163,7 @@
 /* RIGHT IMAGE PANEL */
 .contact-right-image {
     min-height: 420px;
-    background-image: url("../img/contact-img.jpg");
+    background-image: url("../img/contact-img.png");
     background-size: cover;
     background-position: center;
     border-left: 1px solid #eeeeee;

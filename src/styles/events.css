@@ -27,7 +27,7 @@
 .event p {
     font-size: 12pt;
     width: 75%;
-    font-family: lato;
+    font-family: signika;
     font-weight: 300;
 }
 
@@ -47,7 +47,7 @@
     padding: 20px 80px;
     margin-top: 20px;
     width: fit-content;
-    font-family: lato;
+    font-family: signika;
     font-weight: 800;
 }
 
@@ -89,7 +89,7 @@
 .sign-up-container-body{
     display: flex;
     flex-direction: column;
-    font-family: lato;
+    font-family: signika;
     font-size: 14pt;
     width: 50%;
 }

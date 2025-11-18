@@ -9,7 +9,7 @@ import eventImg from "../img/events-img.png";
 const testEvent = {
     title: "De-Stress Trivia Night",
     location: "ENGG 224",
-    date: "2024-11-19T17:00:00.000Z", 
+    date: "2025-11-19T17:00:00.000Z", 
     summary: "Join us for a fun De-Stress Trivia Night hosted by HerAI and AIC on November 19th from 5–8 PM in ENGG 224! Enjoy three rounds of trivia, board games, snacks, and chances to win prizes throughout the evening. Come relax, play games, and connect with others before finals!",
     isUpcoming: true, 
     header: eventImg,

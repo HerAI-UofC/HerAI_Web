@@ -25,10 +25,19 @@
 }
 
 .event p {
-    width: 50%;
     font-size: 12pt;
+    width: 75%;
     font-family: Signika;
     font-weight: 300;
+}
+
+/* The solid background card for event details */
+.event-card {
+    background-color: #2e353bdd;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin-top: 1rem;
 }
 
 .check-btn{
@@ -64,7 +73,7 @@
 }
 
 .sign-up-container{
-    background-color: black;
+    background-color: #2e353bdd;
     border-radius: 20px;
     color: white;
     display: flex;

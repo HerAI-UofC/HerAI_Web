@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.3012aaee.css",
-    "main.js": "/static/js/main.61181f77.js",
+    "main.css": "/static/css/main.475fc350.css",
+    "main.js": "/static/js/main.0c6eca65.js",
     "static/media/about-viv.jpg": "/static/media/about-viv.f51462fc27a1e0bec45f.jpg",
     "static/media/about-alishaba.jpg": "/static/media/about-alishaba.741ecfcee9cfec9c8cf8.jpg",
     "static/media/F25-team-photo.png": "/static/media/F25-team-photo.e323c9a340e7ba72cc70.png",
@@ -27,11 +27,11 @@
     "static/media/sky.png": "/static/media/sky.47ef6d8de228445c3b14.png",
     "static/media/about-fatema.jpg": "/static/media/about-fatema.db18ade20b82f1c5ef97.jpg",
     "index.html": "/index.html",
-    "main.3012aaee.css.map": "/static/css/main.3012aaee.css.map",
-    "main.61181f77.js.map": "/static/js/main.61181f77.js.map"
+    "main.475fc350.css.map": "/static/css/main.475fc350.css.map",
+    "main.0c6eca65.js.map": "/static/js/main.0c6eca65.js.map"
   },
   "entrypoints": [
-    "static/css/main.3012aaee.css",
-    "static/js/main.61181f77.js"
+    "static/css/main.475fc350.css",
+    "static/js/main.0c6eca65.js"
   ]
 }

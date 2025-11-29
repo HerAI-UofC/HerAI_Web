@@ -52,6 +52,9 @@ const Home = () => {
                             HerAI is a forward-thinking student club dedicated to amplifying
                             the voices and contributions of underrepresented groups in the tech landscape.
                         </h2>
+                        <NavLink className="about-button" to="/about">
+                            About Us <span className="arrow">→</span>
+                        </NavLink>
                         <div id="socials">
                             <a href="https://www.instagram.com/herai_uofc/">
                                 <FontAwesomeIcon className="icon" icon={faInstagram} />
@@ -66,9 +69,6 @@ const Home = () => {
                                 <FontAwesomeIcon className="icon" icon={faLinktree} />
                             </a>
                         </div>
-                        <NavLink className="about-button" to="/about">
-                            About Us <span className="arrow">→</span>
-                        </NavLink>
                     </div>
                 </div>
             </div>

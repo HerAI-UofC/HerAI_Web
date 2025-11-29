@@ -64,7 +64,7 @@ body{
     font-family: Signika;
     font-size: 20pt;
     padding: 0% 10%;
-    margin-bottom: 50px;
+    margin-bottom: 45px;
 }
 
 .about-button{
@@ -164,6 +164,18 @@ body{
 #blurb {
     opacity: 0;
     animation: fadeInBlurb 2s ease forwards;
+}
+/*Icons CSS*/
+#socials {
+    display: flex;
+    padding-top: 25px;
+}
+.icon{
+    width: 2rem;
+    height: 2rem;
+    margin: 5px;
+    padding: 8px;
+    color: #725554;
 }
 
 @keyframes fadeInBlurb {

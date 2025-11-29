@@ -40,6 +40,28 @@
     padding: 10px 60px;
 }
 
+/*Icons CSS*/
+#socialsFooter {
+    display: flex;
+    padding-bottom: 10px;
+    margin-left: -20px;
+    
+
+}
+.iconFooter{
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    padding: 8px;
+    
+}
+
+@media (max-width: 768px){
+    #socialsFooter {
+        margin-left: 0px;
+    }
+}
+
 @media (max-width: 768px) {
     .footer {
         flex-direction: column;

@@ -193,8 +193,8 @@ const Contact = () => {
                                 <div className="aside-block">
                                     <h4>Contact</h4>
                                     <p>
-                                        <a href="mailto:connect.herai@gmail.com">
-                                            connect.herai@gmail.com
+                                        <a href="mailto:herai.club@ucalgary.ca">
+                                            herai.club@ucalgary.ca
                                         </a>
                                     </p>
                                 </div>

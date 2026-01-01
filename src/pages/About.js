@@ -1,6 +1,6 @@
 import "../styles/about.css";
 import ScrollTrigger from "react-scroll-trigger";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import { FaLinkedin, FaGithub, FaArrowUp } from "react-icons/fa"
 
@@ -164,6 +164,22 @@ const teamMembers = [
 
 const About = () => {
 
+  /* tab navigation as a side pane */
+  const aboutRef = useRef(null);
+  const [showTabs, setShowTabs] = useState(false);
+  const [collapsed, setCollapsed] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => setShowTabs(entry.isIntersecting),
+      { threshold: 0.15 }
+    );
+
+    if (aboutRef.current) observer.observe(aboutRef.current);
+    return () => observer.disconnect();
+  }, []);
+
+  /* scroll to top button */
   const [showButton, setShowButton] = useState(false);
 
   // show button only after scrolling down
@@ -199,75 +215,94 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className="about-team">
+
+      {/*side tabs are conditionally shown in the about section below*/}
+      {showTabs && (
+        <aside
+          className={`about-tabs floating-tabs ${
+            showTabs ? "tabs-visible" : "tabs-hidden"
+          } ${collapsed ? "collapsed" : ""}`}
+        >
+          {/* Collapse toggle button */}
+          <button
+            className="collapse-btn"
+            onClick={() => setCollapsed(!collapsed)}
+          >
+            {collapsed ? ">" : "<"}
+          </button>
+
+          {/* Team tabs */}
+          {!collapsed &&
+            teamMembers.map((section, index) => {
+              const id = section.team.toLowerCase().replace(/\s+/g, "-");
+              return (
+                <button
+                  key={index}
+                  className="about-tab"
+                  onClick={() =>
+                    document.getElementById(id)?.scrollIntoView({
+                      behavior: "smooth",
+                    })
+                  }
+                >
+                  {section.team}
+                </button>
+              );
+            })}
+        </aside>
+      )}
+
+      {/*about section*/}
+      <div className="about-team" ref={aboutRef}>
         <h1 className="about-title"> Meet the Team </h1>
         <img src={team} alt="Team Photo Fall 2025" className="team-img"/>
 
-        {/*tab navigation*/}
-        <div className="about-tabs">
-          {teamMembers.map((section, index) => {
-            const id = section.team.toLowerCase().replace(/\s+/g, "-");
-            return (
-              <button
-                key={index}
-                className="about-tab"
-                onClick={() => {
-                  const el = document.getElementById(id);
-                  if (el) {
-                    el.scrollIntoView({ behavior: "smooth", block: "start" });
-                  }
-                }}
-              >
-                {section.team}
-              </button>
-            );
-          })}
-        </div>
-      </div>
-      
-      {teamMembers.map((section, teamIndex) => (
-        <div key={teamIndex} className="team-section" id={section.team.toLowerCase().replace(/\s+/g, "-")}>
+        {teamMembers.map((section, teamIndex) => (
+          <div key={teamIndex} className="team-section" id={section.team.toLowerCase().replace(/\s+/g, "-")}>
 
-          <h2 className="team-title">{section.team}</h2>
+            <h2 className="team-title">{section.team}</h2>
 
-          <div className="team-grid">
-            {section.members.map((member, index) => (
-              <div key={index} className="team-card">
-                <div className="card-inner">
-                  {/* Front */}
-                  <div className="card-front">
-                    <img src={member.img} alt={member.name} />
-                    <h3>{member.name}</h3>
-                    <p>{member.role}</p>
-                  </div>
-
-                  {/* Back */}
-                  <div className="card-back">
-                    <h4>{member.name}</h4>
-                    <div className="card-details">
-                      <h4>Education</h4>
-                      <p>{member.bio}</p>
+            <div className="team-grid">
+              {section.members.map((member, index) => (
+                <div key={index} className="team-card">
+                  <div className="card-inner">
+                    {/* Front */}
+                    <div className="card-front">
+                      <img src={member.img} alt={member.name} />
+                      <h3>{member.name}</h3>
+                      <p>{member.role}</p>
                     </div>
-                    <div className="social-links">
-                      <a href={member.linkedin} target="_blank" rel="noreferrer" className="linkedin-icon">
-                        <FaLinkedin/>
-                      </a>              
-                      {
-                        member.github && /*Show github icon only if member's github exists (tech team focused)*/
-                        (
-                        <a href={member.github} target="_blank" rel="noreferrer" className="github-icon">
-                        <FaGithub/>
-                        </a>  
-                        )
-                      }              
+
+                    {/* Back */}
+                    <div className="card-back">
+                      <h4>{member.name}</h4>
+                      <div className="card-details">
+                        <h4>Education</h4>
+                        <p>{member.bio}</p>
+                      </div>
+                      <div className="social-links">
+                        <a href={member.linkedin} target="_blank" rel="noreferrer" className="linkedin-icon">
+                          <FaLinkedin/>
+                        </a>              
+                        {
+                          member.github && /*Show github icon only if member's github exists (tech team focused)*/
+                          (
+                          <a href={member.github} target="_blank" rel="noreferrer" className="github-icon">
+                          <FaGithub/>
+                          </a>  
+                          )
+                        }              
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+
+      </div>
+    
 
       {/* --- Scroll to Top Button --- */}
       <button

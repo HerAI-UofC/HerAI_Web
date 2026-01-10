@@ -144,7 +144,7 @@ const Contact = () => {
                     <p>
                         Email:{" "}
                         <span className="highlight">
-                            connect.herai@gmail.com
+                            herai.club@ucalgary.ca
                         </span>
                     </p>
                 </div>

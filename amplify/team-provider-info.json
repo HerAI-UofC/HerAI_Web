@@ -25,12 +25,12 @@
           "s3Key": "amplify-builds/heraiamplifyauth9cda9675CustomMessage-54652b6332625a4a7a4b-build.zip"
         },
         "getformdata": {
-          "sesEmail": "connect.herai@gmail.com"
+          "sesEmail": "herai.club@ucalgary.ca"
         },
         "getcontactinfo": {
           "deploymentBucketName": "amplify-heraiamplifyauth-dev-103549-deployment",
           "s3Key": "amplify-builds/getcontactinfo-6e76375044586b4a4136-build.zip",
-          "sesEmail": "connect.herai@gmail.com"
+          "sesEmail": "herai.club@ucalgary.ca"
         }
       },
       "api": {

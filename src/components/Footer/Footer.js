@@ -22,7 +22,7 @@ const Footer = () => {
             </div>
             
             <div>
-                <p>connect.herai@gmail.com</p>
+                <p>herai.club@ucalgary.ca</p>
                 <div id="socialsFooter">
                     <a href="https://www.instagram.com/herai_uofc/">
                         <FontAwesomeIcon className="iconFooter" icon={faInstagram} />

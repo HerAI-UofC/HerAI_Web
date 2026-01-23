@@ -1,0 +1,19 @@
+/* styles/workshops.css */
+.no-workshops-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 75vh;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+.no-workshops-section h2 {
+    color: #8C6D6C;
+    font-size: 24px;
+    margin-bottom: 20px;
+}

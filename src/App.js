@@ -12,7 +12,7 @@ import Questions from "./pages/Questions";
 import Events from "./pages/Events.js";
 import Event from "./pages/Event.js";
 import StudyPlan from "./pages/studyPlan.js";
-
+import Workshops from "./pages/Workshops"; 
 import ScrollToTop from "./components/ScrollToTop.js";
 import Profile from "./pages/Profile.js";
 
@@ -27,6 +27,7 @@ function App() {
                 <Route path="/community" Component={Community} />
                 <Route path="/contact" Component={Contact} />
                 <Route path="/events" Component={Events} />
+                <Route path="/workshops" Component={Workshops} /> 
                 <Route path="/login" Component={Login} />
                 <Route path="/events/:eventTitle" Component={Event} />
                 <Route path="/profile" Component={Profile} />

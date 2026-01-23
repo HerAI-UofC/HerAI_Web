@@ -76,7 +76,9 @@ const Navbar = () => {
                 <NavLink className={"link"} to="/events">
                     Events
                 </NavLink>
-                
+                <NavLink className={"link"} to="/workshops">
+                    Workshops
+                </NavLink>
                 {/* Conditionally show Resources dropdown only when logged in */}
                 {isLoggedIn && (
                     <div className="resources" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>

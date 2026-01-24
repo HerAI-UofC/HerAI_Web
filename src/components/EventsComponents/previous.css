@@ -3,15 +3,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40%;
+    width: 60%;
     height:40%;
-    margin: 5% 10px 10% 40px;
+    margin: 0 5px 0 40px;
    
     
 }
 .prev-container{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+   
+}
+.carousel-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .slide{
@@ -96,6 +102,28 @@
 
 }
 
+/*Added CSS for timeline component*/
+
+.timeline-date-icon {
+  width: 100%;
+  height: 100%;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 700;
+  font-size: 10px;
+  padding: 6px;
+  text-align: center;
+  line-height: 1.1;
+}
+
+.previous-page .vertical-timeline-element-content {
+  padding: 20px 22px;
+}
+
+
 /*small screens*/
 @media(max-width: 600px){
     .prev-container{
@@ -122,8 +150,27 @@
     }
 
 }
-@media(max-width: 768px){
-    
-     
 
+/*MEDIA QUERY FOR SMALL SCREENS (PHONES)*/
+ 
+
+@media (max-width: 768px) {
+  .timeline-date-icon {
+    font-size: 8px;
+    padding: 4px;
+  }
+  /* Let timeline cards use full width */
+  .vertical-timeline-element-content {
+    margin-left: 0 !important;
+    width: 100%;
+  }
+
+  /* Center content under the icon */
+  .vertical-timeline-element {
+    padding-left: 0;
+  }
+  .carousel-wrapper{
+    transform: translateX(-38px);
+
+  }
 }

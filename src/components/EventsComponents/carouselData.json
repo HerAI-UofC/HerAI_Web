@@ -1,6 +1,24 @@
 {
+    "youatucal":{ 
+    "title": "You at Ucalgary Event",
+    "date": "April 2025",
+    "description": "An event to welcome incoming University of Calgary students and introduce them to HerAI to inspire students to join our club and help our initiative.",
+    "slides": [
+            {
+                "src": "/events-imgs/youatucal1.JPG",
+                "alt":  "img1"
+            },
+            {
+                "src": "/events-imgs/youatucal2.JPG",
+                "alt":  "img2"
+            }
+           
+
+            ]
+        },
     "blacktie": {
     "title": "BlackTie Event",
+    "date" : "May 2025",
     "description": "A networking event where attendees got the opportunity to network with industry professionals and hearing inspiring speeches from guest speakers.",
     "slides":[
         {
@@ -17,25 +35,11 @@
         }
         ]
 },
-    "youatucal":{ 
-    "title": "You at Ucalgary Event",
-    "description": "An event to welcome incoming University of Calgary students and introduce them to HerAI to inspire students to join our club and help our initiative.",
-    "slides": [
-            {
-                "src": "/events-imgs/youatucal1.JPG",
-                "alt":  "img1"
-            },
-            {
-                "src": "/events-imgs/youatucal2.JPG",
-                "alt":  "img2"
-            }
-           
-
-            ]
-        },
+    
     
     "hertechconnect":{
         "title": "HerTech Connect",
+        "date": "October 2025",
         "description": "An event catered to women in tech who are looking to network, learn more about the tech industry, and transform their lives.",
         "slides": [
             {

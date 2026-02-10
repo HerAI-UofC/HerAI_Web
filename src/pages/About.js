@@ -20,6 +20,8 @@ import daad from "../img/about-daad.jpg";
 import hira from "../img/about-hira.jpg";
 import aryam from "../img/about-aryam.jpg";
 import alishaba from "../img/about-alishaba.jpg";
+import zainab from "../img/about-zainab.jpg";
+import ramsha from "../img/about-ramsha.png";
 import northstar from "../img/northstar-background.png";
 
 const teamMembers = [
@@ -157,6 +159,22 @@ const teamMembers = [
         role: "VP Technology", 
         bio: "3rd Year Computer Science",
         img: arfa 
+      },
+      {
+        name: "Zainab Saeed",
+        role: "Jr. VP Technology",
+        bio: "3rd Year Data Science",
+        linkedin: "https://www.linkedin.com/in/zainab-saeed-zs/",
+        github: "https://github.com/ZainabSaeed06",
+        img: zainab
+      },
+      {
+        name: "Ramsha Oad",
+        role: "Jr. VP Technology",
+        bio: "1st Year Computer Science",
+        linkedin: "https://www.linkedin.com/in/ramshaoad/",
+        github: "https://github.com/oadramsha",
+        img: ramsha
       }
     ]
   }

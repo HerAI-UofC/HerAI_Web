@@ -217,8 +217,10 @@
 
 .team-grid {
   display: flex;
+  margin-left: 15rem;
+  margin-right: 15rem;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 50px;
+  gap: 25px;
   flex-wrap: wrap;
   justify-content: center;
 }

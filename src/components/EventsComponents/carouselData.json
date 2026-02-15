@@ -1,23 +1,12 @@
 {
     "youatucal":{ 
-    "title": "You at Ucalgary Event",
+    "title": "You at UCalgary Event",
     "date": "April 2025",
     "description": "An event to welcome incoming University of Calgary students and introduce them to HerAI to inspire students to join our club and help our initiative.",
-    "slides": [
-            {
-                "src": "/events-imgs/youatucal1.JPG",
-                "alt":  "img1"
-            },
-            {
-                "src": "/events-imgs/youatucal2.JPG",
-                "alt":  "img2"
-            }
-           
-
-            ]
+    "slides": null
         },
     "blacktie": {
-    "title": "BlackTie Event",
+    "title": "Black Tie Networking Night",
     "date" : "May 2025",
     "description": "A networking event where attendees got the opportunity to network with industry professionals and hearing inspiring speeches from guest speakers.",
     "slides":[

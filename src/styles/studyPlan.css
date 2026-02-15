@@ -52,7 +52,7 @@
 }
 
 .intro-text p {
-    font-family: Lato;
+    font-family: Signika;
     font-weight: lighter;
     padding: 5px 50px;
 }
@@ -107,12 +107,12 @@
 
 .study-plan .list h4 {
     font-size: 20px;
-    font-family: Lato;
+    font-family: Signika;
     margin-top: 20px;
 }
 
 .study-plan .list p {
-    font-family: Lato;
+    font-family: Signika;
     font-weight: lighter;
     margin-top: 10px;
 }
@@ -124,7 +124,7 @@
 
 .list button {
     margin-top: 20px;
-    font-family: Lato;
+    font-family: Signika;
     color: white;
     background-color: #8c6d6c;
     padding: 12px 75px;
@@ -165,7 +165,7 @@
 }
 
 .motivate-text p {
-    font-family: Lato;
+    font-family: Signika;
     font-weight: bold;
 }
 

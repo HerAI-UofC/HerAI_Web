@@ -22,6 +22,7 @@ import aryam from "../img/about-aryam.jpg";
 import alishaba from "../img/about-alishaba.jpg";
 import zainab from "../img/about-zainab.jpg";
 import ramsha from "../img/about-ramsha.png";
+import kseniia from "../img/about-kseniia.jpg";
 import northstar from "../img/northstar-background.png";
 
 const teamMembers = [
@@ -32,7 +33,7 @@ const teamMembers = [
       { 
         name: "Vivian Ha", 
         role: "President", 
-        bio: "4th Year Business Tech Management",
+        bio: "4th Year Business Technology Management",
         linkedin: "https://www.linkedin.com/in/viviann-ha/", 
         img: vivian
       },
@@ -55,6 +56,19 @@ const teamMembers = [
         bio: "4th Year Computer Science",
         linkedin: "https://www.linkedin.com/in/habiba-abuelazm/", 
         img: habiba 
+      }
+    ]
+  },
+  {
+    team: "External",
+    members:
+    [
+      {
+        name: "Kseniia Belousova",
+        role: "VP External",
+        bio: "2nd Year Business Technology Management",
+        linkedin: "https://www.linkedin.com/in/kseniia-belousova/",
+        img: kseniia
       }
     ]
   },
@@ -126,7 +140,7 @@ const teamMembers = [
         name: "Brittney Ha", 
         role: "VP Technology", 
         bio: "3rd Year Computer Science",
-        linkedin: "https://www.linkedin.com/in/brittney-ha-b199971b2/", 
+        linkedin: "https://www.linkedin.com/in/brittney-ha/", 
         github: "https://github.com/brittneyhxh",
         img: brittney 
       },

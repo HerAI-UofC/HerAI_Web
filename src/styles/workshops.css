@@ -1,19 +1,67 @@
-/* styles/workshops.css */
-.no-workshops-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    height: 75vh;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 5px;
-    margin: 20px 0;
+.workshops-container {
+    padding: 50px 100px;
+    min-height: 60vh;
 }
 
-.no-workshops-section h2 {
+.workshops-header {
     color: #8C6D6C;
-    font-size: 24px;
-    margin-bottom: 20px;
+    font-size: 32pt;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.workshop-card {
+    background-color: #f5f5f5;
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.workshop-card h2 {
+    color: #333;
+    font-size: 24pt;
+    margin-bottom: 10px;
+}
+
+.workshop-date {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.workshop-summary {
+    font-size: 12pt;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: #444;
+}
+
+.materials-links {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.material-btn {
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.material-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.slides-btn {
+    background-color: #8C6D6C;
+    color: white;
+}
+
+.notebook-btn {
+    background-color: #8C6D6C;
+    color: white;
 }

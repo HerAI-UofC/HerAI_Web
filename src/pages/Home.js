@@ -53,7 +53,7 @@ const Home = () => {
                             the voices and contributions of underrepresented groups in the tech landscape.
                         </h2>
                         <NavLink className="about-button" to="/about">
-                            About Us <span className="arrow">→</span>
+                            About Us →
                         </NavLink>
                         <div id="socials">
                             <a href="https://www.instagram.com/herai_uofc/">

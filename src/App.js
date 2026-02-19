@@ -12,6 +12,7 @@ import Questions from "./pages/Questions";
 import Events from "./pages/Events.js";
 import Event from "./pages/Event.js";
 import StudyPlan from "./pages/studyPlan.js";
+import EventsRevamp from "./pages/EventsRevamp.js";
 import Workshops from "./pages/Workshops"; 
 import ScrollToTop from "./components/ScrollToTop.js";
 import Profile from "./pages/Profile.js";
@@ -34,6 +35,8 @@ function App() {
                 <Route path="/getStarted" Component={GetStarted} />
                 <Route path="/studyPlan" Component={StudyPlan} />
                 <Route path="/Questions" Component={Questions} />
+                <Route path="/EventsRevamp" Component={EventsRevamp} />
+
             </Routes>
             <Footer />
         </Router>

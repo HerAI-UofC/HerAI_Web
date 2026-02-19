@@ -1,4 +1,4 @@
-# HerAI_Web
+# HerAI
 🚀 Welcome to the HerAI_Web repository - the digital hub for HerAI, empowering women in the AI/ML realm! 🌟
 
 ✨ About HerAI:
@@ -6,3 +6,10 @@ HerAI is a dynamic and inclusive community striving to bridge the gender gap in 
 
 👩‍💻 Project Focus:
 This repository is dedicated to the development and maintenance of the official HerAI website. We're crafting an interactive online space where members and enthusiasts can connect, learn, and engage with AI/ML content, events, and more.
+
+## Set-up Instructions
+1. ```git clone https://github.com/HerAI-UofC/HerAI_Web.git```
+2. ```cd project-folder```
+3. ```npm install```
+4. ```npm start```
+

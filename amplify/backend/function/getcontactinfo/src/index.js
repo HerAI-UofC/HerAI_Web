@@ -17,9 +17,9 @@ exports.handler = async (event) => {
 
     const params = {
         Destination: {
-            ToAddresses: ["herai.club@ucalgary.ca"],
+            ToAddresses: ["connect.herai@gmail.com"],
         },
-        Source: "herai.club@ucalgary.ca",
+        Source: "connect.herai@gmail.com",
         Message: {
             Subject: { Data: "Candidate Submission" },
             Body: {

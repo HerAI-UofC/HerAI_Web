@@ -1,17 +1,31 @@
 {
   "api": {
     "heraiamplifyauth": {
-      "dependsOn": [],
+      "dependsOn": [
+        {
+          "attributes": [
+            "UserPoolId"
+          ],
+          "category": "auth",
+          "resourceName": "heraiamplifyauth9cda9675"
+        }
+      ],
       "output": {
         "authConfig": {
           "additionalAuthenticationProviders": [
             {
               "authenticationType": "AWS_IAM"
+            },
+            {
+              "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+              "userPoolConfig": {
+                "userPoolId": "authheraiamplifyauth9cda9675"
+              }
             }
           ],
           "defaultAuthentication": {
             "apiKeyConfig": {
-              "apiKeyExpirationDate": "2026-09-30T19:18:12.378Z",
+              "apiKeyExpirationDate": "2026-09-28T22:26:11.341Z",
               "apiKeyExpirationDays": 365,
               "description": "herai_API"
             },
@@ -63,6 +77,12 @@
     }
   },
   "function": {
+    "contactNotify": {
+      "build": true,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
     "getcontactinfo": {
       "build": true,
       "dependsOn": [
@@ -85,6 +105,38 @@
     }
   },
   "parameters": {
+    "AMPLIFY_function_contactNotify_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "contactNotify"
+        }
+      ]
+    },
+    "AMPLIFY_function_contactNotify_fromEmail": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "contactNotify"
+        }
+      ]
+    },
+    "AMPLIFY_function_contactNotify_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "contactNotify"
+        }
+      ]
+    },
+    "AMPLIFY_function_contactNotify_toEmail": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "contactNotify"
+        }
+      ]
+    },
     "AMPLIFY_function_getcontactinfo_deploymentBucketName": {
       "usedBy": [
         {

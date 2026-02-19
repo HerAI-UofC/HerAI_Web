@@ -9,6 +9,9 @@ type Events @model @auth(rules: [{allow: public}]) {
   videoDescription: String
   pdfDescription: String
   presenters: String
+
+  favourites: [Favourite] @hasMany
+  followers: [Follower] @hasMany
 }
 
 type Candidate @model @auth(rules: [{allow: public}]) {
@@ -25,4 +28,36 @@ type Todo @model @auth(rules: [{allow: public}]) {
   name: String!
   description: String
 }
+
+type Follower @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  userId: ID!
+  event: Events @belongsTo
+}
+
+type Favourite @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  userId: ID!
+  event: Events @belongsTo
+}
+
+type ContactMessage
+  @model
+  @auth(rules: [
+    # anyone can submit (create)
+    { allow: public, operations: [create] },
+    # optional: allow admins to read
+    { allow: groups, groups: ["Admin"], operations: [read, update, delete] }
+  ]) {
+  id: ID!
+  firstName: String!
+  lastName: String
+  email: AWSEmail!
+  phone: String
+  message: String!
+  createdAt: AWSDateTime
+  updatedAt: AWSDateTime
+}
+
+
  

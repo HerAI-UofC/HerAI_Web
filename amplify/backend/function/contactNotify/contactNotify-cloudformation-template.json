@@ -1,6 +1,6 @@
 {
   "AWSTemplateFormatVersion": "2010-09-09",
-  "Description": "{\"createdOn\":\"Mac\",\"createdBy\":\"Amplify\",\"createdWith\":\"12.8.2\",\"stackType\":\"function-Lambda\",\"metadata\":{}}",
+  "Description": "{\"createdOn\":\"Windows\",\"createdBy\":\"Amplify\",\"createdWith\":\"12.14.3\",\"stackType\":\"function-Lambda\",\"metadata\":{\"whyContinueWithGen1\":\"\"}}",
   "Parameters": {
     "CloudWatchRule": {
       "Type": "String",
@@ -24,7 +24,10 @@
       "Type": "String",
       "Default": "apiheraiamplifyauthGraphQLAPIEndpointOutput"
     },
-    "sesEmail": {
+    "toEmail": {
+      "Type": "String"
+    },
+    "fromEmail": {
       "Type": "String"
     }
   },
@@ -58,12 +61,12 @@
         "FunctionName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "getcontactinfo",
+            "contactNotify",
             {
               "Fn::Join": [
                 "",
                 [
-                  "getcontactinfo",
+                  "contactNotify",
                   "-",
                   {
                     "Ref": "env"
@@ -81,8 +84,11 @@
             "REGION": {
               "Ref": "AWS::Region"
             },
-            "SES_EMAIL": {
-              "Ref": "sesEmail"
+            "TO_EMAIL": {
+              "Ref": "toEmail"
+            },
+            "FROM_EMAIL": {
+              "Ref": "fromEmail"
             }
           }
         },
@@ -103,12 +109,12 @@
         "RoleName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "heraiamplifyauthLambdaRole4d3b73d3",
+            "heraiamplifyauthLambdaRolea17b937b",
             {
               "Fn::Join": [
                 "",
                 [
-                  "heraiamplifyauthLambdaRole4d3b73d3",
+                  "heraiamplifyauthLambdaRolea17b937b",
                   "-",
                   {
                     "Ref": "env"
@@ -179,13 +185,13 @@
         }
       }
     },
-    "LambdaTriggerPolicyCandidate": {
+    "LambdaSesPolicy": {
       "DependsOn": [
         "LambdaExecutionRole"
       ],
       "Type": "AWS::IAM::Policy",
       "Properties": {
-        "PolicyName": "amplify-lambda-execution-policy-Candidate",
+        "PolicyName": "lambda-ses-send",
         "Roles": [
           {
             "Ref": "LambdaExecutionRole"
@@ -197,69 +203,14 @@
             {
               "Effect": "Allow",
               "Action": [
-                "dynamodb:DescribeStream",
-                "dynamodb:GetRecords",
-                "dynamodb:GetShardIterator",
-                "dynamodb:ListStreams"
+                "ses:SendEmail",
+                "ses:SendRawEmail"
               ],
-              "Resource": {
-                "Fn::ImportValue": {
-                  "Fn::Sub": "${apiheraiamplifyauthGraphQLAPIIdOutput}:GetAtt:CandidateTable:StreamArn"
-                }
-              }
+              "Resource": "*"
             }
           ]
         }
       }
-    },
-    "LambdaEventSourceMappingCandidate": {
-      "Type": "AWS::Lambda::EventSourceMapping",
-      "DependsOn": [
-        "LambdaTriggerPolicyCandidate",
-        "LambdaExecutionRole"
-      ],
-      "Properties": {
-        "BatchSize": 100,
-        "Enabled": true,
-        "EventSourceArn": {
-          "Fn::ImportValue": {
-            "Fn::Sub": "${apiheraiamplifyauthGraphQLAPIIdOutput}:GetAtt:CandidateTable:StreamArn"
-          }
-        },
-        "FunctionName": {
-          "Fn::GetAtt": [
-            "LambdaFunction",
-            "Arn"
-          ]
-        },
-        "StartingPosition": "LATEST"
-      }
-    },
-    "CustomLambdaExecutionPolicy": {
-      "Type": "AWS::IAM::Policy",
-      "Properties": {
-        "PolicyName": "custom-lambda-execution-policy",
-        "PolicyDocument": {
-          "Version": "2012-10-17",
-          "Statement": [
-            {
-              "Action": [
-                "ses:SendEmail"
-              ],
-              "Effect": "Allow",
-              "Resource": [
-                "arn:aws:ses:*:*:identity/connect.herai@gmail.com"
-              ]
-            }
-          ]
-        },
-        "Roles": [
-          {
-            "Ref": "LambdaExecutionRole"
-          }
-        ]
-      },
-      "DependsOn": "LambdaExecutionRole"
     }
   },
   "Outputs": {

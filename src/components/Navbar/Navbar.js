@@ -77,19 +77,19 @@ const Navbar = () => {
                 <NavLink className={"link"} to="/EventsRevamp">
                     Events
                 </NavLink>
-                <NavLink className={"link"} to="/workshops">
-                    Workshops
-                </NavLink>
                 {/* Conditionally show Resources dropdown only when logged in */}
                 {isLoggedIn && (
                     <div className="resources" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                         <button className="resources-btn">
                             Resources <span className={isDropdownOpen ? 'arrow-up' : ''}>&#11167;</span>
-                        </button> 
+                        </button>
                         {isDropdownOpen && (
                             <div className="dropdown-content">
-                                <NavLink className={"link"} to="/studyPlan"> 
+                                <NavLink className={"link"} to="/studyPlan">
                                     Study Plan
+                                </NavLink>
+                                <NavLink className={"link"} to="/workshops">
+                                    Workshops
                                 </NavLink>
                             </div>
                         )}

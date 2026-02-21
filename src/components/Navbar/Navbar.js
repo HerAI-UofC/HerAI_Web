@@ -77,20 +77,28 @@ const Navbar = () => {
                 <NavLink className={"link"} to="/EventsRevamp">
                     Events
                 </NavLink>
-                {/* Conditionally show Resources dropdown only when logged in */}
+
                 {isLoggedIn && (
-                    <div className="resources" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+                    <NavLink className={"link"} to="/workshops">
+                        Workshops
+                    </NavLink>
+                )}
+                
+                {isLoggedIn && (
+                    <div
+                        className="resources"
+                        onMouseEnter={handleMouseEnter}
+                        onMouseLeave={handleMouseLeave}
+                    >
                         <button className="resources-btn">
-                            Resources <span className={isDropdownOpen ? 'arrow-up' : ''}>&#11167;</span>
+                            Resources <span className={isDropdownOpen ? "arrow-up" : ""}>&#11167;</span>
                         </button>
                         {isDropdownOpen && (
                             <div className="dropdown-content">
                                 <NavLink className={"link"} to="/studyPlan">
                                     Study Plan
                                 </NavLink>
-                                <NavLink className={"link"} to="/workshops">
-                                    Workshops
-                                </NavLink>
+    
                             </div>
                         )}
                     </div>
@@ -122,4 +130,5 @@ const Navbar = () => {
         </nav>
     );
 };
+
 export default Navbar;

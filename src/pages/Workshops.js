@@ -13,7 +13,7 @@ const UpcomingWorkshops = () => {
             duration: "1 hour",
             location: "Science Collab Space (ST 142)",
             summary: "Get ready for some March Machine-Learning Madness! Explore the foundations of Machine Learning in this easy-to-follow workshop, and learn the essentials of supervised, unsupervised, and deep learning while getting a simple overview of models like Linear Regression, SVMs, Random Forests, Neural Networks, and CNNs.",
-            registrationLink: "https://docs.google.com/forms" // replace with actual form
+            registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLScm-hZvXRgiOXrmuTh3qiAaHaoZUR2bxWJZBHlQdMfPYKpFpg/viewform?usp=dialog"
         }
     ];
 

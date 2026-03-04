@@ -1,0 +1,14 @@
+{
+  "lambdaLayers": [],
+  "permissions": {},
+  "environmentVariableList": [
+    {
+      "cloudFormationParameterName": "toEmail",
+      "environmentVariableName": "TO_EMAIL"
+    },
+    {
+      "cloudFormationParameterName": "fromEmail",
+      "environmentVariableName": "FROM_EMAIL"
+    }
+  ]
+}

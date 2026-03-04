@@ -29,8 +29,14 @@
         },
         "getcontactinfo": {
           "deploymentBucketName": "amplify-heraiamplifyauth-dev-103549-deployment",
-          "s3Key": "amplify-builds/getcontactinfo-6e76375044586b4a4136-build.zip",
+          "s3Key": "amplify-builds/getcontactinfo-44773862495573516978-build.zip",
           "sesEmail": "herai.club@ucalgary.ca"
+        },
+        "contactNotify": {
+          "fromEmail": "herai.club@ucalgary.ca",
+          "toEmail": "herai.club@ucalgary.ca",
+          "deploymentBucketName": "amplify-heraiamplifyauth-dev-103549-deployment",
+          "s3Key": "amplify-builds/contactNotify-74534c737863794f4132-build.zip"
         }
       },
       "api": {

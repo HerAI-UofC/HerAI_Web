@@ -34,36 +34,44 @@ const Contact = () => {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        //console.log("Form submitted", formData);
+        setSubmitMessage("Sending...");
+
         const firstname = formData.firstName;
         const lastname = formData.lastName;
         const email = formData.email;
         const number = formData.phone;
         const message = formData.message;
-        //console.log(firstname, message);
-        await client.graphql({
-            query: createCandidate,
-            variables: {
-                input: {
-                    firstname,
-                    lastname,
-                    email,
-                    number,
-                    message,
+
+        try {
+            const response = await client.graphql({
+                query: createCandidate,
+                variables: {
+                    input: {
+                        firstname,
+                        lastname,
+                        email,
+                        number,
+                        message,
+                    },
                 },
-            },
-        });
+            });
 
-        setSubmitMessage("Form submitted successfully");
+            console.log("GraphQL Response:", response);
+            setSubmitMessage("Form submitted successfully");
 
-        // clear form
-        setFormData({
-            firstName: "",
-            lastName: "",
-            email: "",
-            phone: "",
-            message: "",
-        });
+            // Clear form
+            setFormData({
+                firstName: "",
+                lastName: "",
+                email: "",
+                phone: "",
+                message: "",
+            });
+
+        } catch (error) {
+            console.log("Submission error:", error);
+            setSubmitMessage("Failed to send message");
+        }
     };
 
     return (

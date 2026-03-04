@@ -6,13 +6,17 @@
     "defaultAuthType": {
       "mode": "API_KEY",
       "expirationTime": 365,
-      "apiKeyExpirationDate": "2026-09-30T19:18:12.378Z",
+      "apiKeyExpirationDate": "2026-09-28T22:26:11.341Z",
       "keyDescription": "herai_API"
     },
     "conflictResolution": {},
     "additionalAuthTypes": [
       {
         "mode": "AWS_IAM"
+      },
+      {
+        "mode": "AMAZON_COGNITO_USER_POOLS",
+        "cognitoUserPoolId": "authheraiamplifyauth9cda9675"
       }
     ]
   }

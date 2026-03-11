@@ -10,27 +10,28 @@ exports.handler = async (event) => {
     console.log("Received event from AppSync:", JSON.stringify(event));
 
     const {
-        firstname: firstName,
-        lastname: lastName,
+        firstName,
+        lastName,
         email,
-        number: phone,
+        phone,
         message,
     } = event;
 
-    const subject = `New Contact: ${firstName} ${lastName}`;
+    const subject = `New Contact Form Submission: ${firstName} ${lastName}`;
     const bodyText =
-        `New contact submission
+        `New contact form submission from the HerAI website:
 
-Name: ${firstName} ${lastName}
-Email: ${email}
-Phone: ${phone || "N/A"}
+        Name: ${firstName} ${lastName}
+        Email: ${email}
+        Phone: ${phone || "N/A"}
 
-Message:
-${message}`;
+        Message:
+        ${message}`;
 
     console.log("Sending email via SES to:", TO);
 
-    await ses
+    try {
+        const result = await ses
         .sendEmail({
             Source: FROM,
             Destination: { ToAddresses: [TO] },
@@ -42,7 +43,24 @@ ${message}`;
         })
         .promise();
 
-    console.log("Email sent successfully");
+        console.log("SES result:", result);
+        console.log("Email sent successfully");
 
-    return { status: "Email sent" };
+        // GraphQL expects a Candidate object to be returned (placeholder since we moved to Lambda and are no longer using DynamoDB)
+        return { 
+            id: Date.now().toString(),
+            firstname: firstName,
+            lastname: lastName,
+            email: email,
+            number: phone,
+            message: message,
+            createdAt: new Date().toISOString(),
+            updatedAt: new Date().toISOString(),
+        };
+
+    }
+    catch (error) {
+        console.error("Ran into an SES error:", error);
+        throw error;
+    }
 };

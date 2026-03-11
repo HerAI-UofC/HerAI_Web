@@ -33,10 +33,10 @@
           "sesEmail": "herai.club@ucalgary.ca"
         },
         "contactNotify": {
-          "fromEmail": "herai.club@ucalgary.ca",
+          "fromEmail": "contact.form@herai-ucalgary.ca",
           "toEmail": "herai.club@ucalgary.ca",
           "deploymentBucketName": "amplify-heraiamplifyauth-dev-103549-deployment",
-          "s3Key": "amplify-builds/contactNotify-74534c737863794f4132-build.zip"
+          "s3Key": "amplify-builds/contactNotify-336d4539314c79456268-build.zip"
         }
       },
       "api": {

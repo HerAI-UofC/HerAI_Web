@@ -65,3 +65,40 @@
     background-color: #8C6D6C;
     color: white;
 }
+.upcoming-card {
+
+}
+
+.event-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+    color: #555;
+    font-size: 1rem;
+}
+
+.event-date, .event-time {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.event-time-separator {
+    color: #aaa;
+    font-weight: bold;
+}
+
+.event-location {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 15px;
+    color: #555;
+    font-size: 1rem;
+}
+
+
+.upcoming-card .workshop-summary {
+    margin-top: 10px;
+}

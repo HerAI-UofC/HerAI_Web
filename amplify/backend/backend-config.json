@@ -1,12 +1,40 @@
 {
   "api": {
+    "accountApi": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "deleteMe"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    },
     "heraiamplifyauth": {
-      "dependsOn": [],
+      "dependsOn": [
+        {
+          "attributes": [
+            "UserPoolId"
+          ],
+          "category": "auth",
+          "resourceName": "heraiamplifyauth9cda9675"
+        }
+      ],
       "output": {
         "authConfig": {
           "additionalAuthenticationProviders": [
             {
               "authenticationType": "AWS_IAM"
+            },
+            {
+              "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+              "userPoolConfig": {
+                "userPoolId": "authheraiamplifyauth9cda9675"
+              }
             }
           ],
           "defaultAuthentication": {
@@ -63,6 +91,18 @@
     }
   },
   "function": {
+    "contactNotify": {
+      "build": true,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "deleteMe": {
+      "build": true,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
     "getcontactinfo": {
       "build": true,
       "dependsOn": [
@@ -85,6 +125,70 @@
     }
   },
   "parameters": {
+    "AMPLIFY_function_contactNotify_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "contactNotify"
+        }
+      ]
+    },
+    "AMPLIFY_function_contactNotify_fromEmail": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "contactNotify"
+        }
+      ]
+    },
+    "AMPLIFY_function_contactNotify_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "contactNotify"
+        }
+      ]
+    },
+    "AMPLIFY_function_contactNotify_toEmail": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "contactNotify"
+        }
+      ]
+    },
+    "AMPLIFY_function_deleteMe_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "deleteMe"
+        }
+      ]
+    },
+    "AMPLIFY_function_deleteMe_s3Bucket": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "deleteMe"
+        }
+      ]
+    },
+    "AMPLIFY_function_deleteMe_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "deleteMe"
+        }
+      ]
+    },
+    "AMPLIFY_function_deleteMe_userPoolId": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "deleteMe"
+        }
+      ]
+    },
     "AMPLIFY_function_getcontactinfo_deploymentBucketName": {
       "usedBy": [
         {

@@ -1,8 +1,9 @@
 ﻿import { useEffect, useMemo, useState } from "react";
 import "../styles/profile.css";
-import {fetchUserAttributes, updateUserAttribute, confirmUserAttribute, deleteUser, signOut,} from "aws-amplify/auth";
+import { fetchUserAttributes, updateUserAttribute, confirmUserAttribute, signOut, fetchAuthSession,} from "aws-amplify/auth";
 import { uploadData, getUrl } from "aws-amplify/storage";
 import { useNavigate } from "react-router-dom";
+import { del } from "aws-amplify/api";
 
 const DEFAULT_AVATAR = "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png";
 
@@ -152,7 +153,14 @@ const Profile = () => {
         if (!file) return null;
 
         const ext = (file.name.split(".").pop() || "jpg").toLowerCase();
-        const key = `public/${folder}/${Date.now()}.${ext}`;
+
+        const session = await fetchAuthSession();
+        const sub =
+            session?.tokens?.idToken?.payload?.sub ||
+            session?.tokens?.accessToken?.payload?.sub ||
+            session?.userSub;
+
+        const key = `public/${folder}/${sub}/${Date.now()}.${ext}`;
 
         await uploadData({
             path: key,
@@ -160,7 +168,6 @@ const Profile = () => {
             options: { contentType: file.type },
         }).result;
 
-        // Return both key and a usable URL
         const urlResult = await getUrl({ path: key });
         return { key, url: urlResult.url.toString() };
     };
@@ -226,10 +233,36 @@ const Profile = () => {
 
     const deleteAccount = async () => {
         try {
-            await deleteUser();
+            const session = await fetchAuthSession();
+
+            const sub =
+                session?.tokens?.idToken?.payload?.sub ||
+                session?.tokens?.accessToken?.payload?.sub ||
+                session?.userSub;
+
+            const username =
+                session?.tokens?.idToken?.payload?.["cognito:username"] ||
+                session?.tokens?.accessToken?.payload?.username ||
+                userAttributes?.email;
+
+            const operation = del({
+                apiName: "accountApi",
+                path: "/me",
+                options: {
+                    body: {
+                        sub,
+                        username,
+                    },
+                },
+            });
+
+            await operation.response;
+
+            await signOut();
             nav("/");
         } catch (e) {
             console.log("Delete account failed:", e);
+            alert("Could not delete your account. Please try again.");
         }
     };
 

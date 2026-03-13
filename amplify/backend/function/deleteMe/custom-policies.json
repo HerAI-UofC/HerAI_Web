@@ -1,0 +1,29 @@
+[
+  {
+    "Effect": "Allow",
+    "Action": [
+      "cognito-idp:AdminDeleteUser"
+    ],
+    "Resource": [
+      "*"
+    ]
+  },
+  {
+    "Effect": "Allow",
+    "Action": [
+      "s3:ListBucket"
+    ],
+    "Resource": [
+      "arn:aws:s3:::content103549-dev"
+    ]
+  },
+  {
+    "Effect": "Allow",
+    "Action": [
+      "s3:DeleteObject"
+    ],
+    "Resource": [
+      "arn:aws:s3:::content103549-dev/*"
+    ]
+  }
+]

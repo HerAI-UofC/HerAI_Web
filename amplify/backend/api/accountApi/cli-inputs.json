@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "paths": {
+    "/me": {
+      "name": "/me",
+      "lambdaFunction": "deleteMe",
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "delete"
+        ]
+      }
+    }
+  }
+}

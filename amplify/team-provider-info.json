@@ -10,7 +10,8 @@
       "StackName": "amplify-heraiamplifyauth-dev-103549",
       "StackId": "arn:aws:cloudformation:us-east-1:639700345583:stack/amplify-heraiamplifyauth-dev-103549/3ee18bf0-8c82-11ee-8e36-0e069d861ed9",
       "AmplifyAppId": "d26ojlew4mnuil",
-      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-heraiamplifyauth-dev-103549-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
+      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-heraiamplifyauth-dev-103549-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-heraiamplifyauth-dev-103549-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
     },
     "categories": {
       "auth": {
@@ -29,12 +30,25 @@
         },
         "getcontactinfo": {
           "deploymentBucketName": "amplify-heraiamplifyauth-dev-103549-deployment",
-          "s3Key": "amplify-builds/getcontactinfo-6e76375044586b4a4136-build.zip",
+          "s3Key": "amplify-builds/getcontactinfo-44773862495573516978-build.zip",
           "sesEmail": "herai.club@ucalgary.ca"
+        },
+        "deleteMe": {
+          "userPoolId": "us-east-1_xg5QBIKvn",
+          "s3Bucket": "content103549-dev",
+          "deploymentBucketName": "amplify-heraiamplifyauth-dev-103549-deployment",
+          "s3Key": "amplify-builds/deleteMe-70324f6f634e30777642-build.zip"
+        },
+        "contactNotify": {
+          "deploymentBucketName": "amplify-heraiamplifyauth-dev-103549-deployment",
+          "s3Key": "amplify-builds/contactNotify-336d4539314c79456268-build.zip",
+          "toEmail": "herai.club@ucalgary.ca",
+          "fromEmail": "herai.club@ucalgary.ca"
         }
       },
       "api": {
-        "heraiamplifyauth": {}
+        "heraiamplifyauth": {},
+        "accountApi": {}
       },
       "storage": {
         "workshopContent": {}

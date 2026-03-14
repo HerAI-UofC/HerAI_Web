@@ -166,7 +166,7 @@ const Events = () => {
         <div className="no-events-section">
             <h2>Stay Tuned for Upcoming Events</h2>
         </div>
-    );
+    ); 
 };
 
 export default Events;

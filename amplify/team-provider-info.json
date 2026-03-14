@@ -33,17 +33,17 @@
           "s3Key": "amplify-builds/getcontactinfo-44773862495573516978-build.zip",
           "sesEmail": "herai.club@ucalgary.ca"
         },
+        "contactNotify": {
+          "fromEmail": "contact.form@herai-ucalgary.ca",
+          "toEmail": "herai.club@ucalgary.ca",
+          "deploymentBucketName": "amplify-heraiamplifyauth-dev-103549-deployment",
+          "s3Key": "amplify-builds/contactNotify-336d4539314c79456268-build.zip"
+        },
         "deleteMe": {
           "userPoolId": "us-east-1_xg5QBIKvn",
           "s3Bucket": "content103549-dev",
           "deploymentBucketName": "amplify-heraiamplifyauth-dev-103549-deployment",
           "s3Key": "amplify-builds/deleteMe-70324f6f634e30777642-build.zip"
-        },
-        "contactNotify": {
-          "deploymentBucketName": "amplify-heraiamplifyauth-dev-103549-deployment",
-          "s3Key": "amplify-builds/contactNotify-336d4539314c79456268-build.zip",
-          "toEmail": "herai.club@ucalgary.ca",
-          "fromEmail": "herai.club@ucalgary.ca"
         }
       },
       "api": {

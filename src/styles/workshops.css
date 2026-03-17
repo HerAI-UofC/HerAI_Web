@@ -1,3 +1,9 @@
+.workshops-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
 .workshops-container {
     padding: 50px 100px;
     min-height: 60vh;
@@ -64,4 +70,47 @@
 .notebook-btn {
     background-color: #8C6D6C;
     color: white;
+}
+
+.tab-btn {
+    background-color: #8C6D6C; 
+    border: none;
+    border-radius: 30px;
+    padding: 12px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    opacity: 0.85; 
+}
+
+.tab-btn.active {
+    opacity: 1;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(140, 109, 108, 0.4);
+    font-weight: 700; 
+}
+
+.tab-btn:hover {
+    background-color: #a89999;
+    color: white;
+    opacity: 1;
+}
+
+.register-btn {
+    display: inline-block;
+    background-color: #8C6D6C;
+    color: white;
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.register-btn:hover {
+    background-color: #6b4f4e; 
 }

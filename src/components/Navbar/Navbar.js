@@ -84,7 +84,7 @@ const Navbar = () => {
                     </NavLink>
                 )}
                 
-                {isLoggedIn && (
+                {/* {isLoggedIn && (
                     <div
                         className="resources"
                         onMouseEnter={handleMouseEnter}
@@ -102,7 +102,7 @@ const Navbar = () => {
                             </div>
                         )}
                     </div>
-                )}
+                )} */}
                 
                 <NavLink className={"link"} to="/community">
                     Community

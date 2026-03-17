@@ -159,6 +159,25 @@ const Events = () => {
                     </div>
                 </div>
             )}
+
+           <div className="sign-up-container">
+                <div className="sign-up-container-head">
+                    <h3>
+                        Interested in HerAI Events?
+                        <br />
+                        Sign Up to Stay Informed!
+                    </h3>
+                </div>
+                <div className="sign-up-container-body">
+                    <p>
+                        Get access to all of our workshop content and get
+                        notified of upcoming events
+                    </p>
+                    <NavLink to={"/login"} className={"check-btn"}>
+                        Sign Up
+                    </NavLink>
+                </div>
+            </div>
         </div>
     );
 };

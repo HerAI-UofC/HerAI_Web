@@ -5,17 +5,7 @@ import "../styles/workshops.css";
 
 // ---------- Upcoming Workshops ----------
 const UpcomingWorkshops = () => {
-    const upcoming = [
-        {
-            id: 2,
-            title: "Intro to Machine Learning Models",
-            date: "2026-03-12T17:00", 
-            duration: "1 hour",
-            location: "Science Collab Space (ST 142)",
-            summary: "Get ready for some March Machine-Learning Madness! Explore the foundations of Machine Learning in this easy-to-follow workshop, and learn the essentials of supervised, unsupervised, and deep learning while getting a simple overview of models like Linear Regression, SVMs, Random Forests, Neural Networks, and CNNs.",
-            registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLScm-hZvXRgiOXrmuTh3qiAaHaoZUR2bxWJZBHlQdMfPYKpFpg/viewform?usp=dialog"
-        }
-    ];
+    const upcoming = []; 
 
     const formatDateTime = (dateStr) => {
         const date = new Date(dateStr);
@@ -68,6 +58,16 @@ const PreviousWorkshops = () => {
                     slides: "https://docs.google.com/presentation/d/19cC3qcCpg6ngKm4YOpS9fJ0_nukdzZRs/edit?usp=sharing&ouid=112205518221091536952&rtpof=true&sd=true",
                     notebook: "https://colab.research.google.com/drive/1KB7gjxGRGk1LGshpS4KBXEbtUeo2YLeq"
                 }
+            },
+            {
+                id: 2,
+                title: "Intro to Machine Learning Models",
+                date: "2026-03-12",
+                summary: "Get ready for some March Machine-Learning Madness! Explore the foundations of Machine Learning in this easy-to-follow workshop, and learn the essentials of supervised, unsupervised, and deep learning while getting a simple overview of models like Linear Regression, SVMs, Random Forests, Neural Networks, and CNNs.",
+                materials: {
+                    slides: "https://docs.google.com/presentation/d/1YSwxwOdHcr2hwH9TuhzRqWO4U7Iv5nMu/edit?usp=sharing&ouid=112205518221091536952&rtpof=true&sd=true",  // Add link when available
+                    notebook: "" 
+                }
             }
         ];
         setWorkshops(pastWorkshops);
@@ -87,22 +87,26 @@ const PreviousWorkshops = () => {
                         <p className="workshop-date">{formatDate(workshop.date)}</p>
                         <p className="workshop-summary">{workshop.summary}</p>
                         <div className="materials-links">
-                            <a 
-                                href={workshop.materials.slides} 
-                                target="_blank" 
-                                rel="noopener noreferrer"
-                                className="material-btn slides-btn"
-                            >
-                                View Presentation Slides
-                            </a>
-                            <a 
-                                href={workshop.materials.notebook} 
-                                target="_blank" 
-                                rel="noopener noreferrer"
-                                className="material-btn notebook-btn"
-                            >
-                                Open Code Notebook
-                            </a>
+                            {workshop.materials.slides && (
+                                <a 
+                                    href={workshop.materials.slides} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="material-btn slides-btn"
+                                >
+                                    View Presentation Slides
+                                </a>
+                            )}
+                            {workshop.materials.notebook && (
+                                <a 
+                                    href={workshop.materials.notebook} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="material-btn notebook-btn"
+                                >
+                                    Open Code Notebook
+                                </a>
+                            )}
                         </div>
                     </div>
                 ))

@@ -1,6 +1,6 @@
 import "../styles/contact.css";
 import { generateClient } from "aws-amplify/api";
-import { createContactMessage } from "../graphql/mutations";
+import { createCandidate } from "../graphql/mutations";
 import { useState } from "react";
 
 const client = generateClient();
@@ -20,6 +20,8 @@ const Contact = () => {
         ok: false,
         error: ""
     });
+
+    const [submitMessage, setSubmitMessage] = useState("");
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -175,8 +177,9 @@ const Contact = () => {
                                     className="pill-btn"
                                     disabled={state.loading}
                                 >
-                                    {state.loading ? "Sending�" : "Send"}
+                                    {state.loading ? "Sending" : "Send"}
                                 </button>
+                                <p>{submitMessage}</p>
 
                                 {state.ok && (
                                     <p className="success">

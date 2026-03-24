@@ -1,5 +1,19 @@
 {
   "api": {
+    "accountApi": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "deleteMe"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    },
     "heraiamplifyauth": {
       "dependsOn": [
         {
@@ -83,6 +97,12 @@
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
     },
+    "deleteMe": {
+      "build": true,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
     "getcontactinfo": {
       "build": true,
       "dependsOn": [
@@ -134,6 +154,38 @@
         {
           "category": "function",
           "resourceName": "contactNotify"
+        }
+      ]
+    },
+    "AMPLIFY_function_deleteMe_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "deleteMe"
+        }
+      ]
+    },
+    "AMPLIFY_function_deleteMe_s3Bucket": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "deleteMe"
+        }
+      ]
+    },
+    "AMPLIFY_function_deleteMe_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "deleteMe"
+        }
+      ]
+    },
+    "AMPLIFY_function_deleteMe_userPoolId": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "deleteMe"
         }
       ]
     },

@@ -26,16 +26,17 @@ const Contact = () => {
         setFormData((f) => ({ ...f, [name]: value }));
     };
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        setSubmitMessage("Sending...");
 
-        // Honeypot (bots only)
-        if (formData.website) {
-            setState({ loading: false, ok: true, error: "" });
-            return;
-        }
+        const firstname = formData.firstName;
+        const lastname = formData.lastName;
+        const email = formData.email;
+        const number = formData.phone;
+        const message = formData.message;
 
-        if (!formData.firstName || !formData.email || !formData.message) {
+        if (!firstname || !email || !message) {
             setState({
                 loading: false,
                 ok: false,
@@ -45,36 +46,34 @@ const Contact = () => {
         }
 
         try {
-            setState({ loading: true, ok: false, error: "" });
-
-            await client.graphql({
-                query: createContactMessage,
+            const response = await client.graphql({
+                query: createCandidate,
                 variables: {
                     input: {
-                        firstName: formData.firstName,
-                        lastName: formData.lastName || null,
-                        email: formData.email,
-                        phone: formData.phone || null,
-                        message: formData.message
-                    }
-                }
+                        firstname,
+                        lastname,
+                        email,
+                        number,
+                        message,
+                    },
+                },
             });
 
-            setState({ loading: false, ok: true, error: "" });
+            console.log("GraphQL Response:", response);
+            setSubmitMessage("Form submitted successfully");
+
+            // Clear form
             setFormData({
                 firstName: "",
                 lastName: "",
                 email: "",
                 phone: "",
                 message: "",
-                website: ""
             });
-        } catch (err) {
-            setState({
-                loading: false,
-                ok: false,
-                error: err.message || "Something went wrong."
-            });
+
+        } catch (error) {
+            console.log("Submission error:", error);
+            setSubmitMessage("Failed to send message");
         }
     };
 
@@ -176,7 +175,7 @@ const Contact = () => {
                                     className="pill-btn"
                                     disabled={state.loading}
                                 >
-                                    {state.loading ? "Sending…" : "Send"}
+                                    {state.loading ? "Sendingï¿½" : "Send"}
                                 </button>
 
                                 {state.ok && (

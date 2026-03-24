@@ -4,6 +4,12 @@ import womenSTEM from "../img/women-in-stem.png";
 import { NavLink } from "react-router-dom";
 import "../styles/community.css";
 import { useEffect, useRef } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faDiscord } from '@fortawesome/free-brands-svg-icons';
+import { faLinktree } from '@fortawesome/free-brands-svg-icons';
+
 
 const Home = () => {
     useEffect(() => {
@@ -40,7 +46,6 @@ const Home = () => {
             <div className="title-img" style={{backgroundImage: `url(${homeTitle})`}}>
                 <div className="title-head">
                     <h1>HerAI</h1>
-                    <h4>Women in AI/ML</h4>
                 </div>
                 <div className="about-blurb">
                     <div className="about-bubble">
@@ -49,8 +54,22 @@ const Home = () => {
                             the voices and contributions of underrepresented groups in the tech landscape.
                         </h2>
                         <NavLink className="about-button" to="/about">
-                            About Us <span className="arrow">→</span>
+                            About Us →
                         </NavLink>
+                        <div id="socials">
+                            <a href="https://www.instagram.com/herai_uofc/">
+                                <FontAwesomeIcon className="icon" icon={faInstagram} />
+                            </a>
+                            <a href="https://www.linkedin.com/company/herai-women-in-ai-ml/">
+                                <FontAwesomeIcon className="icon" icon={faLinkedin} />
+                            </a>
+                            <a href="https://discord.com/invite/FXvjg9jUga">
+                                <FontAwesomeIcon className="icon" icon={faDiscord} />
+                            </a>
+                            <a href="https://linktr.ee/HerAI_Women_in_AIML?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGniBxV0skNiZdWuGcoXv86g5too3czNwbRzpehLW70d69TsG6X2AhoK2__xp0_aem_huijswr1K4xE9SRWoEZ3wQ">
+                                <FontAwesomeIcon className="icon" icon={faLinktree} />
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

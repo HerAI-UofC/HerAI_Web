@@ -1,27 +1,66 @@
 import "../styles/studyPlan.css";
 import skyImg from "../img/sky.png";
 import archImg from "../img/arch.png";
-import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { NavLink, useNavigate } from 'react-router-dom';
+import { fetchAuthSession } from "aws-amplify/auth";
 
 const StudyPlan = () => {
     
     const [isExpanded, setIsExpanded] = useState(false);
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
+    const [isCheckingAuth, setIsCheckingAuth] = useState(true);
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        const checkAuth = async () => {
+            try {
+                await fetchAuthSession();
+                setIsAuthenticated(true);
+            } catch (error) {
+                setIsAuthenticated(false);
+               
+                navigate('/login');
+            } finally {
+                setIsCheckingAuth(false);
+            }
+        };
+
+        checkAuth();
+    }, [navigate]);
 
     const toggleList = () => {
         setIsExpanded(!isExpanded);
     };
 
+    if (isCheckingAuth) {
+        return (
+            <div style={{ 
+                display: 'flex', 
+                justifyContent: 'center', 
+                alignItems: 'center', 
+                height: '100vh',
+                fontSize: '18px'
+            }}>
+                Loading...
+            </div>
+        );
+    }
+
+    if (!isAuthenticated) {
+        return null;
+    }
+
     return (
         <>
-            <div class="study-header">
-                <div class="title-header">
+            <div className="study-header">
+                <div className="title-header">
                     <h1>My Study Plan</h1>
                 </div>
             </div>
 
-            <div class="intro-section">
-                <div class="intro-text">
+            <div className="intro-section">
+                <div className="intro-text">
                     <h2>Learn, Discover, Explore</h2>
                     <hr></hr>
                     <p>Embark on a journey of discovery as you unravel the mysteries of AI,
@@ -31,11 +70,11 @@ const StudyPlan = () => {
                         complete with recommended online courses, books, articles and blogs, 
                         activities, and challenges about the topics that interest you. 
                         Follow along a schedule and learning style that fits your needs.</p>
-                    <div class="button">
+                    <div className="button">
                         <NavLink className="intro-button" to="/getStarted">Get Started</NavLink>
                     </div>
                 </div>
-                <div class="intro-image">
+                <div className="intro-image">
                     <img src={skyImg} alt="sky" id="sky-img"></img>
                 </div>
             </div>
@@ -75,11 +114,11 @@ const StudyPlan = () => {
                 </div>
             </div>
 
-            <div class="motivate-section">
-                <div class="motivate-image">
+            <div className="motivate-section">
+                <div className="motivate-image">
                     <img src={archImg} alt="classic architecture" id="arch-img"></img>
                 </div>
-                <div class="motivate-text">
+                <div className="motivate-text">
                     <h2>Make learning fun</h2>
                     <p>Make learning enjoyable by setting achievable goals and celebrating small victories along the way.
                         <br /> <br />

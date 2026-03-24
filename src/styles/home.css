@@ -41,7 +41,7 @@ body{
 }
 
 .about-blurb{
-    font-family: "Lato";
+    font-family: Signika;
     text-align: center;
     padding: 50px 75px;
     display: flex;
@@ -61,10 +61,10 @@ body{
 }
 
 .about-blurb h2{
-    font-family: "Lato";
+    font-family: Signika;
     font-size: 20pt;
     padding: 0% 10%;
-    margin-bottom: 50px;
+    margin-bottom: 45px;
 }
 
 .about-button{
@@ -79,7 +79,7 @@ body{
     border-radius: 50px;
     padding: 15px 25px;
     color: white;
-    font-family: "Lato";
+    font-family: Signika;
     font-size: 18px;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     cursor: pointer;
@@ -94,7 +94,7 @@ body{
     background-color: #E4DAD0;
     padding: 50px 50px;
     text-align: center;
-    font-family: "Lato";
+    font-family: Signika;
     font-size: 30pt;
 }
 
@@ -165,6 +165,18 @@ body{
     opacity: 0;
     animation: fadeInBlurb 2s ease forwards;
 }
+/*Icons CSS*/
+#socials {
+    display: flex;
+    padding-top: 25px;
+}
+.icon{
+    width: 2rem;
+    height: 2rem;
+    margin: 5px;
+    padding: 8px;
+    color: #725554;
+}
 
 @keyframes fadeInBlurb {
     from {
@@ -194,7 +206,7 @@ body{
         padding: 40px 25px;
     }
     .about-blurb h2 {
-        font-family: "Lato";
+        font-family: Signika;
         font-size: 16pt;
         margin-bottom: 20px;
     }

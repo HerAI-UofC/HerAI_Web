@@ -1,34 +1,42 @@
-/* tab and menu styling */
-.amplify-tabs__item{
-    color: #8c6d6c;
+ /* tab and menu styling */
+.amplify-tabs__item,
+.amplify-tabs__item.amplify-tabs__item--active {
+    color: #8c6d6c !important;
+    background-color: transparent !important;
+    border-color: #8c6d6c !important;
 }
 
-.amplify-tabs__item:hover{
-    color: white;
-    border-color: #985252;
-    background-color:#8c6d6c
+.amplify-tabs__item:hover {
+    color: white !important;
+    border-color: #985252 !important;
+    background-color: #8c6d6c !important;
 }
 
-.amplify-tabs__item--active{
-    border-color: #985252;
+/* label */
+.amplify-label {
+    color: #8c6d6c !important;
+    font-weight: bold !important;
 }
 
-.amplify-label{
-    color: #8c6d6c;
-    font-weight: bold;
+/* button styling */
+.amplify-button,
+.amplify-button.amplify-button--primary,
+.amplify-button.amplify-button--sign-in {
+    color: #8c6d6c !important;            /* text color */
+    border-color: #8c6d6c !important;     /* border */
+    background-color: transparent !important; /* remove default blue */
 }
 
-/* button styling */ 
-.amplify-button{
-    color:#8c6d6c;
-    border-color: #8c6d6c;
+.amplify-button:hover,
+.amplify-button.amplify-button--primary:hover,
+.amplify-button.amplify-button--sign-in:hover {
+    background-color: #8c6d6c !important;
+    color: white !important;
 }
 
-.amplify-button:hover{
-    background-color: #8c6d6c;
-    color: white;
-}
-
-.amplify-button:active{
-    background-color: #8c6d6c;
+.amplify-button:active,
+.amplify-button.amplify-button--primary:active,
+.amplify-button.amplify-button--sign-in:active {
+    background-color: #8c6d6c !important;
+    color: white !important;
 }

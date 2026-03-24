@@ -2,6 +2,6 @@
   {
     "Action": ["ses:SendEmail"],
     "Effect": "Allow",
-    "Resource": ["arn:aws:ses:*:*:identity/connect.herai@gmail.com"]
+    "Resource": ["arn:aws:ses:*:*:identity/herai.club@ucalgary.ca"]
   }
 ]

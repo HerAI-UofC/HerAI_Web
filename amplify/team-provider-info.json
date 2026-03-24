@@ -10,7 +10,8 @@
       "StackName": "amplify-heraiamplifyauth-dev-103549",
       "StackId": "arn:aws:cloudformation:us-east-1:639700345583:stack/amplify-heraiamplifyauth-dev-103549/3ee18bf0-8c82-11ee-8e36-0e069d861ed9",
       "AmplifyAppId": "d26ojlew4mnuil",
-      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-heraiamplifyauth-dev-103549-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
+      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-heraiamplifyauth-dev-103549-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-heraiamplifyauth-dev-103549-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
     },
     "categories": {
       "auth": {
@@ -25,22 +26,29 @@
           "s3Key": "amplify-builds/heraiamplifyauth9cda9675CustomMessage-54652b6332625a4a7a4b-build.zip"
         },
         "getformdata": {
-          "sesEmail": "connect.herai@gmail.com"
+          "sesEmail": "herai.club@ucalgary.ca"
         },
         "getcontactinfo": {
           "deploymentBucketName": "amplify-heraiamplifyauth-dev-103549-deployment",
-          "s3Key": "amplify-builds/getcontactinfo-6e76375044586b4a4136-build.zip",
-          "sesEmail": "connect.herai@gmail.com"
+          "s3Key": "amplify-builds/getcontactinfo-44773862495573516978-build.zip",
+          "sesEmail": "herai.club@ucalgary.ca"
         },
         "contactNotify": {
+          "fromEmail": "contact.form@herai-ucalgary.ca",
+          "toEmail": "herai.club@ucalgary.ca",
           "deploymentBucketName": "amplify-heraiamplifyauth-dev-103549-deployment",
-          "s3Key": "amplify-builds/contactNotify-616850486c7a78567a36-build.zip",
-          "toEmail": "connect.herai@gmail.com",
-          "fromEmail": "connect.herai@gmail.com"
+          "s3Key": "amplify-builds/contactNotify-336d4539314c79456268-build.zip"
+        },
+        "deleteMe": {
+          "userPoolId": "us-east-1_xg5QBIKvn",
+          "s3Bucket": "content103549-dev",
+          "deploymentBucketName": "amplify-heraiamplifyauth-dev-103549-deployment",
+          "s3Key": "amplify-builds/deleteMe-70324f6f634e30777642-build.zip"
         }
       },
       "api": {
-        "heraiamplifyauth": {}
+        "heraiamplifyauth": {},
+        "accountApi": {}
       },
       "storage": {
         "workshopContent": {}

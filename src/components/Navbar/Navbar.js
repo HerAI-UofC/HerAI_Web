@@ -73,21 +73,40 @@ const Navbar = () => {
                 <NavLink className={"link"} to="/about">
                     About
                 </NavLink>
-                <NavLink className={"link"} to="/events">
+                
+                <NavLink className={"link"} to="/EventsRevamp">
                     Events
                 </NavLink>
-                <div className="resources" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-                    <button className="resources-btn">
-                    Resources <span className={isDropdownOpen ? 'arrow-up' : ''}>&#11167;</span>
-                    </button> 
-                    {isDropdownOpen && (
-                        <div className="dropdown-content">
-                            <NavLink className={"link"} to="/studyPlan"> 
-                                Study Plan
-                            </NavLink>
-                        </div>
-                    )}
-                </div>
+
+                {isLoggedIn && (
+                    <NavLink className={"link"} to="/workshops">
+                        Workshops
+                    </NavLink>
+                )}
+                
+                {/* {isLoggedIn && (
+                    <div
+                        className="resources"
+                        onMouseEnter={handleMouseEnter}
+                        onMouseLeave={handleMouseLeave}
+                    >
+                        <button className="resources-btn">
+                            Resources <span className={isDropdownOpen ? "arrow-up" : ""}>&#11167;</span>
+                        </button>
+                        {isDropdownOpen && (
+                            <div className="dropdown-content">
+                                <NavLink className={"link"} to="/studyPlan">
+                                    Study Plan
+                                </NavLink>
+    
+                            </div>
+                        )}
+                    </div>
+                )} */}
+                
+                <NavLink className={"link"} to="/community">
+                    Community
+                </NavLink>
                 <NavLink className={"link"} to="/contact">
                     Contact
                 </NavLink>

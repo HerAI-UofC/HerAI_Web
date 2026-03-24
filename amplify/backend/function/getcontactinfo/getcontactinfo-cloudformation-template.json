@@ -248,7 +248,7 @@
               ],
               "Effect": "Allow",
               "Resource": [
-                "arn:aws:ses:*:*:identity/connect.herai@gmail.com"
+                "arn:aws:ses:*:*:identity/herai.club@ucalgary.ca"
               ]
             }
           ]

@@ -65,7 +65,7 @@ amplifytools.xcconfig
 
 # Visual Studio
 .vs/
-*.user
 *.suo
+*.user
 *.userosscache
 *.sln.docstates

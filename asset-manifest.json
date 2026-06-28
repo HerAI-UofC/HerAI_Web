@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.b3d2331a.css",
-    "main.js": "/static/js/main.38ddae67.js",
+    "main.js": "/static/js/main.8270aa54.js",
     "static/media/F25-team-photo.png": "/static/media/F25-team-photo.e323c9a340e7ba72cc70.png",
     "static/media/about-ramsha.png": "/static/media/about-ramsha.06738421c3a5e5c5efb1.png",
     "static/media/couch-design.png": "/static/media/couch-design.d3e3e6dc89f5f254b089.png",
@@ -23,10 +23,10 @@
     "static/media/about-fatema.jpg": "/static/media/about-fatema.db18ade20b82f1c5ef97.jpg",
     "index.html": "/index.html",
     "main.b3d2331a.css.map": "/static/css/main.b3d2331a.css.map",
-    "main.38ddae67.js.map": "/static/js/main.38ddae67.js.map"
+    "main.8270aa54.js.map": "/static/js/main.8270aa54.js.map"
   },
   "entrypoints": [
     "static/css/main.b3d2331a.css",
-    "static/js/main.38ddae67.js"
+    "static/js/main.8270aa54.js"
   ]
 }

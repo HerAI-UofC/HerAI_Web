@@ -1,12 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.b3d2331a.css",
-    "main.js": "/static/js/main.855cdeaa.js",
-    "static/media/about-viv.jpg": "/static/media/about-viv.f51462fc27a1e0bec45f.jpg",
-    "static/media/about-alishaba.jpg": "/static/media/about-alishaba.741ecfcee9cfec9c8cf8.jpg",
+    "main.js": "/static/js/main.38ddae67.js",
     "static/media/F25-team-photo.png": "/static/media/F25-team-photo.e323c9a340e7ba72cc70.png",
-    "static/media/about-cassie.jpg": "/static/media/about-cassie.05d6010b9183dc7961ea.jpg",
-    "static/media/about-aryam.jpg": "/static/media/about-aryam.e825e1b872bdd5abd352.jpg",
     "static/media/about-ramsha.png": "/static/media/about-ramsha.06738421c3a5e5c5efb1.png",
     "static/media/couch-design.png": "/static/media/couch-design.d3e3e6dc89f5f254b089.png",
     "static/media/about-hira.jpg": "/static/media/about-hira.d19296de35888d33de07.jpg",
@@ -18,21 +14,19 @@
     "static/media/northstar-background.png": "/static/media/northstar-background.4e4ad914c171da86d31f.png",
     "static/media/about-asma.jpg": "/static/media/about-asma.b440452d161443c7269b.jpg",
     "static/media/about-ana.jpg": "/static/media/about-ana.609678a0f14ba765d370.jpg",
-    "static/media/about-tehreem.jpg": "/static/media/about-tehreem.e6112769c47a3062a0ee.jpg",
     "static/media/logo.png": "/static/media/logo.3c35ac05baf2b36036d8.png",
     "static/media/about-daad.jpg": "/static/media/about-daad.b5cbe6f0de76c1327152.jpg",
     "static/media/arch.png": "/static/media/arch.e8c702bb61be4bc07fc2.png",
     "static/media/contact-img.png": "/static/media/contact-img.ac7ba560cdfdc6479d81.png",
-    "static/media/about-habiba.jpg": "/static/media/about-habiba.927f8dfbc5130c1c6992.jpg",
     "static/media/home-title.png": "/static/media/home-title.bf8133f6a6b8340f398a.png",
     "static/media/sky.png": "/static/media/sky.47ef6d8de228445c3b14.png",
     "static/media/about-fatema.jpg": "/static/media/about-fatema.db18ade20b82f1c5ef97.jpg",
     "index.html": "/index.html",
     "main.b3d2331a.css.map": "/static/css/main.b3d2331a.css.map",
-    "main.855cdeaa.js.map": "/static/js/main.855cdeaa.js.map"
+    "main.38ddae67.js.map": "/static/js/main.38ddae67.js.map"
   },
   "entrypoints": [
     "static/css/main.b3d2331a.css",
-    "static/js/main.855cdeaa.js"
+    "static/js/main.38ddae67.js"
   ]
 }

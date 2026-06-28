@@ -7,19 +7,14 @@ import { FaLinkedin, FaGithub, FaArrowUp } from "react-icons/fa"
 /*Import all team member images - GET PERMISSION*/
 import blank from "../img/arch.png"; /*default blank placeholder*/
 import team from "../img/F25-team-photo.png";
-import vivian from "../img/about-viv.jpg";
 import fatema from "../img/about-fatema.jpg";
 import brittney from "../img/about-britt.jpg";
 import habiba from "../img/about-habiba.jpg";
-import cassie from "../img/about-cassie.jpg";
-import tehreem from "../img/about-tehreem.jpg";
 import asma from "../img/about-asma.jpg";
 import ana from "../img/about-ana.jpg";
 import arfa from "../img/about-arfa.jpg";
 import daad from "../img/about-daad.jpg";
 import hira from "../img/about-hira.jpg";
-import aryam from "../img/about-aryam.jpg";
-import alishaba from "../img/about-alishaba.jpg";
 import zainab from "../img/about-zainab.jpg";
 import ramsha from "../img/about-ramsha.png";
 import kseniia from "../img/about-kseniia.jpg";
@@ -31,15 +26,8 @@ const teamMembers = [
     members: 
     [
       { 
-        name: "Vivian Ha", 
-        role: "President", 
-        bio: "4th Year Business Technology Management",
-        linkedin: "https://www.linkedin.com/in/viviann-ha/", 
-        img: vivian
-      },
-      { 
         name: "Fatema Chowdhury", 
-        role: "Co-President", 
+        role: "President", 
         bio: "5th Year Computer Science",
         linkedin: "https://www.linkedin.com/in/fatema--chowdhury/", 
         img: fatema 
@@ -50,12 +38,11 @@ const teamMembers = [
     team: "Internal",
     members: 
     [
-      { 
-        name: "Habiba Abuelazm", 
-        role: "VP Internal", 
-        bio: "4th Year Computer Science",
-        linkedin: "https://www.linkedin.com/in/habiba-abuelazm/", 
-        img: habiba 
+      {
+        name: "Currently Recruiting!", 
+        role: "N/A", 
+        bio: "N/A",
+        img: blank
       }
     ]
   },
@@ -76,12 +63,11 @@ const teamMembers = [
     team: "Finance",
     members:
     [
-      { 
-        name: "Tehreem Nadeem", 
-        role: "VP Finance", 
-        bio: "3rd Year Accounting Major",
-        linkedin: "https://www.linkedin.com/in/tehreem-nadeem/", 
-        img: tehreem 
+      {
+        name: "Currently Recruiting!", 
+        role: "N/A", 
+        bio: "N/A",
+        img: blank
       }
     ]
   },
@@ -110,17 +96,10 @@ const teamMembers = [
     members:
     [
       {
-        name: "Aryam Matalkeh",
-        role: "VP Marketing",
-        bio: "3rd year Data Science",
-        linkedin: "https://www.linkedin.com/in/aryam-matalkeh/",
-        img: aryam
-      },
-      {
-        name: "Alishaba Sarwar",
-        role: "VP Marketing",
-        bio: "3rd year Accounting",
-        img: alishaba
+        name: "Currently Recruiting!", 
+        role: "N/A", 
+        bio: "N/A",
+        img: blank
       }
     ]
   },
@@ -143,14 +122,6 @@ const teamMembers = [
         linkedin: "https://www.linkedin.com/in/brittney-ha/", 
         github: "https://github.com/brittneyhxh",
         img: brittney 
-      },
-      { 
-        name: "Cassie Rodberg", 
-        role: "VP Technology", 
-        bio: "3rd Year Computer Science",
-        linkedin: "https://www.linkedin.com/in/cassandra-rodberg/", 
-        github: "https://github.com/cassierodberg",
-        img: cassie 
       },
       { 
         name: "Ana Bindiu", 

@@ -16,26 +16,17 @@ const Events = () => {
         let fetchedEvents = all.data.listEvents.items;
 
         const staticEvents = [
-            {
-                id: 'static-ml-workshop',
-                title: 'Intro to Machine Learning Models Workshop',
-                location: 'Science Collab Space (ST 142)',
-                summary: 'Join us for March Machine Learning Madness, an engaging and beginner friendly introduction to the world of Machine Learning. In this workshop, you will explore the foundations of supervised, unsupervised, and deep learning while getting a clear overview of popular models like Linear Regression, Support Vector Machines (SVMs), Random Forests, Neural Networks, and Convolutional Neural Networks (CNNs).',
-                date: '2026-03-12T17:00:00-07:00',
-                timeRange: '5:00–6:00 PM',
-                isUpcoming: true,
-                signUpLink: 'https://docs.google.com/forms/d/e/1FAIpQLScm-hZvXRgiOXrmuTh3qiAaHaoZUR2bxWJZBHlQdMfPYKpFpg/viewform'
-            },
-            {
-                id: 'static-panel-networking',
-                title: 'AI Panel & Networking Night',
-                location: 'Doucette Library, Education Block #370',
-                summary: 'Join HerAI and AIC for a panel discussion and networking night! Hear from panelists across energy, consulting, finance, and tech as they share how AI is transforming their fields and shaping the future.',
-                date: '2026-03-17T18:00:00-07:00',
-                timeRange: '6:00–8:00 PM',
-                isUpcoming: true,
-                signUpLink: 'https://docs.google.com/forms/d/e/1FAIpQLSd67ONGjSkyns1AqoCFN-nNAl--l6vwsQaj948PyOJJmEa5qg/viewform'
-            }
+            // EXAMPLE BELOW:
+            // {
+            //     id: 'static-ml-workshop',
+            //     title: 'Intro to Machine Learning Models Workshop',
+            //     location: 'Science Collab Space (ST 142)',
+            //     summary: 'Join us for March Machine Learning Madness, an engaging and beginner friendly introduction to the world of Machine Learning. In this workshop, you will explore the foundations of supervised, unsupervised, and deep learning while getting a clear overview of popular models like Linear Regression, Support Vector Machines (SVMs), Random Forests, Neural Networks, and Convolutional Neural Networks (CNNs).',
+            //     date: '2026-03-12T17:00:00-07:00',
+            //     timeRange: '5:00–6:00 PM',
+            //     isUpcoming: true,
+            //     signUpLink: 'https://docs.google.com/forms/d/e/1FAIpQLScm-hZvXRgiOXrmuTh3qiAaHaoZUR2bxWJZBHlQdMfPYKpFpg/viewform'
+            // },
         ];
 
        

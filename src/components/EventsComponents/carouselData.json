@@ -42,6 +42,23 @@
 
         ]
 
+    },
+
+    "AICandHerAINetworkingNight2026":{
+        "title": "AI Panel & Networking Night 2026",
+        "date": "March 2026",
+        "description": "A collaboration between HerAI and AIC! Panelists across energy, consulting, finance, and tech share how AI is transforming their fields and shaping the future.",
+        "slides": [
+            {
+                "src": "/events-imgs/ainetworkingnight1.jpg",
+                "alt":  "img1"
+            },
+            {
+                "src": "/events-imgs/ainetworkingnight2.jpg",
+                "alt":  "img2"
+            }
+
+        ]
     }
 
 

@@ -43,7 +43,7 @@
           "userPoolId": "us-east-1_xg5QBIKvn",
           "s3Bucket": "content103549-dev",
           "deploymentBucketName": "amplify-heraiamplifyauth-dev-103549-deployment",
-          "s3Key": "amplify-builds/deleteMe-70324f6f634e30777642-build.zip"
+          "s3Key": "amplify-builds/deleteMe-38305255434d516f6a64-build.zip"
         }
       },
       "api": {

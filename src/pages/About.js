@@ -106,14 +106,6 @@ const teamMembers = [
     members: 
     [
       { 
-        name: "Saja Abufarha", 
-        role: "VP Technology", 
-        bio: "Computer Science Alumni",
-        linkedin: "https://www.linkedin.com/in/saja-abufarha/", 
-        github: "https://github.com/SajaAbufarha",
-        img: blank 
-      },
-      { 
         name: "Brittney Ha", 
         role: "VP Technology", 
         bio: "3rd Year Computer Science",

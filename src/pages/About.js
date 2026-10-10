@@ -6,13 +6,11 @@ import { FaLinkedin, FaGithub, FaArrowUp } from "react-icons/fa"
 
 /*Import all team member images - GET PERMISSION*/
 import blank from "../img/arch.png"; /*default blank placeholder*/
-import team from "../img/F25-team-photo.png";
+import team from "../img/F26-team-photo.jpg";
 import fatema from "../img/about-fatema.jpg";
 import brittney from "../img/about-britt.jpg";
-import habiba from "../img/about-habiba.jpg";
 import asma from "../img/about-asma.jpg";
 import ana from "../img/about-ana.jpg";
-import arfa from "../img/about-arfa.jpg";
 import daad from "../img/about-daad.jpg";
 import hira from "../img/about-hira.jpg";
 import zainab from "../img/about-zainab.jpg";
@@ -139,12 +137,6 @@ const teamMembers = [
         github: "https://github.com/daadhaymour",
         img: daad 
       },
-      { 
-        name: "Arfa Raja", 
-        role: "VP Technology", 
-        bio: "3rd Year Computer Science",
-        img: arfa 
-      },
       {
         name: "Zainab Saeed",
         role: "Jr. VP Technology",
@@ -258,7 +250,7 @@ const About = () => {
       {/*about section*/}
       <div className="about-team" ref={aboutRef}>
         <h1 className="about-title"> Meet the Team </h1>
-        <img src={team} alt="Team Photo Fall 2025" className="team-img"/>
+        <img src={team} alt="Team Photo Fall 2026" className="team-img"/>
 
         {teamMembers.map((section, teamIndex) => (
           <div key={teamIndex} className="team-section" id={section.team.toLowerCase().replace(/\s+/g, "-")}>

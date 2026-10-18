@@ -6,44 +6,83 @@ import EventBlock from "../components/EventBlock/EventBlock";
 import { generateClient } from "aws-amplify/api";
 import { listEvents } from "../graphql/queries";
 
+
+const staticEvents = [
+    // EXAMPLE BELOW:
+    // {
+    //     id: 'static-ml-workshop',
+    //     title: 'Intro to Machine Learning Models Workshop',
+    //     location: 'Science Collab Space (ST 142)',
+    //     summary: 'Join us for March Machine Learning Madness, an engaging and beginner friendly introduction to the world of Machine Learning. In this workshop, you will explore the foundations of supervised, unsupervised, and deep learning while getting a clear overview of popular models like Linear Regression, Support Vector Machines (SVMs), Random Forests, Neural Networks, and Convolutional Neural Networks (CNNs).',
+    //     date: '2026-03-12T17:00:00-07:00',
+    //     timeRange: '5:00–6:00 PM',
+    //     isUpcoming: true,
+    //     signUpLink: 'https://docs.google.com/forms/d/e/1FAIpQLScm-hZvXRgiOXrmuTh3qiAaHaoZUR2bxWJZBHlQdMfPYKpFpg/viewform'
+    // },
+    {
+        id: 'halloween-workshop-2026',
+        title: 'Halloween with HerAI - Tricks & Terminals',
+        location: 'HNSC 124A',
+        summary: 'Face your fears of the terminal. Join HerAI for a Halloween-themed escape room where every puzzle is solved with real Linux commands. Brave the dark by yourself or in teams to explore the terminal, uncover its secrets, and outsmart the ghost in the shell. No prior command line experience is needed, and the challenges ramp up as you go.',
+        date: '2026-10-28T17:00:00-07:00',
+        timeRange: '5:00–6:00 PM',
+        isUpcoming: true,
+        signUpLink: 'https://forms.gle/K7H2ue4h2GDx9jtF9'
+    }
+];
+
+const client = generateClient();
+
+// sad computer graphic for when there are no events
+const SadComputer = () => (
+    <svg
+        className="sad-computer"
+        viewBox="0 0 200 160"
+        role="img"
+        aria-label="A sad computer"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        {/* monitor */}
+        <rect x="30" y="10" width="140" height="105" rx="14" fill="#8C6D6C" />
+        <rect x="42" y="22" width="116" height="81" rx="8" fill="#FFF2EB" />
+        {/* stand */}
+        <rect x="90" y="115" width="20" height="22" fill="#8C6D6C" />
+        <rect x="65" y="135" width="70" height="12" rx="6" fill="#8C6D6C" />
+        {/* eyes */}
+        <circle cx="80" cy="58" r="6" fill="#2e353b" />
+        <circle cx="120" cy="58" r="6" fill="#2e353b" />
+        {/* sad brows (inner ends raised) */}
+        <path d="M68 50 L91 42" stroke="#2e353b" strokeWidth="4" strokeLinecap="round" />
+        <path d="M132 50 L109 42" stroke="#2e353b" strokeWidth="4" strokeLinecap="round" />
+        {/* frown */}
+        <path d="M84 92 Q100 80 116 92" stroke="#2e353b" strokeWidth="4" fill="none" strokeLinecap="round" />
+        {/* tear */}
+        <path d="M126 66 Q132 76 126 80 Q120 76 126 66 Z" fill="#7FB8E8" />
+    </svg>
+);
+
+let cachedEvents = null;
+
 const Events = () => {
     const eventsBlockRef = useRef(null);
-    const client = generateClient();
-    const [events, setEvents] = useState([]);
+    const [events, setEvents] = useState(cachedEvents || staticEvents);
+    const [loading, setLoading] = useState(!cachedEvents);
 
     const getEvents = async () => {
-        const all = await client.graphql({ query: listEvents });
-        let fetchedEvents = all.data.listEvents.items;
+        try {
+            const all = await client.graphql({ query: listEvents });
+            let fetchedEvents = all.data.listEvents.items;
+        
+            const existingTitles = new Set(fetchedEvents.map(e => e.title));
+            const newStatic = staticEvents.filter(e => !existingTitles.has(e.title));
+            const combined = [...fetchedEvents, ...newStatic];
+            setEvents(combined);
+        } catch (err) {
+            console.error("Error fetching events:", err);
+        } finally {
+            setLoading(false);
+        }
 
-        const staticEvents = [
-            // EXAMPLE BELOW:
-            // {
-            //     id: 'static-ml-workshop',
-            //     title: 'Intro to Machine Learning Models Workshop',
-            //     location: 'Science Collab Space (ST 142)',
-            //     summary: 'Join us for March Machine Learning Madness, an engaging and beginner friendly introduction to the world of Machine Learning. In this workshop, you will explore the foundations of supervised, unsupervised, and deep learning while getting a clear overview of popular models like Linear Regression, Support Vector Machines (SVMs), Random Forests, Neural Networks, and Convolutional Neural Networks (CNNs).',
-            //     date: '2026-03-12T17:00:00-07:00',
-            //     timeRange: '5:00–6:00 PM',
-            //     isUpcoming: true,
-            //     signUpLink: 'https://docs.google.com/forms/d/e/1FAIpQLScm-hZvXRgiOXrmuTh3qiAaHaoZUR2bxWJZBHlQdMfPYKpFpg/viewform'
-            // },
-            {
-                id: 'halloween-workshop-2026',
-                title: 'Halloween with HerAI - Tricks & Terminals',
-                location: 'TBD',
-                summary: 'Face your fears of the terminal. Join HerAI for a Halloween-themed escape room where every puzzle is solved with real Linux commands. Brave the dark by yourself or in teams to explore the terminal, uncover its secrets, and outsmart the ghost in the shell. No prior command line experience is needed, and the challenges ramp up as you go.',
-                date: '2026-10-28T17:00:00-07:00',
-                timeRange: '5:00–6:00 PM',
-                isUpcoming: true,
-                signUpLink: 'https://forms.gle/K7H2ue4h2GDx9jtF9'
-            }
-        ];
-
-       
-        const existingTitles = new Set(fetchedEvents.map(e => e.title));
-        const newStatic = staticEvents.filter(e => !existingTitles.has(e.title));
-        const combined = [...fetchedEvents, ...newStatic];
-        setEvents(combined);
     };
 
     useEffect(() => {
@@ -115,10 +154,15 @@ const Events = () => {
                 </div>
             ) : (
                 <div className="workshops-container">
-                    <h1 className="workshops-header">Upcoming Events</h1>
-                    <div className="no-workshops-section">
-                        <h2>Stay Tuned for Upcoming Events</h2>
-                    </div>
+                    {loading ? (
+                        <div className="workshop-card events-skeleton" aria-hidden="true" />
+                    ) : (
+                        <div className="workshop-card no-events-card">
+                            <SadComputer />
+                            <h2>Stay Tuned for Upcoming Events</h2>
+                            <p>Nothing is scheduled right now. Check back soon!</p>
+                        </div>
+                    )}
                 </div>
             )}
 

@@ -171,7 +171,7 @@ const teamMembers = [
       },
       {
         name: "Zainab Saeed",
-        role: "Jr. VP Technology",
+        role: "VP Technology",
         bio: "3rd Year Data Science",
         linkedin: "https://www.linkedin.com/in/zainab-saeed-zs/",
         github: "https://github.com/ZainabSaeed06",

@@ -229,7 +229,7 @@
 .team-card {
   font-size: 1rem;
   width: 250px;
-  height: 320px;
+  height: 360px;
   perspective: 1000px; /* needed for 3D flip */
 }
 
@@ -266,8 +266,9 @@
 
 .card-front img {
   width: 100%;     /* full card width */
-  height: 160px;   /* fixed height or use auto for proportional scaling */
+  height: 210px;   /* fixed height or use auto for proportional scaling */
   object-fit: cover;
+  object-position: center 20%;
   margin-bottom: 10px;
 }
 

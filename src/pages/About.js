@@ -26,7 +26,7 @@ import aditi from "../img/aditi.webp";
 import areba from "../img/areba.webp";
 import aishbah from "../img/aishbah-arif.webp";
 import northstar from "../img/northstar-background.png";
-import maidah from "../img/maidah.webp";
+import maidah from "../img/Maidah.webp";
 
 const teamMembers = [
   {

@@ -26,6 +26,7 @@ import aditi from "../img/aditi.webp";
 import areba from "../img/areba.webp";
 import aishbah from "../img/aishbah-arif.webp";
 import northstar from "../img/northstar-background.png";
+import maidah from "../img/maidah.webp";
 
 const teamMembers = [
   {
@@ -125,6 +126,12 @@ const teamMembers = [
     team: "Marketing",
     members:
     [
+     {
+           name: "Maidah Arif",
+           role: "VP Marketing",
+           bio: "2nd Year Kinesiology",
+           img: maidah
+         },
       {
         name: "Aditi Jain",
         role: "Jr. VP Marketing",

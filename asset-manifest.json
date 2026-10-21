@@ -1,31 +1,41 @@
 {
   "files": {
-    "main.css": "/static/css/main.a64986e1.css",
-    "main.js": "/static/js/main.becac2cb.js",
+    "main.css": "/static/css/main.ec700a5d.css",
+    "main.js": "/static/js/main.799f091c.js",
+    "static/media/tiffany.webp": "/static/media/tiffany.0ad9f27451d6fdcedf35.webp",
     "static/media/about-ramsha.png": "/static/media/about-ramsha.06738421c3a5e5c5efb1.png",
+    "static/media/mehrin.webp": "/static/media/mehrin.e168b740e52fe7254faa.webp",
     "static/media/couch-design.png": "/static/media/couch-design.d3e3e6dc89f5f254b089.png",
+    "static/media/aishbah-arif.webp": "/static/media/aishbah-arif.99f06ebb494754af509c.webp",
     "static/media/about-zainab.jpg": "/static/media/about-zainab.a9d5636d091b76239e20.jpg",
     "static/media/women-in-stem.png": "/static/media/women-in-stem.620e01c600a9112e1244.png",
     "static/media/about-britt.jpg": "/static/media/about-britt.5c459ff7eae5c9227fa5.jpg",
     "static/media/about-kseniia.jpg": "/static/media/about-kseniia.59acccff65c82e6f5625.jpg",
+    "static/media/Maidah.webp": "/static/media/Maidah.c0fc38e614dc554ba710.webp",
     "static/media/F26-team-photo.jpg": "/static/media/F26-team-photo.53893689086b37c5c228.jpg",
     "static/media/northstar-background.png": "/static/media/northstar-background.4e4ad914c171da86d31f.png",
     "static/media/about-hira.jpg": "/static/media/about-hira.5e8cc9fec154ed0e0878.jpg",
+    "static/media/aditi.webp": "/static/media/aditi.8b535f9adf68d404f078.webp",
     "static/media/about-asma.jpg": "/static/media/about-asma.b440452d161443c7269b.jpg",
     "static/media/about-ana.jpg": "/static/media/about-ana.609678a0f14ba765d370.jpg",
     "static/media/logo.png": "/static/media/logo.3c35ac05baf2b36036d8.png",
+    "static/media/areba.webp": "/static/media/areba.cedf7e8bb706d3ca9414.webp",
     "static/media/about-daad.jpg": "/static/media/about-daad.b5cbe6f0de76c1327152.jpg",
+    "static/media/yumiko.webp": "/static/media/yumiko.32f38b29a8e8376359de.webp",
+    "static/media/gabrielle.webp": "/static/media/gabrielle.0741094b8a83b6c8a0b0.webp",
     "static/media/arch.png": "/static/media/arch.e8c702bb61be4bc07fc2.png",
     "static/media/contact-img.png": "/static/media/contact-img.ac7ba560cdfdc6479d81.png",
     "static/media/home-title.png": "/static/media/home-title.bf8133f6a6b8340f398a.png",
+    "static/media/shriya.webp": "/static/media/shriya.48fdc860eb5c26904be8.webp",
     "static/media/sky.png": "/static/media/sky.47ef6d8de228445c3b14.png",
     "static/media/about-fatema.jpg": "/static/media/about-fatema.db18ade20b82f1c5ef97.jpg",
+    "static/media/hamnah.webp": "/static/media/hamnah.92c1a2df68f9d0df057d.webp",
     "index.html": "/index.html",
-    "main.a64986e1.css.map": "/static/css/main.a64986e1.css.map",
-    "main.becac2cb.js.map": "/static/js/main.becac2cb.js.map"
+    "main.ec700a5d.css.map": "/static/css/main.ec700a5d.css.map",
+    "main.799f091c.js.map": "/static/js/main.799f091c.js.map"
   },
   "entrypoints": [
-    "static/css/main.a64986e1.css",
-    "static/js/main.becac2cb.js"
+    "static/css/main.ec700a5d.css",
+    "static/js/main.799f091c.js"
   ]
 }

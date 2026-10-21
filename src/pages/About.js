@@ -16,7 +16,17 @@ import hira from "../img/about-hira.jpg";
 import zainab from "../img/about-zainab.jpg";
 import ramsha from "../img/about-ramsha.png";
 import kseniia from "../img/about-kseniia.jpg";
+import hamnah from "../img/hamnah.webp";
+import shriya from "../img/shriya.webp";
+import yumiko from "../img/yumiko.webp";
+import gabrielle from "../img/gabrielle.webp";
+import tiffany from "../img/tiffany.webp";
+import mehrin from "../img/mehrin.webp";
+import aditi from "../img/aditi.webp";
+import areba from "../img/areba.webp";
+import aishbah from "../img/aishbah-arif.webp";
 import northstar from "../img/northstar-background.png";
+import maidah from "../img/Maidah.webp";
 
 const teamMembers = [
   {
@@ -28,7 +38,14 @@ const teamMembers = [
         role: "President", 
         bio: "5th Year Computer Science",
         linkedin: "https://www.linkedin.com/in/fatema--chowdhury/", 
-        img: fatema 
+        img: fatema   
+       },
+      {
+        name: "Hamnah Suleman",
+        role: "Co-President",
+        bio: "3rd Year Computer Science",
+        linkedin: "https://www.linkedin.com/in/hamnah-suleman",
+        img: hamnah
       }
     ]
   },
@@ -37,10 +54,11 @@ const teamMembers = [
     members: 
     [
       {
-        name: "Currently Recruiting!", 
-        role: "N/A", 
-        bio: "N/A",
-        img: blank
+        name: "Yumiko Banh",  
+        role: "Jr. VP Internal", 
+        bio: "2nd Year Computer Science",
+        linkedin: "http://www.linkedin.com/in/yumiko-banh",
+        img: yumiko
       }
     ]
   },
@@ -62,10 +80,11 @@ const teamMembers = [
     members:
     [
       {
-        name: "Currently Recruiting!", 
-        role: "N/A", 
-        bio: "N/A",
-        img: blank
+         name: "Aishbah Arif",
+        role: "VP Finance",
+        bio: "2nd year BComm",
+        linkedin: "https://www.linkedin.com/in/aishbah-arif/",
+        img: aishbah
       }
     ]
   },
@@ -84,8 +103,22 @@ const teamMembers = [
         name: 
         "Asma Naz", 
         role: "VP Events", 
-        bio: "4th year Biological Sciences",
+        bio: "4th Year Biological Sciences",
         img: asma 
+      },
+            {
+        name: "Shriya Pamula",
+        role: "Jr. VP Events",
+        bio: "4th Year Computer Science",
+        linkedin: "http://linkedin.com/in/shriyapamula",
+        img: shriya
+      },
+      {
+        name: "Areba Aslam",
+        role: "Jr. VP Events",
+        bio: "3rd Year Data Science",
+        linkedin: "https://www.linkedin.com/in/areba-aslam-abab943ab",
+        img: areba
       }
     ]
   },
@@ -93,11 +126,18 @@ const teamMembers = [
     team: "Marketing",
     members:
     [
+     {
+           name: "Maidah Arif",
+           role: "VP Marketing",
+           bio: "2nd Year Kinesiology",
+           img: maidah
+         },
       {
-        name: "Currently Recruiting!", 
-        role: "N/A", 
-        bio: "N/A",
-        img: blank
+        name: "Aditi Jain",
+        role: "Jr. VP Marketing",
+        bio: "4th Year Software Engineering",
+        linkedin: "https://www.linkedin.com/in/aditi-jain--/?isSelfProfile=false",
+        img: aditi
       }
     ]
   },
@@ -131,7 +171,7 @@ const teamMembers = [
       },
       {
         name: "Zainab Saeed",
-        role: "Jr. VP Technology",
+        role: "VP Technology",
         bio: "3rd Year Data Science",
         linkedin: "https://www.linkedin.com/in/zainab-saeed-zs/",
         github: "https://github.com/ZainabSaeed06",
@@ -144,6 +184,28 @@ const teamMembers = [
         linkedin: "https://www.linkedin.com/in/ramshaoad/",
         github: "https://github.com/oadramsha",
         img: ramsha
+      },
+      {
+        name: "Gabrielle Alama",
+        role: "Jr. VP Technology",
+        bio: "2nd Year Computer Science",
+        linkedin: "https://www.linkedin.com/in/gabrielle-alama/",
+        github: "https://github.com/Gabriellemfa",
+        img: gabrielle
+      },
+      {
+        name: "Tiffany Okura",
+        role: "Jr. VP Technology",
+        bio: "3rd Year Computer Science",
+        linkedin: "https://www.linkedin.com/in/tiffanyokura/?isSelfProfile=false",
+        img: tiffany
+      },
+      {
+        name: "Mehrin Chowdhury",
+        role: "Jr. VP Technology",
+        bio: "2nd Year Computer Science",
+        linkedin: "http://www.linkedin.com/in/mehrin-chowdhury-65a526433",
+        img: mehrin
       }
     ]
   }

@@ -28,6 +28,16 @@ const staticEvents = [
         timeRange: '5:00–6:00 PM',
         isUpcoming: true,
         signUpLink: 'https://forms.gle/K7H2ue4h2GDx9jtF9'
+    },
+    {
+        id: 'bytes-blazers-2026',
+        title: 'Bytes & Blazers Panel + Networking Night',
+        location: 'HNSC 330',
+        summary: 'Join HerAI for Bytes and Blazers, a panel discussion and networking evening exploring the intersection of business and technology. Hear industry professionals share insights on career pathways, emerging trends, and leadership, followed by audience Q&A, networking, and dinner with students and professionals.',
+        date: '2026-11-05T18:00:00-07:00',
+        timeRange: '6:00–9:00 PM',
+        isUpcoming: true,
+        signUpLink: 'https://docs.google.com/forms/d/e/1FAIpQLScZB57uU37Ro2yXWOCsRnh9Qa7R9-cgEIn01yrBqMQP4ex3aQ/viewform?usp=sharing&ouid=112205518221091536952'
     }
 ];
 

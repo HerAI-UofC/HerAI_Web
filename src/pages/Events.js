@@ -19,16 +19,16 @@ const staticEvents = [
     //     isUpcoming: true,
     //     signUpLink: 'https://docs.google.com/forms/d/e/1FAIpQLScm-hZvXRgiOXrmuTh3qiAaHaoZUR2bxWJZBHlQdMfPYKpFpg/viewform'
     // },
-    {
-        id: 'halloween-workshop-2026',
-        title: 'Halloween with HerAI - Tricks & Terminals',
-        location: 'HNSC 124A',
-        summary: 'Face your fears of the terminal. Join HerAI for a Halloween-themed escape room where every puzzle is solved with real Linux commands. Brave the dark by yourself or in teams to explore the terminal, uncover its secrets, and outsmart the ghost in the shell. No prior command line experience is needed, and the challenges ramp up as you go.',
-        date: '2026-10-28T17:00:00-07:00',
-        timeRange: '5:00–6:00 PM',
-        isUpcoming: true,
-        signUpLink: 'https://forms.gle/K7H2ue4h2GDx9jtF9'
-    },
+    // {
+    //     id: 'halloween-workshop-2026',
+    //     title: 'Halloween with HerAI - Tricks & Terminals',
+    //     location: 'HNSC 124A',
+    //     summary: 'Face your fears of the terminal. Join HerAI for a Halloween-themed escape room where every puzzle is solved with real Linux commands. Brave the dark by yourself or in teams to explore the terminal, uncover its secrets, and outsmart the ghost in the shell. No prior command line experience is needed, and the challenges ramp up as you go.',
+    //     date: '2026-10-28T17:00:00-07:00',
+    //     timeRange: '5:00–6:00 PM',
+    //     isUpcoming: true,
+    //     signUpLink: 'https://forms.gle/K7H2ue4h2GDx9jtF9'
+    // },
     {
         id: 'bytes-blazers-2026',
         title: 'Bytes & Blazers Panel + Networking Night',

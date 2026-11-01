@@ -1,0 +1,548 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;1,500&display=swap');
+
+.ms {
+  --ms-accent: #8c6d6c;
+  --ms-accent-dark: #5f4746;
+  --ms-hero-bg: #f1e9e8;
+  --ms-soft: #f5f5f5;
+  --ms-ink: #2b2222;
+  --ms-muted: #6b5a59;
+  --ms-line: #ddd0cf;
+
+  font-family: 'DM Sans', sans-serif;
+  color: var(--ms-ink);
+  background: #fff;
+}
+
+.ms *,
+.ms *::before,
+.ms *::after {
+  box-sizing: border-box;
+}
+
+.ms button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  border: 0;
+  background: none;
+  padding: 0;
+}
+
+.ms a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.ms h1,
+.ms h2,
+.ms h3,
+.ms p {
+  margin: 0;
+}
+
+.ms img {
+  display: block;
+}
+
+.ms-display {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 500;
+}
+
+.ms-handwritten {
+  font-family: 'Caveat', cursive;
+}
+
+.ms-eyebrow {
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+}
+
+.ms-arrow-icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* ---------- Pill button ---------- */
+.ms-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  border-radius: 999px;
+  background: var(--ms-accent);
+  color: #fff !important;
+  font-size: 11px;
+  font-weight: 600;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.ms-pill:hover {
+  transform: translateY(-2px);
+  background: var(--ms-accent-dark);
+}
+
+.ms-pill--light {
+  background: #fff;
+  color: var(--ms-accent-dark) !important;
+}
+
+.ms-pill--light:hover {
+  background: var(--ms-hero-bg);
+}
+
+/* ---------- Hero / member spotlight ---------- */
+.ms-hero {
+  position: relative;
+  overflow: hidden;
+  background: var(--ms-hero-bg);
+  padding: 48px 24px 56px;
+}
+
+.ms-hero-top {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.ms-hero-title {
+  margin-top: 16px;
+  font-size: clamp(2.8rem, 5.1vw, 5rem);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+}
+
+.ms-hero-note {
+  max-width: 210px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.6rem;
+  line-height: 1.05;
+  color: var(--ms-muted);
+  transform: rotate(-6deg);
+}
+
+.ms-hero-side {
+  display: none;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--ms-muted);
+  justify-self: end;
+}
+
+.ms-stage {
+  position: relative;
+  margin-top: 40px;
+}
+
+.ms-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: end;
+  gap: 12px;
+}
+
+.ms-profile {
+  display: block;
+  text-align: left;
+}
+
+.ms-profile--side {
+  display: none;
+}
+
+.ms-photo {
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  background: #c9b3b2;
+  transition: all 0.5s ease;
+}
+
+.ms-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.5s ease;
+}
+
+.ms-profile--active .ms-photo {
+  width: 100%;
+  max-width: 380px;
+  height: 460px;
+  border-radius: 999px 999px 0 0;
+}
+
+.ms-profile--active .ms-photo img {
+  object-position: center 25%;
+}
+
+.ms-profile--side .ms-photo {
+  width: 100%;
+  height: 330px;
+  opacity: 0.75;
+  border-radius: 999px 999px 0 0;
+}
+
+.ms-profile--side .ms-photo img {
+  filter: grayscale(25%);
+}
+
+.ms-profile--side:hover .ms-photo img {
+  filter: grayscale(0);
+}
+
+.ms-profile-label {
+  padding-top: 16px;
+  text-align: center;
+}
+
+.ms-profile-name {
+  font-size: 18px;
+}
+
+.ms-profile-meta {
+  margin-top: 4px;
+  font-size: 10px;
+}
+
+.ms-nav {
+  position: absolute;
+  top: 40%;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 4px 16px rgba(95, 71, 70, 0.15);
+  transition: transform 0.2s ease;
+}
+
+.ms-nav:hover {
+  transform: scale(1.06);
+}
+
+.ms-nav--prev {
+  left: 0;
+}
+
+.ms-nav--next {
+  right: 0;
+}
+
+.ms-info {
+  max-width: 420px;
+  margin: 28px auto 0;
+  text-align: center;
+}
+
+.ms-info-name {
+  font-size: 2rem;
+}
+
+.ms-info-meta {
+  margin-top: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--ms-accent-dark);
+}
+
+.ms-info-quote {
+  margin: 16px 0 20px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.ms-dots {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.ms-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(140, 109, 108, 0.35);
+  transition: background 0.2s ease;
+}
+
+.ms-dot--on {
+  background: var(--ms-accent-dark);
+}
+
+/* ---------- Community stories ---------- */
+.ms-stories {
+  background: #fff;
+  padding: 56px 24px;
+}
+
+.ms-stories-head {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  margin-top: 20px;
+}
+
+.ms-section-title {
+  font-size: clamp(2.6rem, 4.8vw, 5rem);
+  line-height: 0.96;
+  letter-spacing: -0.04em;
+}
+
+.ms-stories-blurb {
+  padding-left: 24px;
+  border-left: 1px solid var(--ms-accent);
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.ms-story-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.ms-story {
+  overflow: hidden;
+  border: 1px solid var(--ms-line);
+  background: var(--ms-soft);
+}
+
+.ms-story-img {
+  position: relative;
+  height: 240px;
+  overflow: hidden;
+  background: #d9c9c8;
+}
+
+.ms-story-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.ms-story:hover .ms-story-img img {
+  transform: scale(1.05);
+}
+
+.ms-tag {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: #fff;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.ms-story-body {
+  padding: 20px;
+}
+
+.ms-story-title {
+  font-size: 26px;
+  line-height: 1;
+}
+
+.ms-story-excerpt {
+  margin-top: 16px;
+  min-height: 40px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.ms-story-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 28px;
+  font-size: 10px;
+}
+
+.ms-story-foot span {
+  margin: 0 6px;
+}
+
+.ms-story-link {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--ms-accent);
+  border-radius: 50%;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.ms-story-link:hover {
+  background: var(--ms-accent);
+  color: #fff;
+}
+
+/* ---------- Share your story ---------- */
+.ms-share {
+  position: relative;
+  overflow: hidden;
+  background: var(--ms-accent-dark);
+  color: #fff;
+  padding: 56px 24px;
+}
+
+.ms-ring {
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.ms-ring::before,
+.ms-ring::after {
+  content: '';
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  inset: 34px;
+}
+
+.ms-ring::after {
+  inset: 68px;
+}
+
+.ms-ring--left {
+  width: 520px;
+  height: 520px;
+  left: -130px;
+  top: -210px;
+}
+
+.ms-ring--right {
+  width: 460px;
+  height: 460px;
+  right: -110px;
+  top: -180px;
+}
+
+.ms-share-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 36px;
+}
+
+.ms-share-title {
+  margin-top: 20px;
+  font-size: clamp(2.8rem, 4.5vw, 4.6rem);
+  line-height: 0.96;
+}
+
+.ms-share-copy {
+  max-width: 480px;
+}
+
+.ms-share-copy p {
+  margin-bottom: 24px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.ms-share-note {
+  font-size: 1.6rem;
+  line-height: 1.05;
+  color: rgba(255, 255, 255, 0.75);
+  transform: rotate(-6deg);
+}
+
+/* ---------- Tablet / desktop ---------- */
+@media (min-width: 768px) {
+  .ms-hero,
+  .ms-stories,
+  .ms-share {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+
+  .ms-story-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .ms-hero,
+  .ms-stories,
+  .ms-share {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  .ms-hero {
+    padding-top: 64px;
+  }
+
+  .ms-hero-top {
+    grid-template-columns: 1fr 1.55fr 1fr;
+    gap: 40px;
+  }
+
+  .ms-hero-side {
+    display: block;
+    margin-top: 16px;
+  }
+
+  .ms-hero-note {
+    margin-top: 16px;
+  }
+
+  .ms-row {
+    grid-template-columns: 0.8fr 0.9fr 1.35fr 0.9fr 0.8fr;
+    gap: 20px;
+  }
+
+  .ms-profile--side {
+    display: block;
+  }
+
+  .ms-profile--active .ms-photo {
+    height: 520px;
+    max-width: none;
+  }
+
+  .ms-nav--prev {
+    left: 13%;
+  }
+
+  .ms-nav--next {
+    right: 13%;
+  }
+
+  .ms-stories-head {
+    grid-template-columns: 1.25fr 1fr 0.75fr;
+    align-items: center;
+  }
+
+  .ms-stories-cta {
+    justify-self: end;
+  }
+
+  .ms-share-grid {
+    grid-template-columns: 1fr 1.25fr 0.7fr;
+    align-items: center;
+  }
+
+  .ms-share-note {
+    justify-self: end;
+  }
+}

@@ -15,6 +15,7 @@ import EventsRevamp from "./pages/EventsRevamp.js";
 import Workshops from "./pages/Workshops"; 
 import ScrollToTop from "./components/ScrollToTop.js";
 import Profile from "./pages/Profile.js";
+import BiasSeries from "./pages/BiasSeries.js";
 
 function App() {
     return (
@@ -34,7 +35,7 @@ function App() {
                 <Route path="/studyPlan" Component={StudyPlan} />
                 <Route path="/Questions" Component={Questions} />
                 <Route path="/EventsRevamp" Component={EventsRevamp} />
-
+                <Route path="/BiasSeries" Component={BiasSeries} />
             </Routes>
             <Footer />
         </Router>

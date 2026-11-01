@@ -78,6 +78,10 @@ const Navbar = () => {
                     Events
                 </NavLink>
 
+                <NavLink className={"link"} to="/BiasSeries">
+                    Spotlight
+                </NavLink>
+
                 {isLoggedIn && (
                     <NavLink className={"link"} to="/workshops">
                         Workshops

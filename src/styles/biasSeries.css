@@ -107,7 +107,7 @@
 .ms-hero-top {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 24px;
+  /* gap: 24px; */
 }
 
 .ms-hero-title {
@@ -138,7 +138,7 @@
 
 .ms-stage {
   position: relative;
-  margin-top: 40px;
+  /* margin-top: -1em; */
 }
 
 .ms-row {

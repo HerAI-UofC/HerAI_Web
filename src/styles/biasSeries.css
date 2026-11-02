@@ -127,10 +127,11 @@
 }
 
 .ms-hero-side {
-  display: none;
-  font-size: 13px;
+  display: block;
+  font-size: 16px;
   line-height: 1.5;
-  color: var(--ms-muted);
+  grid-column: 3;
+  /* color: var(--ms-muted); */
   justify-self: end;
 }
 
@@ -510,6 +511,9 @@
     grid-template-columns: 0.8fr 0.9fr 1.35fr 0.9fr 0.8fr;
     gap: 20px;
   }
+
+  .ms-row--1 .ms-profile:first-child { grid-column-start: 3; }  /* center column */
+  .ms-row--3 .ms-profile:first-child { grid-column-start: 2; }  /* columns 2, 3, and 4 */
 
   .ms-profile--side {
     display: block;

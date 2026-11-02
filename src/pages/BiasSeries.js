@@ -10,29 +10,14 @@ const members = [
     quote: 'Learning to build models taught me that curiosity is a skill you can practice.',
   },
   {
-    name: 'Member Two',
-    focus: 'NLP',
-    school: 'University of Calgary',
-    image: '/images/members/member-two.jpg',
-    quote: 'HerAI gave me a room full of women who ask the questions I was too shy to ask.',
-  },
-  {
-    name: 'Member Three',
-    focus: 'Machine Learning',
-    school: 'University of Calgary',
-    image: '/images/members/member-three.jpg',
-    quote:
-      'I never thought I’d find a community like this in tech. HerAI showed me I can be technical, creative, and fully myself.',
-  },
-  {
-    name: 'Member Four',
+    name: 'Individual Two',
     focus: 'Data Science',
     school: 'University of Calgary',
     image: '/images/members/member-four.jpg',
     quote: 'There is real power in learning alongside women who understand the journey.',
   },
   {
-    name: 'Member Five',
+    name: 'Individual Three',
     focus: 'AI Ethics',
     school: 'University of Calgary',
     image: '/images/members/member-five.jpg',
@@ -91,7 +76,7 @@ function PillButton({ children, light = false, href = '#' }) {
 }
 
 function BiasSeries() {
-  const [active, setActive] = useState(2);
+  const [active, setActive] = useState(Math.floor(members.length / 2));
   const current = members[active];
 
   const move = (amount) => {
@@ -120,7 +105,7 @@ function BiasSeries() {
         </div>
 
         <div className="ms-stage">
-          <div className="ms-row">
+          <div className={`ms-row ms-row--${members.length}`}>
             {members.map((member, index) => {
               const isActive = index === active;
               return (
@@ -153,22 +138,27 @@ function BiasSeries() {
             })}
           </div>
 
-          <button
-            type="button"
-            onClick={() => move(-1)}
-            aria-label="Previous profile"
-            className="ms-nav ms-nav--prev"
-          >
-            <Arrow direction="left" />
-          </button>
-          <button
-            type="button"
-            onClick={() => move(1)}
-            aria-label="Next profile"
-            className="ms-nav ms-nav--next"
-          >
-            <Arrow />
-          </button>
+          {members.length > 1 && (
+            <>
+              <button
+                type="button"
+                onClick={() => move(-1)}
+                aria-label="Previous profile"
+                className="ms-nav ms-nav--prev"
+              >
+                <Arrow direction="left" />
+              </button>
+              <button
+                type="button"
+                onClick={() => move(1)}
+                aria-label="Next profile"
+                className="ms-nav ms-nav--next"
+              >
+                <Arrow />
+              </button>
+            </>
+          )
+          }
 
           <div className="ms-info">
             <h2 className="ms-display ms-info-name">{current.name}</h2>
@@ -180,22 +170,25 @@ function BiasSeries() {
           </div>
         </div>
 
-        <div className="ms-dots">
-          {members.map((member, index) => (
-            <button
-              key={member.name}
-              type="button"
-              onClick={() => setActive(index)}
-              aria-label={`Go to ${member.name}`}
-              className={`ms-dot ${index === active ? 'ms-dot--on' : ''}`}
-            />
-          ))}
-        </div>
+        {members.length > 1 && (
+          <div className="ms-dots">
+            {members.map((member, index) => (
+              <button
+                key={member.name}
+                type="button"
+                onClick={() => setActive(index)}
+                aria-label={`Go to ${member.name}`}
+                className={`ms-dot ${index === active ? 'ms-dot--on' : ''}`}
+              />
+            ))}
+          </div>
+        )}
+
       </section>
 
       {/* ---------- Community stories ---------- */}
       <section className="ms-stories">
-        <p className="ms-eyebrow">Community stories</p>
+        <p className="ms-eyebrow">Trailblazers</p>
         <div className="ms-stories-head">
           <h2 className="ms-display ms-section-title">
             Real stories.
@@ -203,7 +196,8 @@ function BiasSeries() {
             Bigger <em>impact.</em>
           </h2>
           <p className="ms-stories-blurb">
-            These are the stories of women and underrepresented groups building their futures in AI and machine learning.
+            These are the stories our team has compiled about women and underrepresented individuals 
+            in tech becoming trailblazers for the community
           </p>
           <div className="ms-stories-cta">
             <PillButton>View All Stories</PillButton>

@@ -1,12 +1,13 @@
 {
   "files": {
     "main.css": "/static/css/main.ec700a5d.css",
-    "main.js": "/static/js/main.bc44b4fe.js",
+    "main.js": "/static/js/main.c21fe422.js",
     "static/media/tiffany.webp": "/static/media/tiffany.0ad9f27451d6fdcedf35.webp",
     "static/media/about-ramsha.png": "/static/media/about-ramsha.06738421c3a5e5c5efb1.png",
     "static/media/mehrin.webp": "/static/media/mehrin.e168b740e52fe7254faa.webp",
     "static/media/couch-design.png": "/static/media/couch-design.d3e3e6dc89f5f254b089.png",
     "static/media/aishbah-arif.webp": "/static/media/aishbah-arif.99f06ebb494754af509c.webp",
+    "static/media/alisha-khattak.jpeg": "/static/media/alisha-khattak.778f9e15747ece2f7566.jpeg",
     "static/media/about-zainab.jpg": "/static/media/about-zainab.a9d5636d091b76239e20.jpg",
     "static/media/women-in-stem.png": "/static/media/women-in-stem.620e01c600a9112e1244.png",
     "static/media/about-britt.jpg": "/static/media/about-britt.5c459ff7eae5c9227fa5.jpg",
@@ -20,6 +21,7 @@
     "static/media/logo.png": "/static/media/logo.3c35ac05baf2b36036d8.png",
     "static/media/areba.webp": "/static/media/areba.cedf7e8bb706d3ca9414.webp",
     "static/media/about-daad.jpg": "/static/media/about-daad.b5cbe6f0de76c1327152.jpg",
+    "static/media/alisha-malik.webp": "/static/media/alisha-malik.e49af36b56af2ffc3c68.webp",
     "static/media/yumiko.webp": "/static/media/yumiko.32f38b29a8e8376359de.webp",
     "static/media/gabrielle.webp": "/static/media/gabrielle.0741094b8a83b6c8a0b0.webp",
     "static/media/arch.png": "/static/media/arch.e8c702bb61be4bc07fc2.png",
@@ -31,10 +33,10 @@
     "static/media/hamnah.webp": "/static/media/hamnah.92c1a2df68f9d0df057d.webp",
     "index.html": "/index.html",
     "main.ec700a5d.css.map": "/static/css/main.ec700a5d.css.map",
-    "main.bc44b4fe.js.map": "/static/js/main.bc44b4fe.js.map"
+    "main.c21fe422.js.map": "/static/js/main.c21fe422.js.map"
   },
   "entrypoints": [
     "static/css/main.ec700a5d.css",
-    "static/js/main.bc44b4fe.js"
+    "static/js/main.c21fe422.js"
   ]
 }

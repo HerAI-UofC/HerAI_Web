@@ -26,6 +26,8 @@ import areba from "../img/areba.webp";
 import aishbah from "../img/aishbah-arif.webp";
 import northstar from "../img/northstar-background.png";
 import maidah from "../img/Maidah.webp";
+import alishakhattak from "../img/alisha-khattak.jpeg";
+import alishamalik from "../img/alisha-malik.webp";
 
 const teamMembers = [
   {
@@ -52,6 +54,13 @@ const teamMembers = [
     team: "Internal",
     members: 
     [
+     {
+        name: "Alisha Malik",
+        role: "VP Internal",
+        bio: "4th Year Computer Science",
+        linkedin: "https://ca.linkedin.com/in/alisha--malik",
+        img: alishamalik
+      },
       {
         name: "Yumiko Banh",  
         role: "Jr. VP Internal", 
@@ -175,6 +184,14 @@ const teamMembers = [
         github: "https://github.com/ZainabSaeed06",
         img: zainab
       },
+       {
+        name: "Alisha Khattak",
+        role: "Jr. VP Technology",
+        bio: "2nd Year Computer Science",
+        linkedin: "https://www.linkedin.com/in/alisha-k-ba3556416",
+        github: "https://github.com/Alisha1114",
+        img: alishakhattak
+     },
       {
         name: "Ramsha Oad",
         role: "Jr. VP Technology",

@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.ec700a5d.css",
-    "main.js": "/static/js/main.81ac8173.js",
+    "main.js": "/static/js/main.bc44b4fe.js",
     "static/media/tiffany.webp": "/static/media/tiffany.0ad9f27451d6fdcedf35.webp",
     "static/media/about-ramsha.png": "/static/media/about-ramsha.06738421c3a5e5c5efb1.png",
     "static/media/mehrin.webp": "/static/media/mehrin.e168b740e52fe7254faa.webp",
@@ -10,7 +10,6 @@
     "static/media/about-zainab.jpg": "/static/media/about-zainab.a9d5636d091b76239e20.jpg",
     "static/media/women-in-stem.png": "/static/media/women-in-stem.620e01c600a9112e1244.png",
     "static/media/about-britt.jpg": "/static/media/about-britt.5c459ff7eae5c9227fa5.jpg",
-    "static/media/about-kseniia.jpg": "/static/media/about-kseniia.59acccff65c82e6f5625.jpg",
     "static/media/Maidah.webp": "/static/media/Maidah.c0fc38e614dc554ba710.webp",
     "static/media/F26-team-photo.jpg": "/static/media/F26-team-photo.53893689086b37c5c228.jpg",
     "static/media/northstar-background.png": "/static/media/northstar-background.4e4ad914c171da86d31f.png",
@@ -32,10 +31,10 @@
     "static/media/hamnah.webp": "/static/media/hamnah.92c1a2df68f9d0df057d.webp",
     "index.html": "/index.html",
     "main.ec700a5d.css.map": "/static/css/main.ec700a5d.css.map",
-    "main.81ac8173.js.map": "/static/js/main.81ac8173.js.map"
+    "main.bc44b4fe.js.map": "/static/js/main.bc44b4fe.js.map"
   },
   "entrypoints": [
     "static/css/main.ec700a5d.css",
-    "static/js/main.81ac8173.js"
+    "static/js/main.bc44b4fe.js"
   ]
 }

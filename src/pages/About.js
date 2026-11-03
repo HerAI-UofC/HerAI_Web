@@ -15,7 +15,6 @@ import daad from "../img/about-daad.jpg";
 import hira from "../img/about-hira.jpg";
 import zainab from "../img/about-zainab.jpg";
 import ramsha from "../img/about-ramsha.png";
-import kseniia from "../img/about-kseniia.jpg";
 import hamnah from "../img/hamnah.webp";
 import shriya from "../img/shriya.webp";
 import yumiko from "../img/yumiko.webp";
@@ -67,11 +66,10 @@ const teamMembers = [
     members:
     [
       {
-        name: "Kseniia Belousova",
-        role: "VP External",
-        bio: "2nd Year Business Technology Management",
-        linkedin: "https://www.linkedin.com/in/kseniia-belousova/",
-        img: kseniia
+        name: "Currently Recruiting!",
+        role: "N/A",
+        bio: "N/A",
+        img: blank
       }
     ]
   },

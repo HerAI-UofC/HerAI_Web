@@ -119,10 +119,82 @@
   line-height: 1.1;
 }
 
+/*timeline component*/
+.previous-page {
+  background: #fff;
+  padding: 20px 0 60px;
+}
+
 .previous-page .vertical-timeline-element-content {
   padding: 20px 22px;
 }
 
+/* .previous-page .vertical-timeline-element-content:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12) !important;
+} */
+
+/* Stack text above photos inside each card */
+.previous-page .prev-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Title + description: plain text on the gray card instead of the mauve box */
+.previous-page .carousel-description {
+  margin: 0;
+  padding: 0;
+  align-items: flex-start;
+  text-align: left;
+}
+.previous-page .carousel-description h3 {
+  color: #8C6D6C;
+  font-weight: bold;
+  font-size: 26px;
+  margin: 0 0 8px;
+}
+.previous-page .carousel-description p {
+  color: #444;
+  background: none;
+  box-shadow: none;
+  border-radius: 0;
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Photo carousel fills the card */
+.previous-page .carousel-wrapper {
+  width: 100%;
+  transform: none;
+}
+.previous-page .carousel {
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+.previous-page .slide {
+  width: 100%;
+  height: auto;
+  max-height: 380px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Date badge */
+.previous-page .timeline-date-icon {
+  font-size: 16px;
+}
+
+.previous-page .vertical-timeline-element-icon {
+width: 5rem;
+height: 5rem;
+}
 
 /*small screens*/
 @media(max-width: 600px){
@@ -152,25 +224,19 @@
 }
 
 /*MEDIA QUERY FOR SMALL SCREENS (PHONES)*/
- 
 
 @media (max-width: 768px) {
-  .timeline-date-icon {
-    font-size: 8px;
-    padding: 4px;
+  .previous-page .vertical-timeline-element-content {
+    padding: 18px;
   }
-  /* Let timeline cards use full width */
-  .vertical-timeline-element-content {
-    margin-left: 0 !important;
-    width: 100%;
+  .previous-page .carousel-description h3 {
+    font-size: 22px;
+  }
+  .previous-page .carousel-description p {
+    font-size: 15px;
+  }
+  .previous-page .carousel {
+    margin-left: 0;
   }
 
-  /* Center content under the icon */
-  .vertical-timeline-element {
-    padding-left: 0;
-  }
-  .carousel-wrapper{
-    transform: translateX(-38px);
-
-  }
 }

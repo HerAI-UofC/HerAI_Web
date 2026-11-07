@@ -1,10 +1,38 @@
 {
-    "youatucal":{ 
-    "title": "You at UCalgary Event",
-    "date": "April 2025",
-    "description": "An event to welcome incoming University of Calgary students and introduce them to HerAI to inspire students to join our club and help our initiative.",
-    "slides": null
-        },
+
+    "AICandHerAINetworkingNight2026":{
+        "title": "AI Panel & Networking Night 2026",
+        "date": "March 2026",
+        "description": "A collaboration between HerAI and AIC! Panelists across energy, consulting, finance, and tech share how AI is transforming their fields and shaping the future.",
+        "slides": [
+            {
+                "src": "/events-imgs/ainetworkingnight1.jpg",
+                "alt":  "img1"
+            },
+            {
+                "src": "/events-imgs/ainetworkingnight2.jpg",
+                "alt":  "img2"
+            }
+
+        ]
+    },
+
+    "hertechconnect":{
+        "title": "HER Tech Connect 2025",
+        "date": "October 2025",
+        "description": "An event catered to women in tech who are looking to network, learn more about the tech industry, and transform their lives.",
+        "slides": [
+            {
+                "src": "/events-imgs/hertechconnect1.jpg",
+                "alt":  "img1"
+            },
+            {
+                "src": "/events-imgs/hertechconnect2.JPG",
+                "alt":  "img2"
+            }
+        ]
+    },
+
     "blacktie": {
     "title": "Black Tie Networking Night",
     "date" : "May 2025",
@@ -23,43 +51,8 @@
             "alt":"img3"
         }
         ]
-},
-    
-    
-    "hertechconnect":{
-        "title": "HerTech Connect",
-        "date": "October 2025",
-        "description": "An event catered to women in tech who are looking to network, learn more about the tech industry, and transform their lives.",
-        "slides": [
-            {
-                "src": "/events-imgs/hertechconnect1.jpg",
-                "alt":  "img1"
-            },
-            {
-                "src": "/events-imgs/hertechconnect2.JPG",
-                "alt":  "img2"
-            }
-
-        ]
-
-    },
-
-    "AICandHerAINetworkingNight2026":{
-        "title": "AI Panel & Networking Night 2026",
-        "date": "March 2026",
-        "description": "A collaboration between HerAI and AIC! Panelists across energy, consulting, finance, and tech share how AI is transforming their fields and shaping the future.",
-        "slides": [
-            {
-                "src": "/events-imgs/ainetworkingnight1.jpg",
-                "alt":  "img1"
-            },
-            {
-                "src": "/events-imgs/ainetworkingnight2.jpg",
-                "alt":  "img2"
-            }
-
-        ]
     }
+
 
 
 }

@@ -1,4 +1,27 @@
 {
+    "HalloweenWorkshopFall2026":{
+        "title": "HerAI - Tricks & Terminals",
+        "date": "October 2026",
+        "description": "A Halloween-themed virtual escape room where every key is found with Linux commands, and every mystery solved reveals the ghost in the shell.",
+        "slides": [
+            {
+                "src": "/events-imgs/halloweenf26-1.jpg",
+                "alt":  "img1"
+            },
+            {
+                "src": "/events-imgs/halloweenf26-2.jpg",
+                "alt":  "img2"
+            },
+            {
+                "src": "/events-imgs/halloweenf26-3.jpg",
+                "alt":  "img3"
+            },
+            {
+                "src": "/events-imgs/halloweenf26-4.jpg",
+                "alt":  "img4"
+            }
+        ]
+    },
 
     "AICandHerAINetworkingNight2026":{
         "title": "AI Panel & Networking Night 2026",

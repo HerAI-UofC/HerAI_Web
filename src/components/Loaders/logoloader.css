@@ -18,11 +18,13 @@
     align-items: center;
     gap: 1.5rem;
     background-color: #e2d9d0;
-    background-image: url('../../img/home-title.png');
+    background-image: linear-gradient(rgba(184, 152, 152, 0.5),
+     rgba(239, 227, 227, 0.5)), 
+     url('../../img/home-title.png');
     background-size: cover;
     background-position: center;
     z-index: 1000;
-    opacity: 0.95;
+    opacity: 1;
     transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -48,8 +50,8 @@
 .logo-loader {
     display: inline-flex;
     align-items: baseline;
-    font-family: 'Playfair Display', 'Didot', 'Bodoni 72', serif; /* swap for your logo's font */
-    font-size: clamp(40px, 14vw, 72px);  /* shrinks on phones */
+    font-family: 'Playfair Display', 'Didot', 'Bodoni 72', serif; 
+    font-size: clamp(40px, 14vw, 72px);  
     color: #1b2333;
     line-height: 1;
     letter-spacing: 0.02em;
@@ -57,10 +59,10 @@
 
 .logo-loader__a {
     width: 0.834em;
-    height: 0.72em;          /* roughly the capital-letter height */
+    height: 0.72em;          
     margin: 0 0.06em;
     overflow: visible;
-    fill: #c4a69f;
+    fill: #9b7e78;
 }
 
 /* Faded "empty" A */

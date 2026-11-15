@@ -3,45 +3,90 @@ import homeTitle from "../img/home-title.png";
 import womenSTEM from "../img/women-in-stem.png";
 import { NavLink } from "react-router-dom";
 import "../styles/community.css";
-import { useEffect, useRef } from "react";
+import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faDiscord } from '@fortawesome/free-brands-svg-icons';
 import { faLinktree } from '@fortawesome/free-brands-svg-icons';
-
+import LogoLoader from "../components/Loaders/LogoLoader.js";
 
 const Home = () => {
+    const [loading, setLoading] = useState(true);
+    const [removeLoader, setRemoveLoader] = useState(false);
+
+    const LOADER_SPEED = 4000;               // ms, must match the loader's speed
+    const FILLED_AT = LOADER_SPEED * 0.45;
     useEffect(() => {
+        const start = Date.now();
+        let timer;
+
+        const img = new Image();
+        img.src = homeTitle;
+
+        const handleLoad = () => {
+            const elapsed = Date.now() - start;
+            // the next moment the A is completely filled
+            const cyclesToWait = Math.max(0, Math.ceil((elapsed - FILLED_AT) / LOADER_SPEED));
+            const remaining = FILLED_AT + cyclesToWait * LOADER_SPEED - elapsed;
+
+            clearTimeout(timer);
+            timer = setTimeout(() => setLoading(false), remaining);
+        };
+
+        img.onload = handleLoad;
+        img.onerror = handleLoad;
+        if (img.complete) handleLoad();
+
+        return () => {
+            clearTimeout(timer);
+            img.onload = null;
+            img.onerror = null;
+        };
+    }, []);
+
+
+    useEffect(() => {
+    if (loading) return;
+    const t = setTimeout(() => setRemoveLoader(true), 500);
+    return () => clearTimeout(t);
+    }, [loading]);
+
+    useEffect(() => {
+        if (loading) return;
         const sections = document.querySelectorAll(".fade-section");
-
         const observer = new IntersectionObserver(
-        (entries) => {
-            entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                const index = Array.from(sections).indexOf(entry.target);
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        const index = Array.from(sections).indexOf(entry.target);
 
-                // Stagger effect: delay each section by index * 200ms
-                setTimeout(() => {
-                entry.target.classList.add("visible");
-                }, index * 200);
+                        setTimeout(() => {
+                            entry.target.classList.add("visible");
+                        }, index * 200);
 
-                observer.unobserve(entry.target); // animate only once
-            }
-            });
-        },
-        { threshold: 0.2 }
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            { threshold: 0.2 }
         );
 
         sections.forEach((section) => observer.observe(section));
 
         return () => observer.disconnect();
-    }, []);
-
-
-    const ref = useRef(null);
+    }, [loading]);
 
     return (
+    <>
+    
+            {!removeLoader && (
+                <>
+                    <LogoLoader fullScreen hidden={!loading} speed={4} label="Loading Home Page..." />
+                </>
+            )}
+ 
+            {!loading && (
         <>
             <div className="title-img" style={{backgroundImage: `url(${homeTitle})`}}>
                 <div className="title-head">
@@ -49,7 +94,7 @@ const Home = () => {
                 </div>
                 <div className="about-blurb">
                     <div className="about-bubble">
-                        <h2 id="blurb" ref={ref}>
+                        <h2 id="blurb">
                             HerAI is a forward-thinking student club dedicated to amplifying
                             the voices and contributions of underrepresented groups in the tech landscape.
                         </h2>
@@ -120,6 +165,8 @@ const Home = () => {
                     Sign Up
                 </a>
             </div>
+        </>
+            )}
         </>
     );
 };

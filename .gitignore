@@ -41,6 +41,14 @@ yarn-error.log*
 /.vs/HerAI_Web1/FileContentIndex/12759dea-0eed-45cd-8215-be50b49744e6.vsidx
 /.vs/HerAI_Web1/FileContentIndex/6f0a3268-7884-43c3-bc27-29c59cbeacfe.vsidx
 
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
 #amplify-do-not-edit-begin
 amplify/\#current-cloud-backend
 amplify/.config/local-*
@@ -62,10 +70,3 @@ amplifytools.xcconfig
 .secret-*
 **.sample
 #amplify-do-not-edit-end
-
-# Visual Studio
-.vs/
-*.suo
-*.user
-*.userosscache
-*.sln.docstates
